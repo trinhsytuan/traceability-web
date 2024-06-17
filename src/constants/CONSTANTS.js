@@ -774,6 +774,12 @@ export const product_public_items = [
     isEdit: false,
   },
   {
+    name: "Các tiêu chuẩn quóc gia, quốc tế",
+    key: "national_standard",
+    checked: false,
+    isEdit: true,
+  },
+  {
     name: "Mô tả sản phẩm",
     key: "describe",
     checked: true,

@@ -20,14 +20,7 @@ import NhatKyKiemDinhTruyXuat from "./NhatKyKiemDinh";
 import NhatKySanXuatTruyXuat from "./NhatKySanXuat";
 PreviewPublic.propTypes = {};
 
-function PreviewPublic({
-  isOpen,
-  handleOpen,
-  idParcel,
-  infoParcel,
-  infoStep,
-  infoPublic,
-}) {
+function PreviewPublic({ isOpen, handleOpen, idParcel, infoParcel, infoStep, infoPublic }) {
   const firstSwiperRef = useRef(null);
   const secondSwiperRef = useRef(null);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(1);
@@ -71,28 +64,17 @@ function PreviewPublic({
   };
   const viStatus = (status) => {
     let viText = status;
-    if (viText == STATUS_PARCEL.UNEXPORTED)
-      viText = VI_STATUS_PARCEL.UNEXPORTED;
-    else if (viText == STATUS_PARCEL.CANCELLED)
-      viText = VI_STATUS_PARCEL.CANCELLED;
-    else if (viText == STATUS_PARCEL.CREATING)
-      viText = VI_STATUS_PARCEL.CREATING;
+    if (viText == STATUS_PARCEL.UNEXPORTED) viText = VI_STATUS_PARCEL.UNEXPORTED;
+    else if (viText == STATUS_PARCEL.CANCELLED) viText = VI_STATUS_PARCEL.CANCELLED;
+    else if (viText == STATUS_PARCEL.CREATING) viText = VI_STATUS_PARCEL.CREATING;
     else viText = VI_STATUS_PARCEL.EXPORTED;
     return viText;
   };
   useEffect(() => {
-    if (
-      isOpen &&
-      infoParcel.product._id &&
-      infoPublic.product_public_items.media
-    ) {
+    if (isOpen && infoParcel.product._id && infoPublic.product_public_items.media) {
       getImageProduct();
     }
-    if (
-      isOpen &&
-      infoParcel.product._id &&
-      !infoPublic.product_public_items.media
-    ) {
+    if (isOpen && infoParcel.product._id && !infoPublic.product_public_items.media) {
       setImgProduct([]);
     }
     if (isOpen && infoPublic.product_public_items.producer) {
@@ -167,9 +149,7 @@ function PreviewPublic({
                         <SwiperSlide key={index}>
                           <img
                             src={API.PREVIEW_ID.format(res.url)}
-                            className={`preview_image ${
-                              currentSlideIndex - 1 == index && "image_active"
-                            }`}
+                            className={`preview_image ${currentSlideIndex - 1 == index && "image_active"}`}
                             onClick={() => handleBottomSlideClick(index)}
                           />
                         </SwiperSlide>
@@ -221,90 +201,74 @@ function PreviewPublic({
           <div className="div_hr"></div>
           <div className="body-info">
             <div className="tabs-item">
-              <div
-                className={activeTabs == 0 ? "tabs-active" : "tab-inactive"}
-                onClick={() => onChange(0)}
-              >
+              <div className={activeTabs == 0 ? "tabs-active" : "tab-inactive"} onClick={() => onChange(0)}>
                 Thông tin sản phẩm
               </div>
-              <div
-                className={activeTabs == 1 ? "tabs-active" : "tab-inactive"}
-                onClick={() => onChange(1)}
-              >
+              <div className={activeTabs == 1 ? "tabs-active" : "tab-inactive"} onClick={() => onChange(1)}>
                 Thông tin lô sản phẩm
               </div>
-              <div
-                className={activeTabs == 2 ? "tabs-active" : "tab-inactive"}
-                onClick={() => onChange(2)}
-              >
+              <div className={activeTabs == 2 ? "tabs-active" : "tab-inactive"} onClick={() => onChange(2)}>
                 Quy trình sản xuất
               </div>
-              <div
-                className={activeTabs == 3 ? "tabs-active" : "tab-inactive"}
-                onClick={() => onChange(3)}
-              >
+              <div className={activeTabs == 3 ? "tabs-active" : "tab-inactive"} onClick={() => onChange(3)}>
                 Bình luận
               </div>
             </div>
             <div className="tabs-body">
               {activeTabs == 0 && (
                 <div className="tab0">
-                  {infoPublic?.product_public_items?.name &&
-                    infoParcel.product?.name && (
-                      <div className="info-product">
-                        <span className="title">Tên sản phẩm:</span>
-                        <span>{infoParcel?.product?.name}</span>
-                      </div>
-                    )}
-                  {infoPublic?.product_public_items?.code &&
-                    infoParcel?.product?._id && (
-                      <div className="info-product">
-                        <span className="title">Mã sản phẩm:</span>
-                        <span>{infoParcel?.product?.code}</span>
-                      </div>
-                    )}
+                  {infoPublic?.product_public_items?.name && infoParcel.product?.name && (
+                    <div className="info-product">
+                      <span className="title">Tên sản phẩm:</span>
+                      <span>{infoParcel?.product?.name}</span>
+                    </div>
+                  )}
+                  {infoPublic?.product_public_items?.code && infoParcel?.product?._id && (
+                    <div className="info-product">
+                      <span className="title">Mã sản phẩm:</span>
+                      <span>{infoParcel?.product?.code}</span>
+                    </div>
+                  )}
                   {infoPublic?.product_public_items?.producer && infoOrg?.name && (
                     <div className="info-product">
                       <span className="title">Cơ sở sản xuất:</span>
                       <span>{infoOrg?.name}</span>
                     </div>
                   )}
-                  {infoPublic?.product_public_items?.address &&
-                    infoParcel?.product?.address && (
-                      <div className="info-product">
-                        <span className="title">Địa chỉ:</span>
-                        <span>{infoParcel?.product?.address}</span>
-                      </div>
-                    )}
-                  {infoPublic?.product_public_items?.describe &&
-                    infoParcel?.product?.describe && (
-                      <div className="info-product">
-                        <span className="title">Giới thiệu sản phẩm:</span>
-                        <span className="describe">
-                          {infoParcel?.product?.describe}
-                        </span>
-                      </div>
-                    )}
-                  {infoPublic?.product_public_items?.url &&
-                    infoParcel?.product?.url && (
-                      <div className="info-product">
-                        <span className="title">URL:</span>
-                        <span className="describe">
-                          {infoParcel?.product?.url}
-                        </span>
-                      </div>
-                    )}
+                  {infoPublic?.product_public_items?.address && infoParcel?.product?.address && (
+                    <div className="info-product">
+                      <span className="title">Địa chỉ:</span>
+                      <span>{infoParcel?.product?.address}</span>
+                    </div>
+                  )}
+                  {infoPublic?.product_public_items?.nationalStandard && infoParcel?.product?.nationalStandard && (
+                    <div className="info-product">
+                      <span className="title">Các tiêu chuẩn quốc gia, quốc tế:</span>
+                      <span>{infoParcel?.product?.nationalStandard}</span>
+                    </div>
+                  )}
+                  {infoPublic?.product_public_items?.describe && infoParcel?.product?.describe && (
+                    <div className="info-product">
+                      <span className="title">Giới thiệu sản phẩm:</span>
+                      <span className="describe">{infoParcel?.product?.describe}</span>
+                    </div>
+                  )}
+                  {infoPublic?.product_public_items?.url && infoParcel?.product?.url && (
+                    <div className="info-product">
+                      <span className="title">URL:</span>
+                      <span className="describe">{infoParcel?.product?.url}</span>
+                    </div>
+                  )}
                 </div>
               )}
               {activeTabs == 1 && (
                 <div className="tab1">
-                  {infoPublic?.parcel_public_items?.name &&
-                    infoParcel?.procedure?._id && (
-                      <div className="info-product">
-                        <span className="title">Mã lô hàng:</span>
-                        <span>{infoParcel?.name}</span>
-                      </div>
-                    )}
+                  {infoPublic?.parcel_public_items?.name && infoParcel?.procedure?._id && (
+                    <div className="info-product">
+                      <span className="title">Mã lô hàng:</span>
+                      <span>{infoParcel?.name}</span>
+                    </div>
+                  )}
                   {infoPublic?.parcel_public_items?.nsx && infoParcel?.nsx && (
                     <div className="info-product">
                       <span className="title">Ngày sản xuất:</span>
@@ -317,15 +281,12 @@ function PreviewPublic({
                       <span>{infoParcel?.num}</span>
                     </div>
                   )}
-                  
                 </div>
               )}
               {activeTabs == 2 && infoStep && (
                 <div className="tab2">
                   {infoStep.map((res, index) => {
-                    const isPublic = infoPublic?.step_public_items.includes(
-                      res._id
-                    );
+                    const isPublic = infoPublic?.step_public_items.includes(res._id);
                     if (isPublic) {
                       return (
                         <div className="show_step_product" key={index}>
@@ -339,70 +300,49 @@ function PreviewPublic({
                                 Đã được kiểm định bởi {res?.endorser.name}
                               </div>
                             ) : (
-                              <div className="show_step_product__kiemdinhcancel">
-                                Quy trình chưa được kiểm định
-                              </div>
+                              <div className="show_step_product__kiemdinhcancel">Quy trình chưa được kiểm định</div>
                             )}
                           </div>
                           <div className="show_step_product__info">
                             <div className="show_step_product__info__content titleMoTaTruyXuat">
-                              <span className="title ">Mô tả:</span>{" "}
-                              <span>{res.describe}</span>
+                              <span className="title ">Mô tả:</span> <span>{res.describe}</span>
                             </div>
                             {res.from_date && (
                               <div className="show_step_product__info__content">
-                                <span className="title">
-                                  Thời gian bắt đầu:
-                                </span>{" "}
+                                <span className="title">Thời gian bắt đầu:</span>{" "}
                                 <span>{formatDate(res.from_date)}</span>
                               </div>
                             )}
                             {res.to_date && (
                               <div className="show_step_product__info__content">
-                                <span className="title">
-                                  Thời gian kết thúc:
-                                </span>{" "}
+                                <span className="title">Thời gian kết thúc:</span>{" "}
                                 <span>{formatDate(res.to_date)}</span>
                               </div>
                             )}
-                            {infoPublic?.parcel_public_items
-                              ?.productHistory && (
+                            {infoPublic?.parcel_public_items?.productHistory && (
                               <div className="show_step_product__info__content">
-                                <span
-                                  className="title title_clickaction"
-                                  onClick={() => handleShowNKSX(res)}
-                                >
+                                <span className="title title_clickaction" onClick={() => handleShowNKSX(res)}>
                                   Xem nhật ký sản xuất
                                 </span>
                               </div>
                             )}
-                            {infoPublic?.parcel_public_items
-                              ?.productHistory && (
+                            {infoPublic?.parcel_public_items?.productHistory && (
                               <div className="show_step_product__info__content">
-                                <span
-                                  className="title title_clickaction"
-                                  onClick={() => handleShowNKKD(res)}
-                                >
+                                <span className="title title_clickaction" onClick={() => handleShowNKKD(res)}>
                                   Xem nhật ký kiểm định
                                 </span>
                               </div>
                             )}
                             {res.image.length > 0 && (
                               <div className="show_step_product__info__content">
-                                <span className="title">
-                                  Hình ảnh, video lô hàng:
-                                </span>
+                                <span className="title">Hình ảnh, video lô hàng:</span>
                               </div>
                             )}
                             <div className="show_step_product__img">
-                              {res.image && (
-                                <UploadImage data={res.image} disabled={true} />
-                              )}
+                              {res.image && <UploadImage data={res.image} disabled={true} />}
                             </div>
                           </div>
-                          {index != infoStep.length - 1 && (
-                            <div className="show_hr" />
-                          )}
+                          {index != infoStep.length - 1 && <div className="show_hr" />}
                         </div>
                       );
                     }
@@ -410,22 +350,10 @@ function PreviewPublic({
                 </div>
               )}
               {activeTabs == 3 && (
-                <BinhLuanSanPham
-                  idParcel={idParcel}
-                  idProduct={infoParcel.product._id}
-                  disabled={true}
-                />
+                <BinhLuanSanPham idParcel={idParcel} idProduct={infoParcel.product._id} disabled={true} />
               )}
-              <NhatKySanXuatTruyXuat
-                idParcel={idShowNKSX}
-                handleVisible={handleShowNKSX}
-                onVisible={showNKSX}
-              />
-              <NhatKyKiemDinhTruyXuat
-                idParcel={idShowNKKD}
-                handleVisible={handleShowNKKD}
-                onVisible={showNKKD}
-              />
+              <NhatKySanXuatTruyXuat idParcel={idShowNKSX} handleVisible={handleShowNKSX} onVisible={showNKSX} />
+              <NhatKyKiemDinhTruyXuat idParcel={idShowNKKD} handleVisible={handleShowNKKD} onVisible={showNKKD} />
             </div>
           </div>
         </div>

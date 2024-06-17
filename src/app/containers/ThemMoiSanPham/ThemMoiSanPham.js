@@ -304,32 +304,7 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
                   </Col>
                 </Row>
                 <Row gutter={18}>
-                  <Col className="gutter-row" xs={24} sm={24} md={6} lg={6}>
-                    <Form.Item
-                      label="Ngày sản xuất"
-                      name="manufacture_date"
-                      rules={[
-                        {
-                          validator: (_, value) => {
-                            if (!value) {
-                              return Promise.resolve();
-                            }
-                            const isValidDate = moment(value).isValid();
-                            if (!isValidDate) {
-                              return Promise.reject(new Error("Ngày sản xuất không hợp lệ"));
-                            }
-                            if (moment(value).isAfter(moment())) {
-                              return Promise.reject(new Error("Ngày sản xuất không được lớn hơn ngày hiện tại"));
-                            }
-                            return Promise.resolve();
-                          },
-                        },
-                      ]}
-                    >
-                      <DatePicker placeholder="Nhập ngày sản xuất" format={"DD/MM/YYYY"} style={{ width: "100%" }} />
-                    </Form.Item>
-                  </Col>
-                  <Col className="gutter-row" xs={24} sm={24} md={18} lg={18}>
+                  <Col className="gutter-row" xs={24} sm={24} md={24} lg={24}>
                     <Form.Item label="Các tiêu chuẩn quốc gia, quốc tế" name="national_standard">
                       <Input placeholder="Nhập các tiêu chuẩn quốc gia của sản phẩm nếu có" />
                     </Form.Item>
