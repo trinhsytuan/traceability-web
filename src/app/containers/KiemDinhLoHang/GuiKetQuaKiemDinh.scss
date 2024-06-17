@@ -1,0 +1,83 @@
+.form-guikq-kiemdinh {
+  font-family: "NotoSans-Regular";
+}
+
+.form-kiem-dinh {
+  .ant-form-item-label {
+    font-weight: 500;
+    font-family: "NotoSans-Regular";
+  }
+  @media screen and(max-width: 700px) {
+    .ant-form-item {
+      margin-bottom: 10px;
+    }
+  }
+  .form-kiem-dinh-content {
+    padding: 0 5px;
+    .input-lg {
+      height: 35px;
+    }
+
+    label {
+      font-size: 15px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    @media screen and(max-width: 667px) {
+      padding: 0;
+      label {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .checkbox-kq {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.form-guikd-kiemdinh-modal {
+  @media screen and(max-width: 667px) {
+    .ant-modal-body {
+      padding: 10px 20px;
+    }
+  }
+}
+
+.btn_action-gkqkd {
+  font-family: "NotoSans-Bold";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  .btn-cancel {
+    color: #ff811e;
+    margin-right: 15px;
+    background-color: #ffe9d8;
+    border: 0 !important;
+  }
+}
+.modal-GuiKQKiemDinh-row {
+  margin-left: 15px;
+}
+.textarea-chuadatyc {
+  margin-left: 10px;
+}
+.description-cancel-kd {
+  .ant-form-item-control {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    @media screen and(max-width: 585px) {
+      margin-left: 5px;
+    }
+  }
+  .ant-form-item-required {
+    font-family: "NotoSans-Regular";
+  }
+}
+.all_selected{
+  font-family: "NotoSans-Regular";
+  color: #179a6b;
+  margin-bottom: 10px;
+}

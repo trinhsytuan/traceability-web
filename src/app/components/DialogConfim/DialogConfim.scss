@@ -1,0 +1,34 @@
+.cf-confim-children {
+  font-family: "NotoSans-Regular";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3% 5%;
+  .cf-confim-title {
+    font-family: "NotoSans-Bold";
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .cf-confim-body {
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .cf-confim-btn{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  .cf-confim-btnConfim{
+    margin-right: 20px;
+    background-color: #ffefef !important;
+    color: red !important;
+    border: 0 !important;
+    padding: 0 17px !important;
+  }
+}
+

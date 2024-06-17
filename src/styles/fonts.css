@@ -1,0 +1,14 @@
+
+@font-face {
+  font-family: SVN-PoppinsBold;
+  src: url('../assets/fonts/SVN-Poppins Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: NotoSans-Bold;
+  src: url('../assets/fonts/Noto_Sans/NotoSans-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: NotoSans-Regular;
+  src: url('../assets/fonts/Noto_Sans/NotoSans-Regular.ttf') format('truetype');
+}

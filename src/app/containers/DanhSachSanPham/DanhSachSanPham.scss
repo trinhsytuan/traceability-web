@@ -1,0 +1,96 @@
+$primary_color: #179a6b;
+.DanhSachSanPham {
+  font-family: "NotoSans-Regular";
+  font-size: 14px;
+  &__title {
+    font-family: "NotoSans-Bold";
+    color: #179a6b;
+    text-transform: uppercase;
+  }
+  &__boxBtnFilter {
+    margin-top: 10px;
+  }
+  &__BtnFilter {
+    font-family: "NotoSans-Bold";
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    .anticon {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+  }
+  .filter {
+    margin-top: 10px;
+  }
+  .btn_col {
+    display: flex;
+    align-items: center;
+  }
+  .btn_clearFilter {
+    margin-left: 15px;
+    padding: 0 25px;
+  }
+  &__details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .ct_detailse {
+      margin-top: 10px;
+      margin-right: 25px;
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 10px;
+      }
+      @media screen and(max-width: 772px) {
+        margin-right: 10px;
+      }
+      @media screen and(max-width: 600px) {
+        margin-right: 5px;
+        margin-top: 5px;
+      }
+    }
+    @media screen and(max-width: 550px) {
+      flex-direction: column;
+    }
+  }
+  .ant-pagination-item-active {
+    a {
+      background-color: #f0fcf8;
+    }
+  }
+  .ant-table-thead > tr > th {
+    font-family: "NotoSans-Bold";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .table_dssp {
+    margin-top: 20px;
+  }
+  .table {
+    .ant-pagination-item-link {
+      border: 0 !important;
+      color: $primary_color !important;
+    }
+
+    .ant-select-selector {
+      background-color: #f0fcf8 !important;
+      color: $primary_color;
+      border: 0 !important;
+    }
+    .ant-pagination-item {
+      border: 0;
+    }
+  }
+  .LoHang_More{
+    display: flex;
+    align-items: center;
+  }
+  .Search_SP_Filter{
+    display: flex;
+  }
+}
+

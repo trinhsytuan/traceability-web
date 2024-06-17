@@ -1,0 +1,35 @@
+.dialog_xd_nsx {
+  font-family: "NotoSans-Regular";
+  font-size: 14px;
+}
+.btn_submit_form_dialogxd {
+  font-family: "NotoSans-Bold";
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  margin-top: 25px;
+  justify-content: center;
+  .btn_cancel {
+    background-color: #ffe9d8;
+    color: #ff811e;
+    border: 0 !important;
+    margin-right: 15px;
+  }
+}
+.dialog_xd {
+  .form_xetduyet {
+    padding: 0 20px;
+    @media screen and(max-width: 667px) {
+      .ant-form-item {
+        margin-bottom: 5px;
+      }
+      padding: 0;
+    }
+  }
+  @media screen and(max-width: 667px) {
+    .ant-modal-body {
+      padding-top: 0;
+    }
+  }
+}
+

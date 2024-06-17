@@ -1,0 +1,97 @@
+$primary_color: #179a6b;
+$bold: "NotoSans-Bold";
+.list-procedure-container {
+  font-family: "NotoSans-Regular";
+  .list-procedure-title {
+    color: $primary_color;
+    text-transform: uppercase;
+    font-family: $bold;
+    font-size: 14px;
+  }
+  .btn-search {
+    font-family: $bold;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn_reverse {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    :first-child {
+      margin-left: 5px;
+    }
+  }
+  .box-search {
+    margin-top: 15px;
+  }
+  .table_show_content_produre {
+    margin-top: 20px;
+  }
+  .titleTable {
+    th {
+      font-family: $bold;
+    }
+  }
+  .filterSearch {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    .btn_clearFilter {
+      margin-left: 20px;
+      padding: 0 25px;
+    }
+  }
+  .table_show_content_produre {
+    .ant-select-selector {
+      background-color: #f0fcf8 !important;
+      color: $primary-color;
+      border: 0 !important;
+    }
+  }
+  .status-parcel--creating {
+    color: #ff811e;
+  }
+  .status-parcel--exported {
+    color: #1890ff;
+  }
+  .status-parcel--unexported {
+    color: #ff811e;
+  }
+  .status-parcel--cancelled {
+    color: red;
+  }
+  .tag-procedure {
+    padding: 5px 10px;
+    width: 150px;
+  }
+  .tag-procedure-parrent {
+    display: flex;
+    justify-content: center;
+  }
+  .tag-procedure--creating {
+    color: #ff811e;
+    background-color: #ffe9d8;
+  }
+  .tag-procedure--sending {
+    color: #ff811e;
+    background-color: #ffe9d8;
+  }
+  .tag-procedure--endorsing {
+    color: #ffbd13;
+    background-color: #fff3d3;
+  }
+  .tag-procedure--endorsed {
+    color: #179a6b;
+    background-color: #f0fcf8;
+  }
+  .tag-procedure--publish {
+    color: #1890ff;
+    background-color: #cee7ff;
+  }
+  .tag-procedure--reject {
+    color: #a7a7a7;
+    background-color: #f3f3f3;
+  }
+}
+

@@ -1,0 +1,84 @@
+.NKKD-btnAction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.titleNKKD {
+  width: 100%;
+}
+.nhat-ky-kiem-dinh--title {
+  margin-top: 25px;
+  font-family: "NotoSans-Bold";
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  &__icon {
+    color: #179a6b;
+    margin-left: 10px;
+  }
+  &__top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+.img_certifice {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.modal_kiem_dinh {
+  .ant-modal-body {
+    padding: 0;
+  }
+}
+.NhatKyKiemDinh {
+  font-family: "NotoSans-Regular";
+  font-size: 14px;
+  .ant-steps-item-title {
+    color: #179a6b !important;
+  }
+  .ant-steps-item {
+    .ant-steps-item-description {
+      color: #b6b5b5 !important;
+      .form_nhat_ky {
+        margin-top: 20px;
+      }
+    }
+    :hover {
+      .ant-steps-item-description {
+        color: #b6b5b5 !important;
+      }
+    }
+  }
+  .ant-steps-item-title {
+    margin-top: -3px;
+  }
+}
+.div_khongconhatky {
+  margin-bottom: 30px;
+}
+.NhatKyKiemDinh-Step {
+  padding: 0 0 0 10px;
+  @media screen and(max-width: 881px) {
+    padding: 0;
+  }
+  .ant-steps-item-title {
+    width: 100%;
+    padding: 0px;
+  }
+  .btn-cancel:not([disabled]) {
+    color: red;
+    background-color: #ffefef;
+    margin-right: 10px;
+    border: 0 !important;
+  }
+  .btn-cancel {
+    margin-right: 10px;
+    font-family: "NotoSans-Bold";
+  }
+}
+

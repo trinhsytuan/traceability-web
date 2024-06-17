@@ -1,0 +1,24 @@
+.modal-show-pending-comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 35px;
+  @media screen and(max-width: 667px) {
+    padding: 0;
+  }
+  span {
+    text-align: center;
+  }
+  .title {
+    margin-top: 10px;
+    font-family: "NotoSans-Bold";
+    margin-bottom: 10px;
+  }
+  .btn_agree {
+    width: 100%;
+    margin-top: 10px;
+    font-family: "NotoSans-Bold";
+  }
+}
+

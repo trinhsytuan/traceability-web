@@ -1,0 +1,20 @@
+.modal-add-org {
+  .btn_action {
+    font-family: "NotoSans-Bold";
+    display: flex;
+    justify-content: center;
+  }
+  .btn_cancel {
+    background-color: #ffe9d8;
+    color: #ff811e;
+    border: 0 !important;
+    margin-right: 20px;
+  }
+  .ant-form-item-required{
+    font-family: "NotoSans-Regular";
+  }
+  .ant-form-item-control{
+    margin-bottom: 9px;
+  }
+}
+

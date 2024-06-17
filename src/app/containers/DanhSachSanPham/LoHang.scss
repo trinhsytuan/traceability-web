@@ -1,0 +1,23 @@
+.lo-hang-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 0;
+  > span {
+    margin-bottom: 10px;
+  }
+  .lo-hang--pd {
+    padding: 5px 7px;
+    cursor: pointer;
+  }
+
+  .lo-hang_item {
+    border: 0 !important;
+    font-family: "NotoSans-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+

@@ -1,0 +1,92 @@
+$primary_color: #179a6b;
+.content_qt {
+  > * {
+    font-family: "NotoSans-Regular";
+  }
+  .title {
+    font-family: "NotoSans-Bold";
+  }
+  .btnhoa {
+    font-family: "NotoSans-Bold";
+  }
+  .btn-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    .title {
+      color: $primary_color;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  .iconReverse {
+    margin-left: 10px;
+  }
+  .table {
+    margin-top: 10px;
+    .ant-pagination-item-link {
+      border: 0 !important;
+      color: $primary_color !important;
+    }
+
+    .ant-select-selector {
+      background-color: #f0fcf8 !important;
+      color: $primary_color;
+      border: 0 !important;
+    }
+    .ant-pagination-item {
+      border: 0;
+    }
+  }
+  > th {
+    font-family: "NotoSans-Bold";
+    font-weight: bold !important;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .dungsd {
+    background-color: #fff3d3;
+    &__span {
+      color: #ffbd13;
+    }
+  }
+  .dangsd {
+    background-color: #f0fcf8;
+    &__span {
+      color: $primary_color;
+    }
+  }
+  .btn_clearFilter {
+    padding: 0 20px;
+  }
+  .header__filter {
+    margin-top: 15px;
+  }
+  .btn_col {
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 992px) {
+      margin-top: 0;
+    }
+  }
+  .btn_clearFilter {
+    margin-left: 20px;
+  }
+  .ant-pagination-item-active {
+    a {
+      background-color: #f0fcf8;
+    }
+  }
+  .ant-table-thead > tr > th {
+    font-family: "NotoSans-Bold";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+

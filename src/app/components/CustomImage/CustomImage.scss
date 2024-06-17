@@ -1,0 +1,29 @@
+.header_img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 14px;
+  padding: 4px 2px 2px 8px;
+  :nth-child(2) {
+    font-size: 16px;
+  }
+}
+.img_content {
+  padding: 0 5px;
+}
+.hoverable:hover {
+  color: #179a6b;
+}
+.img_border {
+  background-color: #f9f9f9;
+  width: 125px;
+  height: 140px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  @media screen and(max-width: 772px) {
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+}

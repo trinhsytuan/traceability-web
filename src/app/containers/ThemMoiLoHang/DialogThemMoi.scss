@@ -1,0 +1,44 @@
+.ant-form-item-label {
+  font-family: "NotoSans-Regular" !important;
+  font-weight: 500 !important;
+}
+
+.btn_confim_dialogThemMoi {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-family: "NotoSans-Bold";
+  font-weight: 700;
+  font-size: 14px;
+  .btn_cancel {
+    margin-right: 15px;
+    color: #ff811e;
+    background-color: #ffe9d8;
+    border: 0 !important;
+  }
+}
+.DialogKiemDinh-LoHang-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-family: "NotoSans-Bold";
+    
+  }
+  .nhat-ky-kiem-dinh--title__top{
+    margin-bottom: 10px;
+    span{
+      font-family: "NotoSans-Bold";
+    }
+  }
+  .nkkd {
+    margin-bottom: 7px;
+  }
+  .ant-btn-hidden {
+    display: none;
+  }
+  .NhatKyKiemDinh{
+    margin-top: 15px;
+  }
+}
+

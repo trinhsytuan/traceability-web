@@ -1,0 +1,25 @@
+.form_item_add {
+  margin-bottom: 30px;
+  @media screen and (max-width: 576px) {
+    margin-bottom: 10px;
+  }
+}
+.form_item_submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  &__btn_cancel {
+    color: #ff811e !important;
+    background-color: #ffe9d8 !important;
+    border: 0 !important;
+    margin-right: 20px;
+  }
+  &__btn {
+    font-family: "NotoSans-Bold" !important;
+  }
+}
+.modal_add_progress {
+  padding: 0 10px;
+}
+

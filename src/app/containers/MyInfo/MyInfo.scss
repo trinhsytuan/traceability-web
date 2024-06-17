@@ -1,0 +1,39 @@
+.MyInfo {
+  display: flex;
+  flex-direction: row;
+
+  font-family: "NotoSans-Regular";
+  .ant-tabs-tab {
+    width: 20vw;
+    @media screen and(max-width: 750px) {
+      width: 92vw;
+    }
+    text-align: left !important;
+    padding: 13px !important;
+  }
+  .ant-tabs-tab-active {
+    background-color: #f0fcf8;
+  }
+  .site-layout-background {
+    padding-left: 0px;
+    width: 20vw;
+    @media screen and(max-width: 750px) {
+      width: 92vw;
+    }
+  }
+}
+.MyInfoClass {
+  display: flex;
+  flex-direction: row;
+}
+.rootMyInfo {
+  display: flex;
+  flex-direction: row;
+  @media screen and(max-width: 750px) {
+    flex-direction: column;
+  }
+}
+.leftClassPanel {
+  width: 92%;
+}
+

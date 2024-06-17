@@ -1,0 +1,171 @@
+.BinhLuanSanPham-container {
+  .rate-sp {
+    margin-top: 2px;
+  }
+  .rate-sp-duoi {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: "NotoSans-Bold";
+    margin-top: 10px;
+  }
+  .sao-rate-duoi {
+    font-family: "NotoSans-Regular";
+  }
+
+  .full-width {
+    width: 100%;
+    margin-left: 15px;
+    background-color: #fbfbfb !important;
+  }
+  .BinhLuanSanPham-Pagination {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .comment {
+      font-family: "NotoSans-Bold";
+      font-size: 18px;
+    }
+  }
+  .ant-select-selector {
+    border-radius: 0px !important;
+    background-color: #f0fcf8 !important;
+    color: #179a6b !important;
+    border: 0 !important;
+  }
+  .ant-select-item-option-selected {
+    color: #179a6b;
+  }
+  .ant-select-item-option-active {
+    background-color: #f0fcf8 !important;
+  }
+  .BinhLuanSanPham-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .no_comment {
+    font-family: "NotoSans-Bold";
+    color: #179a6b;
+    margin-bottom: 18px;
+  }
+  .item-content-comment {
+    margin-bottom: 25px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+  }
+  .item-content-comment-by-me {
+    margin-bottom: 25px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .item-content-comment-by-me {
+    margin-bottom: 25px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+    .btn-delete {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color: #ffefef;
+      align-items: center;
+      border: 0;
+      .icon-delete-outlined {
+        margin: 0 !important;
+      }
+    }
+    .item-content-comment-body {
+      background-color: #fefefe;
+    }
+    .item-content-comment-body-user {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      opacity: 1;
+      span{
+        opacity: 0.4;
+      }
+    }
+    .item-content-comment-body-time{
+      opacity: 0.4;
+    }
+    .rate-sp{
+      opacity: 0.4;
+    }
+    .item-content-comment-desciption{
+      opacity: 0.4;
+    }
+    .item-content-comment-avatar{
+      opacity: 0.4;
+    }
+  }
+
+  .item-content-comment-avatar {
+    background-color: #179a6b;
+    color: #ffffff;
+    font-family: "NotoSans-Bold";
+    width: 42px;
+    font-size: 12px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    img {
+      width: 42px;
+      height: 39px;
+      border-radius: 50px;
+    }
+  }
+  .item-content-comment-body {
+    margin-left: 15px;
+    background-color: #fbfbfb;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    width: 100%;
+  }
+  .item-content-comment-body-user {
+    font-family: "NotoSans-Bold";
+    font-size: 14px;
+  }
+  .item-content-comment-body-time {
+    color: #8b8b8b;
+    font-family: "NotoSans-Regular";
+  }
+  .item-content-comment-desciption {
+    margin-top: 10px;
+    padding-bottom: 11px;
+    font-family: "NotoSans-Regular";
+  }
+  .BinhLuanSanPham-BtnSend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "NotoSans-Bold";
+  }
+  .item-content-comment-body-textarea {
+    border-radius: 0 !important;
+    width: 100%;
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 10px 10px;
+  }
+  .item-content-comment-formitem-textarea {
+    padding: 0;
+    border: 0 !important;
+  }
+  .item-content-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+

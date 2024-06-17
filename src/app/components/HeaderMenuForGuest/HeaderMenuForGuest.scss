@@ -1,0 +1,14 @@
+.header-guest-container {
+  .header-menu-center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0 10px 15px;
+  }
+  .btn_signin {
+    margin-right: 15px;
+    color: #ffffff;
+    font-family: "NotoSans-Bold";
+  }
+}

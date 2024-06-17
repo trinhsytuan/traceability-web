@@ -1,0 +1,48 @@
+.PersonalInfomation {
+  > span {
+    font-family: "NotoSans-Regular";
+  }
+  .title {
+    color: #179a6b;
+    font-family: "NotoSans-Bold";
+  }
+  &__Content {
+    margin-top: 10px;
+  }
+}
+.attach-image__img {
+  box-shadow: 1px solid #ddd;
+  display: flex;
+  justify-content: left;
+}
+.indoorUploadImage {
+  width: 120px;
+  height: 120px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+.attach-image {
+  margin-left: 10px;
+}
+.noAvatar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #179a6b;
+  font-family: "NotoSans-Bold";
+}
+.iconImgFix {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.btn_personal_submit {
+  margin-top: 10px;
+  font-family: "NotoSans-Bold";
+}
+

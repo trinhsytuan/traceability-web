@@ -1,0 +1,51 @@
+$primary_color: #179a6b;
+.manufacture-container {
+  .title {
+    font-family: "NotoSans-Bold";
+    text-transform: uppercase;
+    color: #179a6b;
+  }
+  .table-show-info {
+    margin-top: 20px;
+  }
+  .table {
+    .ant-pagination-item-link {
+      border: 0 !important;
+      color: $primary_color !important;
+    }
+
+    .ant-select-selector {
+      background-color: #f0fcf8 !important;
+      color: $primary_color;
+      border: 0 !important;
+    }
+    .ant-pagination-item {
+      border: 0;
+    }
+  }
+}
+.modal-add-new {
+  .form-register {
+    .ant-form-item-required {
+      font-family: "NotoSans-Regular";
+      margin-bottom: 5px;
+    }
+  }
+  .btn-action {
+    margin-top: 10px;
+    font-family: "NotoSans-Bold";
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .btn-cancel {
+    color: #ff811e;
+    background-color: #ffe9d8;
+    border: 0 !important;
+    margin-right: 20px;
+  }
+  .btn-action-table{
+    
+  }
+}
+

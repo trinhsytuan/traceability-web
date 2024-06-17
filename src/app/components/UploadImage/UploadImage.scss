@@ -1,0 +1,35 @@
+.upload-image-container {
+  font-family: "NotoSans-Regular";
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .upload-image-btnUpload {
+    display: flex;
+    align-items: center;
+    color: #179a6b;
+    justify-content: center;
+    flex-direction: column;
+    width: 125px;
+    height: 140px;
+    background-color: #f0fcf8;
+    .icon-upload {
+      font-size: 20px;
+    }
+  }
+  .upload-image-preview-image {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.modal_upload_image--type {
+  margin-top: 10px;
+  .ant-col {
+    font-family: "NotoSans-Regular" !important;
+  }
+  .btn_submit_upload {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+

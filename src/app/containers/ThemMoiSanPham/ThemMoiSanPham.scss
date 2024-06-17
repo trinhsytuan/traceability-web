@@ -1,0 +1,83 @@
+$primary_color: #179a6b;
+$bold: "NotoSans-Bold";
+$size: "14px";
+.add-product-container {
+  font-family: "NotoSans-Regular";
+  font-size: 14px;
+  .add-product-header {
+    color: $primary_color;
+    font-family: $bold;
+    font-size: $size;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    :nth-child(2) {
+      text-transform: uppercase;
+      margin-left: 10px;
+    }
+    .add-product-header-right {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      font-family: "NotoSans-Regular";
+      span {
+        text-transform: none;
+      }
+      @media screen and(max-width: 478px) {
+        margin-top: 10px;
+        margin-left: 0;
+      }
+    }
+  }
+  .add-product-infoProduct {
+    margin-top: 10px;
+  }
+  .div-hr {
+    margin-top: 10px;
+    background-color: #dfdfdf;
+    height: 1px;
+  }
+  .ant-form-item-label {
+    font-family: "NotoSans-Regular";
+    font-weight: 500;
+  }
+  .ant-form-item-control {
+    margin-top: 3px;
+  }
+  .camera {
+    display: flex;
+    align-items: center;
+    :nth-child(2) {
+      margin-left: 5px;
+    }
+  }
+  .imageProduct {
+    margin-top: 10px;
+  }
+  .nguoipt-content {
+    margin-top: 10px;
+  }
+}
+.ant-select-item-option-active {
+  color: #179a6b !important;
+  background-color: #f0fcf8 !important;
+}
+.ant-select-item-option-selected {
+  color: #179a6b !important;
+}
+.btn_create_product {
+  display: flex;
+  justify-content: center;
+  font-family: "NotoSans-Bold";
+  margin-top: 10px;
+}
+
+.them-moi-lo-hang {
+  margin-top: 25px;
+}
+.btn_delete{
+  display: flex;
+  align-items: center;
+}

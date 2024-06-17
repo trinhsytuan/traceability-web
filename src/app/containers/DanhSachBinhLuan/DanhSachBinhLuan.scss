@@ -1,0 +1,75 @@
+$primary_color: #179a6b;
+.list-comment-container {
+  .title-class {
+    font-family: "NotoSans-Bold";
+    color: #179a6b;
+    text-transform: uppercase;
+  }
+  .btn_reverse {
+    font-family: "NotoSans-Bold";
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    :first-child {
+      margin-left: 5px;
+      margin-bottom: 2px;
+    }
+  }
+  .filter {
+    margin-top: 10px;
+  }
+  .ant-form-item-label {
+    font-family: "NotoSans-Regular";
+  }
+  .choduyet {
+    color: #ffbd13;
+    background-color: #fff3d3;
+  }
+  .chapnhan {
+    color: #179a6b;
+    background-color: #f0fcf8;
+  }
+  .tuchoi {
+    color: #a7a7a7;
+    background-color: #f3f3f3;
+  }
+  .ant-pagination-options {
+    border-radius: 0px;
+  }
+  .ant-pagination-item-active {
+    a {
+      background-color: #f0fcf8;
+    }
+  }
+  .table {
+    margin-top: 20px;
+    .ant-pagination-item-link {
+      border: 0 !important;
+      color: $primary_color !important;
+    }
+
+    .ant-select-selector {
+      background-color: #f0fcf8 !important;
+      color: $primary_color;
+      border: 0 !important;
+    }
+    .ant-pagination-item {
+      border: 0;
+    }
+  }
+  .commentRow {
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .long-content {
+    text-overflow: ellipsis; /* Thêm dấu ... khi nội dung bị cắt bỏ */
+    
+    overflow: hidden; /* Ẩn phần nội dung vượt quá kích thước của container */
+  }
+}
+

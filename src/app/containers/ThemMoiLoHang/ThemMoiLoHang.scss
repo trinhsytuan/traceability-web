@@ -1,0 +1,188 @@
+$primary_color: #179a6b;
+.describe-show-procedure {
+  white-space: pre-line;
+}
+.top--createnewParcel {
+  font-family: "NotoSans-Regular";
+  font-size: 14px;
+  .header-top-parcel {
+    .header-top-right {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      span {
+        font-family: "NotoSans-Regular";
+        text-transform: none;
+      }
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: $primary_color;
+    * {
+      margin-right: 5px;
+    }
+    .header-top-left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    span {
+      text-transform: uppercase;
+      font-family: "NotoSans-Bold";
+    }
+    .status-parcel {
+      display: flex;
+      justify-content: center;
+      margin-left: 10px;
+      @media screen and(max-width: 418px) {
+        margin: 10px 0;
+      }
+      width: 130px;
+      height: 24px;
+    }
+  }
+  .div_hr {
+    height: 1px;
+    margin-top: 16px;
+    background-color: #dfdfdf;
+  }
+  .search-bottom-parcel-tm {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    .btn_search {
+      width: 100%;
+      color: #ff811e;
+      background-color: #ffe9d8;
+      border: 0 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .qr-mobile {
+      display: flex;
+      justify-content: center;
+      .btn_download {
+        margin-bottom: 10px;
+      }
+      @media screen and(min-width: 1200px) and(max-width: 1500px) {
+        margin-right: 10px;
+      }
+      .div_img_qr {
+        display: flex;
+        justify-content: center;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      .div_left_qr {
+        display: flex;
+        flex-direction: column;
+      }
+      .btn_action_out {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn_action {
+        display: flex;
+        flex-direction: column;
+        width: 140px;
+        button {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    @media screen and(max-width: 767px) {
+      display: block;
+    }
+  }
+  .handleBack {
+    cursor: pointer;
+  }
+}
+.show-procedure--lohang {
+  .show-procedure--title {
+    font-family: "NotoSans-Bold";
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    color: $primary_color;
+    @media screen and(max-width: 400px) {
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+  .show-procedure--content {
+    margin-top: 20px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    @media screen and(max-width: 600px) {
+      padding: 0;
+    }
+  }
+  .show-procedure--content--title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "NotoSans-Bold";
+    justify-content: space-between;
+  }
+  .show-procedure--content-right {
+    width: 100%;
+    margin-left: 15px;
+  }
+  .show-procedure--body-right {
+    line-height: 18px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    * {
+      margin-bottom: 6px;
+    }
+  }
+  .show-procedure--content-left {
+    margin-top: 5px;
+  }
+}
+
+.add-procedure-btn-add-parcel {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-family: "NotoSans-Bold";
+}
+.btn_duyet_kiemdinh {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+  .button_reverse {
+    border: 0 !important;
+  }
+  right: 15px;
+  font-family: "NotoSans-Bold";
+  top: 5px;
+  z-index: 20;
+  margin-bottom: 20px;
+  :first-child {
+    margin-right: 10px;
+  }
+  @media screen and (max-width: 628px) {
+    display: flex;
+    position: unset;
+    margin-left: 15px;
+  }
+}
+

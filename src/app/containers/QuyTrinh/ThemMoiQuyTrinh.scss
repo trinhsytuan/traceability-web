@@ -1,0 +1,102 @@
+$primary_color: #179a6b;
+$font: "NotoSans-Bold";
+.hr_divider {
+  width: 100%;
+  height: 1px;
+  margin-top: 10px;
+  background-color: #dfdfdf;
+}
+.form_item {
+  padding: 12px 12px;
+}
+
+.header_root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: $primary_color;
+  &__text {
+    color: $primary_color;
+    margin-left: 9px;
+    font-family: $font;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  &__icon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @media screen and(max-width: 474px) {
+      margin-top: 10px;
+    }
+  }
+}
+.btn_delete {
+  margin-left: 10px;
+}
+.progress_sx_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-weight: bold;
+  align-items: center;
+  font-family: "NotoSans-Bold";
+  > span {
+    color: $primary_color;
+    text-transform: uppercase;
+  }
+}
+
+.btn_addProcedure {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.btn_create {
+  font-family: "NotoSans-Bold";
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.step_procedure {
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+  &__body {
+    margin-left: 10px;
+    width: 100%;
+  }
+  &__step {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+  &__title {
+    font-family: "NotoSans-Bold";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__describe {
+    margin-top: 10px;
+    white-space: pre-line;
+    font-size: 14px;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.ThemMoiQuyTrinh {
+  font-family: "NotoSans-Regular";
+}
+
+.conmat {
+  margin-right: 5px;
+}
+

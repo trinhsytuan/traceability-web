@@ -1,0 +1,50 @@
+.form_nhat_ky {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  input {
+    background-color: white;
+  }
+  .text_padding {
+    padding: 10px 10px;
+    background-color: white !important;
+  }
+  .text_padding-disabled {
+    padding: 10px 10px;
+  }
+  .date_padding {
+    padding: 10px 10px;
+  }
+  .ant-row {
+    display: flex;
+    align-items: center;
+  }
+  .textArea {
+    background-color: white;
+  }
+  .btn_action {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "NotoSans-Bold";
+  }
+  .btn-huytt {
+    color: #ff811e;
+    background-color: #ffe9d8;
+    margin-right: 10px;
+    border: 0 !important;
+  }
+  .btn-cancel:not([disabled]) {
+    color: red;
+    background-color: #ffefef;
+    margin-right: 10px;
+    border: 0 !important;
+  }
+  .btn-cancel {
+    margin-right: 10px;
+  }
+  .guitt{
+    margin-left: 10px;
+  }
+}
+

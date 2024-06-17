@@ -1,0 +1,48 @@
+$primary_color: #179a6b;
+.list-organtion-container {
+  .title {
+    font-family: "NotoSans-Bold";
+    color: #179a6b;
+    text-transform: uppercase;
+  }
+  .table-show-info {
+    margin-top: 20px;
+  }
+  .table {
+    .ant-pagination-item-link {
+      border: 0 !important;
+      color: $primary_color !important;
+    }
+
+    .ant-select-selector {
+      background-color: #f0fcf8 !important;
+      color: $primary_color;
+      border: 0 !important;
+    }
+    .ant-pagination-item {
+      border: 0;
+    }
+    .btn_edit_remove {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      .btn_delete_tc {
+        margin-left: 10px;
+      }
+    }
+    .icon-delete-outlined {
+      margin-right: 0 !important;
+      justify-content: center !important;
+    }
+    .btn_delete_tc {
+      background-color: #ffefef !important;
+      border: 0 !important;
+    }
+    .btn_edit {
+      color: #ff811e;
+      background-color: #ffe9d8;
+      border: 0 !important;
+    }
+  }
+}
+

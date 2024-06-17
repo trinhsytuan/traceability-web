@@ -1,0 +1,58 @@
+.CongKhaiSanPham-container {
+  .CongKhaiSanPham-header {
+    text-transform: uppercase;
+    font-family: "NotoSans-Bold";
+    color: #179a6b;
+    margin-bottom: 10px;
+  }
+  .div_hr {
+    margin-bottom: 10px;
+  }
+  .title_sp {
+    text-transform: uppercase;
+    font-family: "NotoSans-Bold";
+  }
+  .CongKhaiSanPham-ThongTinSanPham {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    .ant-checkbox-wrapper {
+      margin-top: 10px;
+      margin-left: 0px !important;
+    }
+  }
+  .CongKhaiSanPham-ThongTinLoSanPham {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    .ant-checkbox-wrapper {
+      margin-top: 10px;
+      margin-left: 0px !important;
+    }
+  }
+  .CongKhaiSanPham-QTSX {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    .ant-checkbox-wrapper {
+      margin-top: 10px;
+      margin-left: 0px !important;
+    }
+  }
+  .select_all {
+    color: #179a6b;
+  }
+  .btn_action {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "NotoSans-Bold";
+  }
+  .preview_btn {
+    margin-right: 25px;
+    color: white;
+    background-color: #1890ff !important;
+    border: 0 !important;
+  }
+}
+

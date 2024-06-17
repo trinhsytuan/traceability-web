@@ -1,0 +1,108 @@
+$primary_color: #179a6b;
+.QuyTrinhXetDuyet {
+  font-family: "NotoSans-Regular";
+  .title_qtxd {
+    font-family: "NotoSans-Bold";
+    text-transform: uppercase;
+    color: #179a6b;
+  }
+  .div_hr {
+    margin-top: 10px;
+  }
+  .QuyTrinhXetDuyet-content {
+    padding: 5px;
+  }
+  .QuyTrinhXetDuyet-title {
+    margin-top: 10px;
+  }
+  .QuyTrinhXetDuyet-map {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .QuyTrinhXetDuyet-mapContent {
+    margin-left: 15px;
+  }
+  .QuyTrinhXetDuyet-contentIn {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  .QuyTrinhXetDuyet-mapCT {
+    margin-left: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    span {
+      margin-top: 10px;
+    }
+  }
+  .title_gkd {
+    font-family: "NotoSans-Bold";
+  }
+  .ant-col {
+    line-height: 9px;
+  }
+  .gutter-guikd {
+    margin-top: 12px;
+  }
+  .gutter-row {
+    line-height: 14px;
+  }
+  .btn_acceptreject {
+    display: flex;
+    flex-direction: row;
+    span {
+      margin-top: 0;
+    }
+    button {
+      margin-top: 10px;
+    }
+  }
+  .btn_accept {
+    border-radius: 0 !important;
+    padding: 4px;
+    color: #179a6b !important;
+    border-color: #179a6b !important;
+    border-left: 0 !important;
+  }
+  .btn_reject {
+    border-radius: 0 !important;
+    padding: 4px;
+    color: #179a6b !important;
+    border-color: #179a6b !important;
+  }
+  .chungNhan {
+    margin-top: 10px;
+  }
+}
+.table {
+  .ant-pagination-item-link {
+    border: 0 !important;
+    color: $primary_color !important;
+  }
+
+  .ant-select-selector {
+    background-color: #f0fcf8 !important;
+    color: $primary_color;
+    border: 0 !important;
+  }
+  .ant-pagination-item {
+    border: 0;
+  }
+}
+.width-kd-qtkd {
+  width: 50% !important;
+  @media screen and(max-width: 877px) {
+    width: 100% !important;
+  }
+  .ant-modal-body {
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-bottom: 5px !important;
+  }
+}
+

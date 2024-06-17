@@ -1,0 +1,115 @@
+$primary_color: #179a6b;
+.details-comment-container {
+  .ant-pagination-mini {
+    margin-bottom: 15px;
+  }
+  .details-comment-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .details-comment-header-left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: #179a6b;
+    text-transform: uppercase;
+    align-items: center;
+    font-family: "NotoSans-Bold";
+    :nth-child(2) {
+      margin-left: 10px;
+    }
+    margin-bottom: 19px;
+  }
+  .ant-pagination-item-link {
+    border: 0 !important;
+    color: $primary_color !important;
+  }
+
+  .ant-select-selector {
+    background-color: #f0fcf8 !important;
+    color: $primary_color;
+    border: 0 !important;
+  }
+  .ant-pagination-item {
+    border: 0;
+  }
+  .details-comment-user-container {
+    margin-bottom: 20px;
+  }
+  .details-comment-body {
+    padding: 0 20px;
+    padding-right: 0px;
+    @media screen and(max-width: 661px) {
+      padding: 0;
+    }
+    display: flex;
+    flex-direction: column;
+  }
+  .details-comment-user {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .noAvatar {
+    background-color: #179a6b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    font-size: 12px;
+    font-family: "NotoSans-Bold";
+    width: 40px;
+    height: 40px;
+  }
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      border-radius: 40px;
+      font-size: 12px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .details-comment-user-right {
+    margin-left: 15px;
+    background-color: #fbfbfb;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 13px;
+    padding-right: 0px;
+  }
+  .detail-comment-user-name {
+    font-family: "NotoSans-Bold";
+    font-size: 14px;
+  }
+  .detail-comment-time {
+    color: #8b8b8b;
+    font-family: "NotoSans-Regular";
+    font-size: 12px;
+  }
+  .detail-comment-content {
+    margin-top: 10px;
+    font-family: "NotoSans-Regular";
+    font-size: 14px;
+  }
+  .btn-actions-comment {
+    font-family: "NotoSans-Bold";
+    margin-top: 12px;
+    margin-left: 45px;
+    .btn_reject {
+      color: #ff811e !important;
+      background-color: #ffe9d8 !important;
+      border: 0 !important;
+    }
+    .btn_acceptCmt {
+      margin-left: 15px;
+    }
+  }
+}
+

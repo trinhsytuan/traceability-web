@@ -1,0 +1,219 @@
+$primary_color: #179a6b;
+.describe-show-procedure{
+  white-space: pre-line;
+}
+.top--createnewParcel {
+  font-family: "NotoSans-Regular";
+  font-size: 14px;
+  .header-top-parcel {
+    .header-top-right {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      span {
+        font-family: "NotoSans-Regular";
+        text-transform: none;
+      }
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: $primary_color;
+    * {
+      margin-right: 5px;
+    }
+    .header-top-left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    span {
+      text-transform: uppercase;
+      font-family: "NotoSans-Bold";
+    }
+
+    .status-parcel {
+      display: flex;
+      justify-content: center;
+      margin-left: 10px;
+      @media screen and(max-width: 418px) {
+        margin: 10px 0;
+      }
+      width: 130px;
+      height: 24px;
+    }
+  }
+  .div_hr {
+    height: 1px;
+    margin-top: 16px;
+    background-color: #dfdfdf;
+  }
+  .search-bottom-parcel {
+    margin-top: 10px;
+  }
+  .handleBack {
+    cursor: pointer;
+  }
+}
+.show-procedure--lohang {
+  .show-procedure---step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    .choxm {
+      margin-left: 10px;
+      padding: 3px 7px;
+      font-size: 12px;
+      font-family: "NotoSans-Regular";
+      color: #ffbd13;
+      background-color: #fff3d3;
+      @media screen and(max-width: 667px){
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;        
+      }
+    }
+    .dakd {
+      margin-left: 10px;
+      padding: 3px 7px;
+      font-size: 12px;
+      font-family: "NotoSans-Regular";
+      color: #179a6b;
+      background-color: #f0fcf8;
+      @media screen and(max-width: 667px){
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;        
+      }
+    }
+  }
+  .show-procedure--title {
+    font-family: "NotoSans-Bold";
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    color: $primary_color;
+    @media screen and(max-width: 400px) {
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .show-procedure--content {
+    margin-top: 20px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    @media screen and(max-width: 600px) {
+      padding: 0;
+    }
+  }
+  .show-procedure--content--title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "NotoSans-Bold";
+    justify-content: space-between;
+  }
+  .show-procedure--content-right {
+    width: 100%;
+    margin-left: 15px;
+  }
+  .show-procedure--body-right {
+    line-height: 18px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    * {
+      margin-bottom: 6px;
+    }
+    .green_pc {
+      color: #179a6b;
+    }
+  }
+  .show-procedure--content-left {
+    margin-top: 5px;
+  }
+}
+
+.add-procedure-btn-add-parcel {
+  display: flex;
+  justify-content: center;
+  font-family: "NotoSans-Bold";
+}
+.btn_duyet_kiemdinh {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+  .button_reverse {
+    border: 0 !important;
+  }
+  right: 15px;
+  font-family: "NotoSans-Bold";
+  top: 5px;
+  z-index: 20;
+  margin-bottom: 20px;
+  :first-child {
+    margin-right: 10px;
+  }
+  @media screen and (max-width: 628px) {
+    display: flex;
+    position: unset;
+    margin-left: 15px;
+  }
+}
+.history-kd {
+  margin-top: 5px;
+  .show-kd--title {
+    font-family: "NotoSans-Bold";
+    text-transform: uppercase;
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    color: $primary_color;
+  }
+  &__content {
+    margin-top: 20px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .history-kd-right {
+    font-family: 14px;
+    margin-left: 15px;
+    width: 100%;
+    height: 100%;
+    .history-kd-right-title {
+      font-family: "NotoSans-Bold";
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      span{
+        margin-bottom: 6px;
+      }
+    }
+  }
+  .history-kd-map {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  .gutter-row{
+    margin-bottom: 10px;
+  }
+  .div_hr{
+    margin-bottom: 15px;
+  }
+}
+

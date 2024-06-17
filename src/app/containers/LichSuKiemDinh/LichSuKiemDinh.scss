@@ -1,0 +1,35 @@
+.lich-su-kiem-dinh-container {
+  .header_content {
+    margin-top: 1px;
+    font-family: "NotoSans-Bold";
+    color: #179a6b;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .lskd {
+    margin-left: 10px;
+  }
+  .div_hr {
+    margin-top: 16px;
+  }
+  .step-audit {
+    margin-top: 20px;
+    margin-left: 10px;
+    @media screen and(max-width: 772px) {
+      margin-left: 0;
+    }
+  }
+  .ant-steps-item-content {
+    * {
+      margin-top: -7px;
+    }
+  }
+  .ant-steps-item-description {
+    padding-bottom: 35px !important;
+  }
+}
+

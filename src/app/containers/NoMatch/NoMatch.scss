@@ -1,0 +1,28 @@
+#no-match-container {
+  height: calc(100vh - 122px);
+  display: flex;
+
+  #no-match {
+    margin: auto;
+    text-align: center;
+
+    .img-not-found {
+      width: 255px;
+    }
+
+    .no-match__text {
+      font-family: "NotoSans-Bold";
+      margin: 1rem 0;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0;
+      text-align: center;
+      color: #179a6b;
+    }
+    .btn__title {
+      font-family: "NotoSans-Bold";
+    }
+  }
+}
+

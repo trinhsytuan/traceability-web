@@ -1,0 +1,105 @@
+.modal-GuiDuyetKiemDinh-container {
+  font-family: "NotoSans-Regular";
+  padding: 0px 2px;
+  @media screen and(max-width: 997px) {
+    padding: 0px;
+  }
+  .cb_selectAll {
+    color: #179a6b;
+    margin-top: 4px;
+  }
+  .modal-GuiDuyetKiemDinh-row {
+    display: flex;
+    align-items: center;
+    .input_step {
+      margin-left: 2px;
+      @media screen and(max-width: 570px) {
+        margin-left: 10px;
+      }
+    }
+    .modal-statusgd-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .btn_submitForm {
+    display: flex;
+    justify-content: center;
+    font-family: "NotoSans-Bold";
+    align-items: center;
+    margin-top: 25px;
+    .btn-cancel {
+      color: #ff811e;
+      background-color: #ffe9d8;
+      border: 0 !important;
+    }
+    .btn_submit {
+      margin-left: 15px;
+    }
+  }
+  .DanhSachSanPham__details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .ct_details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 11px;
+    margin-bottom: 10px;
+    img {
+      margin-right: 5px;
+    }
+  }
+  .status-input-creating {
+    border-color: #ff811e !important;
+    color: #ff811e !important;
+  }
+  .status-input-browsing {
+    border-color: #ff811e !important;
+    color: #ff811e !important;
+  }
+  .status-input-sending {
+    border-color: #ffbd13 !important;
+    color: #ffbd13 !important;
+  }
+  .status-input-endorsing {
+    border-color: #ffbd13 !important;
+    color: #ffbd13 !important;
+  }
+  .status-input-endorsed {
+    border-color: #179a6b !important;
+    color: #179a6b !important;
+  }
+  .status-input-publish {
+    border-color: #1890ff !important;
+    color: #1890ff !important;
+  }
+  .status-input-reject {
+    border-color: #a7a7a7 !important;
+    color: #a7a7a7 !important;
+  }
+  .status-input-undefined {
+    border-color: #ff811e !important;
+    color: #ff811e !important;
+  }
+  /* Ghi đè lên hiệu ứng màu primary color khi click vào input */
+  .ant-input:focus,
+  .ant-input:active {
+    border-color: initial;
+    box-shadow: none;
+  }
+  .modal-GuiDuyetKiemDinh-row {
+    margin-bottom: 7px;
+  }
+  .modal-GuiDuyetKiemDinh-item{
+    margin-left: 4px;
+  }
+  .row-text-status{
+    margin-left: 4px;
+  }
+}
+

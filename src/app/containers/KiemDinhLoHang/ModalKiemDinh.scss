@@ -1,0 +1,59 @@
+.modal-content {
+  font-family: "NotoSans-Regular";
+  font-size: 14px;
+  .ant-form-item-label {
+    font-family: "NotoSans-Regular";
+  }
+  .nhat-ky-kiem-dinh--title {
+    margin-top: 25px;
+    font-family: "NotoSans-Bold";
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    &__icon {
+      color: #179a6b;
+      margin-left: 10px;
+    }
+    &__top {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+  .img_certifice {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+.modal_kiem_dinh {
+  .ant-modal-body {
+    padding: 0;
+  }
+}
+.arrowDownKD {
+  font-family: "NotoSans-Regular";
+  font-size: 14px;
+  .ant-steps-item-title {
+    color: #179a6b !important;
+  }
+  .ant-steps-item {
+    .ant-steps-item-description {
+      color: #b6b5b5 !important;
+      .form_nhat_ky {
+        margin-top: 20px;
+      }
+    }
+    :hover {
+      .ant-steps-item-description {
+        color: #b6b5b5 !important;
+      }
+    }
+  }
+}
+.div_khongconhatky {
+  margin-bottom: 30px;
+}
+
