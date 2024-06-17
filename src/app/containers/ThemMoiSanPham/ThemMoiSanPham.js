@@ -1,14 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
-import BaseContent from '@components/BaseContent';
-import { CloseOutlined, EditOutlined, LeftOutlined } from '@ant-design/icons';
-import './ThemMoiSanPham.scss';
-import { useHistory, useParams } from 'react-router-dom';
-import { URL } from '@url';
-import { Button, Col, Form, Input, Row, Select } from 'antd';
-import { getAllUserByOrg, getListOrgUnitByOrgID, getListProcedure } from '@app/services/Manager';
-import TextArea from 'antd/lib/input/TextArea';
-import UploadImage from '@components/UploadImage/UploadImage';
+import React, { useEffect, useRef, useState } from "react";
+import PropTypes from "prop-types";
+import BaseContent from "@components/BaseContent";
+import { CloseOutlined, EditOutlined, LeftOutlined } from "@ant-design/icons";
+import "./ThemMoiSanPham.scss";
+import { useHistory, useParams } from "react-router-dom";
+import { URL } from "@url";
+import { Button, Col, DatePicker, Form, Input, Row, Select } from "antd";
+import { getAllUserByOrg, getListOrgUnitByOrgID, getListProcedure } from "@app/services/Manager";
+import TextArea from "antd/lib/input/TextArea";
+import UploadImage from "@components/UploadImage/UploadImage";
 
 import {
   createProduct,
@@ -16,16 +16,17 @@ import {
   getInfoProduct,
   getMediaBase,
   updateProduct,
-} from '@app/services/ThemMoiSanPham';
-import { toast, validateSpaceNull } from '@app/common/functionCommons';
-import { CONSTANTS, TOAST_MESSAGE } from '@constants';
-import { connect } from 'react-redux';
-import { API } from '@api';
-import DialogDeleteConfim from '@components/DialogDeleteConfim/DialogDeleteConfim';
-import DanhSachLoHang from '@containers/LoHang/DanhSachLoHang';
-import DeleteIcon from '@components/Icons/DeleteIcon';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-import Loading from '@components/Loading';
+} from "@app/services/ThemMoiSanPham";
+import { formatFormDataExtra, toast, validateSpaceNull } from "@app/common/functionCommons";
+import { CONSTANTS, TOAST_MESSAGE } from "@constants";
+import { connect } from "react-redux";
+import { API } from "@api";
+import DialogDeleteConfim from "@components/DialogDeleteConfim/DialogDeleteConfim";
+import DanhSachLoHang from "@containers/LoHang/DanhSachLoHang";
+import DeleteIcon from "@components/Icons/DeleteIcon";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import Loading from "@components/Loading";
+import moment from "moment";
 
 function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
   const { id } = useParams();
@@ -38,21 +39,21 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
   const [phutrach, setNguoiPhuTrach] = useState(null);
   const [listOrg, setOrgUnit] = useState(null);
   const [form] = Form.useForm();
-  const tentrang = 'quan-ly-san-pham';
+  const tentrang = "quan-ly-san-pham";
   const URLPattern = new RegExp(
-    '^(https?:\\/\\/)?' + // protocol
-    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-    '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-    '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-    '(\\#[-a-z\\d_]*)?$',
-    'i',
+    "^(https?:\\/\\/)?" + // protocol
+      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+      "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+      "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+      "(\\#[-a-z\\d_]*)?$",
+    "i"
   ); // fragment locator
   const pathURL = (urls) => {
-    var newUrls = urls.map(function(urlLink) {
+    var newUrls = urls.map(function (urlLink) {
       return {
         ...urlLink,
-        url: API.DOWNLOAD_FILE + '/' + urlLink.url,
+        url: API.DOWNLOAD_FILE + "/" + urlLink.url,
         origin: urlLink.url,
       };
     });
@@ -72,7 +73,7 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
     callAPI();
   }, [id]);
   const callAPI = async () => {
-    const responseProcedure = await getListProcedure('limit=0&active=true');
+    const responseProcedure = await getListProcedure("limit=0&active=true");
     setProcedure(responseProcedure);
     const orgUnit = await getListOrgUnitByOrgID(myInfo?.org?._id);
     setOrgUnit(orgUnit.docs);
@@ -81,15 +82,17 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
       disableForm();
       getInfoProduct(id).then((res) => {
         form.setFieldsValue({
-          name: res.name,
-          code: res.code,
-          procedure: res.procedure,
-          org_unit: res.orgUnit,
-          url: res.url,
-          address: res.address,
-          describe: res.describe,
-          user_id: res.userId,
-          require_inspect: res.requireInspect,
+          name: res?.name,
+          code: res?.code,
+          procedure: res?.procedure,
+          org_unit: res?.orgUnit,
+          url: res?.url,
+          address: res?.address,
+          describe: res?.describe,
+          user_id: res?.userId,
+          require_inspect: res?.requireInspect,
+          national_standard: res?.nationalStandard,
+          manufacture_date: res?.manufactureDate ? moment(res?.manufactureDate, "YYYY-MM-DD") : null,
         });
       });
       getMediaBase(id).then((res) => changeImage(pathURL(res)));
@@ -137,7 +140,7 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
     }
   };
   const selectChange = (data) => {
-    if (data == 'createnew') history.push(URL.THEM_MOI_QUY_TRINH);
+    if (data == "createnew") history.push(URL.THEM_MOI_QUY_TRINH);
   };
   const cancelEdit = () => {
     callAPI();
@@ -150,76 +153,61 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
           <div className="add-product-container">
             <div className="add-product-header">
               <div className="add-product-header-left">
-                <LeftOutlined onClick={handleBackButton}/>
+                <LeftOutlined onClick={handleBackButton} />
                 <span>Thông tin sản phẩm</span>
               </div>
               {id && (
                 <div className="add-product-header-right">
-                  {disabled &&
-                    (myPermission?.[tentrang]?.sua ||
-                      myPermission?.is_admin) && (
-                      <Button
-                        icon={<EditOutlined/>}
-                        type="ghost"
-                        onClick={disableForm}
-                        style={{
-                          color: '#FF811E',
-                          backgroundColor: '#FFE9D8',
-                          border: 0,
-                        }}
-                      >
-                        Chỉnh sửa
-                      </Button>
-                    )}
-                  {!disabled &&
-                    (myPermission?.[tentrang]?.sua ||
-                      myPermission?.is_admin) && (
-                      <Button
-                        icon={<CloseOutlined/>}
-                        type="ghost"
-                        onClick={cancelEdit}
-                        style={{
-                          color: '#FF811E',
-                          backgroundColor: '#FFE9D8',
-                          border: 0,
-                        }}
-                      >
-                        Huỷ chỉnh sửa
-                      </Button>
-                    )}
-                  {(myPermission?.[tentrang]?.xoa ||
-                    myPermission?.is_admin) && (
+                  {disabled && (myPermission?.[tentrang]?.sua || myPermission?.is_admin) && (
+                    <Button
+                      icon={<EditOutlined />}
+                      type="ghost"
+                      onClick={disableForm}
+                      style={{
+                        color: "#FF811E",
+                        backgroundColor: "#FFE9D8",
+                        border: 0,
+                      }}
+                    >
+                      Chỉnh sửa
+                    </Button>
+                  )}
+                  {!disabled && (myPermission?.[tentrang]?.sua || myPermission?.is_admin) && (
+                    <Button
+                      icon={<CloseOutlined />}
+                      type="ghost"
+                      onClick={cancelEdit}
+                      style={{
+                        color: "#FF811E",
+                        backgroundColor: "#FFE9D8",
+                        border: 0,
+                      }}
+                    >
+                      Huỷ chỉnh sửa
+                    </Button>
+                  )}
+                  {(myPermission?.[tentrang]?.xoa || myPermission?.is_admin) && (
                     <Button
                       className="btn_delete"
-                      icon={<DeleteIcon/>}
+                      icon={<DeleteIcon />}
                       type="ghost"
                       onClick={onCancelRemove}
                       style={{
-                        color: 'red',
-                        backgroundColor: '#FFEFEF',
+                        color: "red",
+                        backgroundColor: "#FFEFEF",
                         border: 0,
                       }}
                     >
                       Xoá
                     </Button>
                   )}
-                  <DialogDeleteConfim
-                    visible={removeVisible}
-                    onCancel={onCancelRemove}
-                    onOK={handleRemove}
-                  />
+                  <DialogDeleteConfim visible={removeVisible} onCancel={onCancelRemove} onOK={handleRemove} />
                 </div>
               )}
             </div>
             <div className="div-hr"></div>
             <div className="add-product-infoProduct">
-              <Form
-                layout="vertical"
-                disabled={disabled}
-                form={form}
-                onFinish={onFinish}
-                ref={formRef}
-              >
+              <Form layout="vertical" disabled={disabled} form={form} onFinish={onFinish} ref={formRef}>
                 <Row gutter={18}>
                   <Col className="gutter-row" xs={24} sm={24} md={12} lg={6}>
                     <Form.Item
@@ -228,12 +216,12 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
                       rules={[
                         {
                           required: true,
-                          message: 'Tên sản phẩm không thể để trống',
+                          message: "Tên sản phẩm không thể để trống",
                         },
                         { validator: validateSpaceNull },
                       ]}
                     >
-                      <Input placeholder="Nhập tên sản phẩm"/>
+                      <Input placeholder="Nhập tên sản phẩm" />
                     </Form.Item>
                   </Col>
                   <Col className="gutter-row" xs={24} sm={24} md={12} lg={6}>
@@ -243,11 +231,11 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
                       rules={[
                         {
                           pattern: URLPattern,
-                          message: 'Vui lòng nhập một Website hợp lệ!',
+                          message: "Vui lòng nhập một Website hợp lệ!",
                         },
                       ]}
                     >
-                      <Input placeholder="Nhập địa chỉ url"/>
+                      <Input placeholder="Nhập địa chỉ url" />
                     </Form.Item>
                   </Col>
                   {/* <Col className="gutter-row" xs={24} sm={24} md={12} lg={6}>
@@ -269,30 +257,18 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
                         placeholder="Chọn quy trình sản xuất"
                         onChange={selectChange}
                         filterOption={(inputValue, option) =>
-                          option.label
-                            .toLowerCase()
-                            .indexOf(inputValue.toLowerCase()) !== -1
+                          option.label.toLowerCase().indexOf(inputValue.toLowerCase()) !== -1
                         }
                       >
                         {procedure &&
                           procedure.docs.map((option) => (
-                            <Select.Option
-                              key={option._id}
-                              value={option._id}
-                              label={option.name}
-                            >
+                            <Select.Option key={option._id} value={option._id} label={option.name}>
                               {option.name}
                             </Select.Option>
                           ))}
-                        <Select.Option
-                          key="createnew_procedure"
-                          value="createnew"
-                          label="Tạo mới quy trình"
-                        >
+                        <Select.Option key="createnew_procedure" value="createnew" label="Tạo mới quy trình">
                           <Link to={URL.THEM_MOI_QUY_TRINH}>
-                            <span style={{ fontFamily: 'NotoSans-Bold' }}>
-                              Tạo mới quy trình
-                            </span>
+                            <span style={{ fontFamily: "NotoSans-Bold" }}>Tạo mới quy trình</span>
                           </Link>
                         </Select.Option>
                       </Select>
@@ -305,7 +281,7 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
                       rules={[
                         {
                           required: true,
-                          message: 'Cơ sở sản xuất không thể để trống',
+                          message: "Cơ sở sản xuất không thể để trống",
                         },
                       ]}
                     >
@@ -314,22 +290,48 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
                         notFoundContent="Chưa có cơ sở sản xuất"
                         placeholder="Chọn cơ sở sản xuất"
                         filterOption={(inputValue, option) =>
-                          option.label
-                            .toLowerCase()
-                            .indexOf(inputValue.toLowerCase()) !== -1
+                          option.label.toLowerCase().indexOf(inputValue.toLowerCase()) !== -1
                         }
                       >
                         {listOrg &&
                           listOrg?.map((option) => (
-                            <Select.Option
-                              key={option._id}
-                              value={option._id}
-                              label={option.name}
-                            >
+                            <Select.Option key={option._id} value={option._id} label={option.name}>
                               {option.name}
                             </Select.Option>
                           ))}
                       </Select>
+                    </Form.Item>
+                  </Col>
+                </Row>
+                <Row gutter={18}>
+                  <Col className="gutter-row" xs={24} sm={24} md={6} lg={6}>
+                    <Form.Item
+                      label="Ngày sản xuất"
+                      name="manufacture_date"
+                      rules={[
+                        {
+                          validator: (_, value) => {
+                            if (!value) {
+                              return Promise.resolve();
+                            }
+                            const isValidDate = moment(value).isValid();
+                            if (!isValidDate) {
+                              return Promise.reject(new Error("Ngày sản xuất không hợp lệ"));
+                            }
+                            if (moment(value).isAfter(moment())) {
+                              return Promise.reject(new Error("Ngày sản xuất không được lớn hơn ngày hiện tại"));
+                            }
+                            return Promise.resolve();
+                          },
+                        },
+                      ]}
+                    >
+                      <DatePicker placeholder="Nhập ngày sản xuất" format={"DD/MM/YYYY"} style={{ width: "100%" }} />
+                    </Form.Item>
+                  </Col>
+                  <Col className="gutter-row" xs={24} sm={24} md={18} lg={18}>
+                    <Form.Item label="Các tiêu chuẩn quốc gia, quốc tế" name="national_standard">
+                      <Input placeholder="Nhập các tiêu chuẩn quốc gia của sản phẩm nếu có" />
                     </Form.Item>
                   </Col>
                 </Row>
@@ -355,12 +357,12 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
                       rules={[
                         {
                           required: true,
-                          message: 'Địa chỉ không thể bỏ trống',
+                          message: "Địa chỉ không thể bỏ trống",
                         },
                         { validator: validateSpaceNull },
                       ]}
                     >
-                      <Input placeholder="Nhập địa chỉ"/>
+                      <Input placeholder="Nhập địa chỉ" />
                     </Form.Item>
                   </Col>
                 </Row>
@@ -372,12 +374,12 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
                       rules={[
                         {
                           required: true,
-                          message: 'Mô tả sản phẩm không thể bỏ trống',
+                          message: "Mô tả sản phẩm không thể bỏ trống",
                         },
                         { validator: validateSpaceNull },
                       ]}
                     >
-                      <TextArea rows={3} placeholder="Mô tả sản phẩm"/>
+                      <TextArea rows={3} placeholder="Mô tả sản phẩm" />
                     </Form.Item>
                   </Col>
                 </Row>
@@ -385,31 +387,20 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
                   <Col className="gutter-row" span={24}>
                     <Form.Item label="Hình ảnh, video sản phẩm" name="image">
                       <div className="imageProduct">
-                        <UploadImage
-                          onChange={pushNewData}
-                          data={image}
-                          disabled={disabled}
-                          onRemove={removeData}
-                        />
+                        <UploadImage onChange={pushNewData} data={image} disabled={disabled} onRemove={removeData} />
                       </div>
                     </Form.Item>
                   </Col>
                 </Row>
 
-                <Col
-                  className="gutter-row nguoipt"
-                  xs={24}
-                  sm={24}
-                  md={12}
-                  lg={6}
-                >
+                <Col className="gutter-row nguoipt" xs={24} sm={24} md={12} lg={6}>
                   <Form.Item
                     label="Người phụ trách"
                     name="user_id"
                     rules={[
                       {
                         required: true,
-                        message: 'Người phụ trách không thể để trống',
+                        message: "Người phụ trách không thể để trống",
                       },
                     ]}
                   >
@@ -418,9 +409,7 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
                       placeholder="Chọn người phụ trách"
                       className="nguoipt_content"
                       filterOption={(inputValue, option) =>
-                        option.value
-                          .toLowerCase()
-                          .indexOf(inputValue.toLowerCase()) !== -1
+                        option.value.toLowerCase().indexOf(inputValue.toLowerCase()) !== -1
                       }
                     >
                       {phutrach &&
@@ -432,18 +421,8 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
                     </Select>
                   </Form.Item>
                 </Col>
-                <Col
-                  className="gutter-row nguoipt"
-                  xs={24}
-                  sm={24}
-                  md={12}
-                  lg={6}
-                >
-                  <Form.Item
-                    label="Yêu cầu kiểm định"
-                    name="require_inspect"
-                    initialValue={true}
-                  >
+                <Col className="gutter-row nguoipt" xs={24} sm={24} md={12} lg={6}>
+                  <Form.Item label="Yêu cầu kiểm định" name="require_inspect" initialValue={true}>
                     <Select className="nguoipt_content">
                       <Select.Option value={true}>Yêu cầu</Select.Option>
                       <Select.Option value={false}>Không yêu cầu</Select.Option>
@@ -464,13 +443,11 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
               disabled={isLoading}
               loading={isLoading}
             >
-              {id ? 'Cập nhật sản phẩm' : 'Tạo mới sản phẩm'}
+              {id ? "Cập nhật sản phẩm" : "Tạo mới sản phẩm"}
             </Button>
           </div>
         )}
-        <div className="them-moi-lo-hang">
-          {id && <DanhSachLoHang id={id}/>}
-        </div>
+        <div className="them-moi-lo-hang">{id && <DanhSachLoHang id={id} />}</div>
       </Loading>
     </>
   );
