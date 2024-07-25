@@ -9,10 +9,6 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1600px,
 );
-html{
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
 
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities/spacing";
