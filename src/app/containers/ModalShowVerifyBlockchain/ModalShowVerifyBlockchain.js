@@ -44,7 +44,7 @@ function ModalShowVerifyBlockchain({ isVisible, handleCancel, linkToUrl }) {
           ...textContent,
           {
             title: 'Xác thực thành công',
-            description: 'Đây là thông tin hợp lệ và được xác thực trên nền tảng Blockchain của HDU',
+            description: 'Đây là thông tin hợp lệ và được xác thực trên nền tảng Blockchain của Đại học Hồng Đức',
             link: linkToUrl,
           },
         ];
