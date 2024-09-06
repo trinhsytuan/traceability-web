@@ -261,7 +261,7 @@ function ThongTinSanPham({ data, isPublic }) {
               {data?.product?.url && (
                 <div className="info-product">
                   <span className="title">URL:</span>
-                  <span className="describe">{data?.product?.url}</span>
+                  <a href={data?.product?.url} className="describe">{data?.product?.url}</a>
                 </div>
               )}
             </div>

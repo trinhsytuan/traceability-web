@@ -333,13 +333,13 @@ function PreviewPublic({ isOpen, handleOpen, idParcel, infoParcel, infoStep, inf
                                 </span>
                               </div>
                             )}
-                            {res.image.length > 0 && (
+                            {res?.image?.length > 0 && (
                               <div className="show_step_product__info__content">
                                 <span className="title">Hình ảnh, video lô hàng:</span>
                               </div>
                             )}
                             <div className="show_step_product__img">
-                              {res.image && <UploadImage data={res.image} disabled={true} />}
+                              {res?.image && <UploadImage data={res?.image} disabled={true} />}
                             </div>
                           </div>
                           {index != infoStep.length - 1 && <div className="show_hr" />}
