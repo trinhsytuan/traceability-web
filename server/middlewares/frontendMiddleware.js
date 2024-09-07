@@ -32,7 +32,7 @@ module.exports = (app, options) => {
 function corsMiddlewares(req, res, next) {
 
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', 'https://truysuat.thinklabs.com.vn/');
+  res.setHeader('Access-Control-Allow-Origin', 'https://truyxuat.hdu.edu.vn/');
 
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');

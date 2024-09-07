@@ -826,7 +826,7 @@ export const parcel_public_items = [
 ];
 
 export const SITE_URL = {
-  URL: "https://truysuat.thinklabs.com.vn",
+  URL: "https://truyxuat.hdu.edu.vn",
 };
 export const BROWSING_COLOR = {
   creating: {
