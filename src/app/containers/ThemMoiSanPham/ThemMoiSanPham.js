@@ -91,7 +91,7 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
           describe: res?.describe,
           user_id: res?.userId,
           require_inspect: res?.requireInspect,
-          national_standard: res?.nationalStandard,
+          nationalstandard: res?.nationalstandard,
           manufacture_date: res?.manufactureDate ? moment(res?.manufactureDate, "YYYY-MM-DD") : null,
         });
       });
@@ -305,7 +305,7 @@ function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
                 </Row>
                 <Row gutter={18}>
                   <Col className="gutter-row" xs={24} sm={24} md={24} lg={24}>
-                    <Form.Item label="Các tiêu chuẩn quốc gia, quốc tế" name="national_standard">
+                    <Form.Item label="Các tiêu chuẩn quốc gia, quốc tế" name="nationalstandard">
                       <Input placeholder="Nhập các tiêu chuẩn quốc gia của sản phẩm nếu có" />
                     </Form.Item>
                   </Col>
