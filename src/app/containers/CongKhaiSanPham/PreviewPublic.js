@@ -241,10 +241,10 @@ function PreviewPublic({ isOpen, handleOpen, idParcel, infoParcel, infoStep, inf
                       <span>{infoParcel?.product?.address}</span>
                     </div>
                   )}
-                  {infoPublic?.product_public_items?.nationalStandard && infoParcel?.product?.nationalStandard && (
+                  {infoPublic?.product_public_items?.nationalstandard && infoParcel?.product?.nationalstandard && (
                     <div className="info-product">
                       <span className="title">Các tiêu chuẩn quốc gia, quốc tế:</span>
-                      <span>{infoParcel?.product?.nationalStandard}</span>
+                      <span>{infoParcel?.product?.nationalstandard}</span>
                     </div>
                   )}
                   {infoPublic?.product_public_items?.describe && infoParcel?.product?.describe && (
