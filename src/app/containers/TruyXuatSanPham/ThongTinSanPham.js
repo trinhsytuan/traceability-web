@@ -252,10 +252,10 @@ function ThongTinSanPham({ data, isPublic }) {
                   <span className="describe">{data?.product?.describe}</span>
                 </div>
               )}
-              {data?.product?.nationalStandard && (
+              {data?.product?.nationalstandard && (
                 <div className="info-product">
                   <span className="title">Các tiêu chuẩn quốc gia, quốc tế:</span>
-                  <span className="describe">{data?.product?.nationalStandard}</span>
+                  <span className="describe">{data?.product?.nationalstandard}</span>
                 </div>
               )}
               {data?.product?.url && (
