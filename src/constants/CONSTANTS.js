@@ -774,7 +774,7 @@ export const product_public_items = [
     isEdit: false,
   },
   {
-    name: "Các tiêu chuẩn quóc gia, quốc tế",
+    name: "Các tiêu chuẩn quốc gia, quốc tế",
     key: "nationalstandard",
     checked: false,
     isEdit: true,
