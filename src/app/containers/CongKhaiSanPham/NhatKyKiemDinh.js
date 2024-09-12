@@ -9,12 +9,10 @@ NhatKyKiemDinhTruyXuat.propTypes = {};
 
 function NhatKyKiemDinhTruyXuat({ idParcel, onVisible, handleVisible }) {
   const [dataStep, setDataStep] = useState([]);
-  const [isOK, setIsOK] = useState(false);
   const callAPI = async () => {
     if (idParcel) {
-      const response = await getStepAudit(idParcel?._id);
-      setDataStep(response);
-      setIsOK(true);
+      
+      setDataStep(idParcel);
     }
   };
   useEffect(() => {
@@ -32,12 +30,12 @@ function NhatKyKiemDinhTruyXuat({ idParcel, onVisible, handleVisible }) {
         <span className="title-nkkd-preview">
           Thông tin nhật ký kiểm định của bước {idParcel?.name}
         </span>
-        {dataStep && isOK && dataStep.length == 0 && (
+        {dataStep && !dataStep?.auditHistory && (
           <div className="NKKD-Preview-Map">
-            <span>Chưa có nhật ký kiểm định cho bước</span>
+            <span>Chưa có nhật ký kiểm định cho bước {idParcel?.name}</span>
           </div>
         )}
-        {dataStep.map((res, index) => {
+        {dataStep?.auditHistory?.map((res, index) => {
           return (
             <div className="NKKD-Preview-Map" key={index}>
               <div className="title-nkkd">

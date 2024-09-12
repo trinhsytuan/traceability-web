@@ -9,17 +9,15 @@ NhatKySanXuatTruyXuat.propTypes = {};
 
 function NhatKySanXuatTruyXuat({ idParcel, onVisible, handleVisible }) {
   const [dataStep, setDataStep] = useState([]);
-  const [isOK, setIsOK] = useState(false);
-  const callAPI = async () => {
-    if (idParcel) {
-      const response = await getAllHistoryByStep(idParcel?._id);
-      setDataStep(response);
-      setIsOK(true);
-    }
-  };
   useEffect(() => {
     callAPI();
+    
   }, [idParcel]);
+  const callAPI = () => {
+    if(idParcel) {
+      setDataStep(idParcel);
+    }
+  }
   return (
     <div>
       <Modal
@@ -32,12 +30,12 @@ function NhatKySanXuatTruyXuat({ idParcel, onVisible, handleVisible }) {
         <span className="title-nkkd-preview">
           Thông tin nhật ký sản xuất của bước {idParcel?.name}
         </span>
-        {dataStep && isOK && dataStep.length == 0 && (
+        {dataStep && !dataStep?.productHistory && (
           <div className="NKKD-Preview-Map">
-            <span>Chưa có nhật ký sản xuất cho bước</span>
+            <span>Chưa có nhật ký sản xuất cho bước {idParcel?.name}</span>
           </div>
         )}
-        {dataStep.map((res, index) => {
+        {dataStep?.productHistory?.map((res, index) => {
           return (
             <div className="NKKD-Preview-Map" key={index}>
               <div className="title-nkkd">

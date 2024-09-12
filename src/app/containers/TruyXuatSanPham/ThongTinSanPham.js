@@ -330,7 +330,7 @@ function ThongTinSanPham({ data, isPublic }) {
                           <span>{formatDate(res.toDate)}</span>
                         </div>
                       )}
-                      {data?.procedure?.productHistory && (
+                      {data?.procedure?.productHistory && res?.productHistory && (
                         <div className="show_step_product__info__content">
                           <span
                             className="title title_clickaction nkkd_action"
@@ -340,7 +340,7 @@ function ThongTinSanPham({ data, isPublic }) {
                           </span>
                         </div>
                       )}
-                      {data?.procedure?.auditHistory && (
+                      {data?.procedure?.auditHistory && res?.auditHistory && (
                         <div className="show_step_product__info__content">
                           <span
                             className="title title_clickaction nkkd_action"
