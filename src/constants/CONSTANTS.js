@@ -900,3 +900,7 @@ export const DATA_SEARCH_PROCEDURE = [
     value: false,
   },
 ];
+export const LINK_DOWNLOAD_APP = {
+  CH_PLAY: "https://play.google.com/store/apps/details?id=vn.thinklabs.traceabilityapp",
+  APP_STORE: "https://apps.apple.com/vn/app/th-tracing/id6529534082?platform=iphone"
+}

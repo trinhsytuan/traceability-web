@@ -1,3 +1,20 @@
 .homepage {
+  font-family: "NotoSans-Bold";
   height: calc(100vh - 122px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+
+  .img_app {
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+  .row-linkdownloadapp{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: -30px;
+  }
 }
