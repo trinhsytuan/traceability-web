@@ -6,15 +6,26 @@
   justify-content: center;
   gap: 30px;
 
-  .img_app {
-    @media screen and (max-width: 800px) {
-      display: none;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+    height: auto;
+    .img_app{
+      margin-top: -30px;
     }
   }
-  .row-linkdownloadapp{
+
+  .row-linkdownloadapp {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    margin-top: -30px;
+    margin-top: -50px;
+
+    @media screen and (max-width: 800px) {
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
