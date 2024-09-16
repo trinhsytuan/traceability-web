@@ -11,7 +11,9 @@ function TrangChu({ isLoading, ...props }) {
     <>
       <BaseContent>
         <div className="homepage">
-          <img src={IMG_TRUY_XUAT_APP} className="img_app" />
+          <div className="img_app_div">
+            <img src={IMG_TRUY_XUAT_APP} className="img_app"  />
+          </div>
           <div className="homepage_right">
             <h2>TH Tracing nay đã có phiên bản Mobile:</h2>
             <h2>Tải ứng dụng TH Tracing tại địa chỉ:</h2>

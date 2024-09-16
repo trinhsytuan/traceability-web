@@ -12,9 +12,15 @@
     flex-direction: column-reverse;
     gap: 0;
     height: auto;
-    .img_app{
+
+    .img_app {
       margin-top: -30px;
     }
+
+  }
+  .img_app{
+    width: 100%;
+    height: 100%;
   }
 
   .row-linkdownloadapp {
