@@ -6,7 +6,7 @@ RUN yarn install
 COPY . .
 RUN yarn run build
 
-FROM nginx:1.18.0-alpine
+FROM nginx:1.26.2-alpine
 RUN apk update && apk add tzdata
 ENV TZ=Asia/Ho_Chi_Minh
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
