@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import "./IconVerifyAndLoading.scss";
+import React from 'react';
+import './IconVerifyAndLoading.scss';
+
 function IconVerifyAndLoading() {
   return (
     <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">

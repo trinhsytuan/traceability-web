@@ -1,6 +1,3 @@
-import { authorizePermission } from "@app/rbac/authorizationHelper";
-import { ADMIN_ROUTES } from "@app/router/ConstantsRoutes";
-
 export function checkPermission(permissionGranted, url = "", type, type_org) {
   if (permissionGranted) {
     if (

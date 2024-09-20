@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import { Modal } from "antd";
-import { getAllHistoryByStep } from "@app/services/GhiNhatKySX";
-import { formatDate } from "@app/common/functionCommons";
-import "./NhatKySanXuat.scss";
-import UploadImage from "@components/UploadImage/UploadImage";
+import React, { useEffect, useState } from 'react';
+import { Modal } from 'antd';
+import { formatDate } from '@app/common/functionCommons';
+import './NhatKySanXuat.scss';
+import UploadImage from '@components/UploadImage/UploadImage';
+
 NhatKySanXuatTruyXuat.propTypes = {};
 
 function NhatKySanXuatTruyXuat({ idParcel, onVisible, handleVisible }) {

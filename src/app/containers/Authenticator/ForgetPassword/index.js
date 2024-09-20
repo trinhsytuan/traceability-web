@@ -1,24 +1,24 @@
-import React, { useState } from "react";
-import { Link, useHistory, withRouter } from "react-router-dom";
-import { Button, Form, Input, Row, Col } from "antd";
+import React, { useState } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import { Button, Col, Form, Input, Row } from 'antd';
 
-import AuthBase from "@containers/Authenticator/AuthBase";
+import AuthBase from '@containers/Authenticator/AuthBase';
 
-import { requestForgetPassword } from "@app/services/User";
-import { URL } from "@url";
-import { CONSTANTS } from "@constants";
-import { toast } from "@app/common/functionCommons";
-import "./Forget.scss";
-import { CustomAlert } from "@components/CustomAlert";
-import MailIcon from "@components/Icons/MailIcon";
+import { requestForgetPassword } from '@app/services/User';
+import { URL } from '@url';
+import { CONSTANTS } from '@constants';
+import './Forget.scss';
+import { CustomAlert } from '@components/CustomAlert';
+import MailIcon from '@components/Icons/MailIcon';
 
 const FormItem = Form.Item;
 
 function ForgetPassword() {
-  let history = useHistory();
   const [resultLogin, setResultLogin] = useState(false);
   async function forgetPassword(values) {
-    const response = await requestForgetPassword(values);
+    let newValues = values;
+    newValues?.email = newValues?.email?.toLowerCase();
+    const response = await requestForgetPassword(newValues);
     if (response?.success) {
       setResultLogin(true);
     }

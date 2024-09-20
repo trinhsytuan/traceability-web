@@ -1,11 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
 
-import { API } from "@api";
-import { renderMessageError, toast } from "@app/common/functionCommons";
-import { deleteByIdBase, getAllPaginationBase } from "@app/services/Base";
-import { convertCamelCaseToSnakeCase, convertSnakeCaseToCamelCase } from "@app/common/dataConverter";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
-import { URL } from "@url";
+import { API } from '@api';
+import { renderMessageError, toast } from '@app/common/functionCommons';
+import { deleteByIdBase, getAllPaginationBase } from '@app/services/Base';
+import { convertCamelCaseToSnakeCase, convertSnakeCaseToCamelCase } from '@app/common/dataConverter';
+import { CONSTANTS, TOAST_MESSAGE } from '@constants';
 
 export function login(data) {
   return axios

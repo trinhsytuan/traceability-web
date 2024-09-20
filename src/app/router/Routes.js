@@ -1,16 +1,16 @@
-import React, { Suspense, useEffect } from "react";
-import { connect } from "react-redux";
-import { Redirect, Route, Switch, withRouter } from "react-router-dom";
+import React, { Suspense, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 
-import Loading from "@components/Loading";
-import LoginRoutes, { UrlLogin } from "@app/router/LoginRoutes";
-import NoMatch from "@containers/NoMatch";
+import Loading from '@components/Loading';
+import LoginRoutes, { UrlLogin } from '@app/router/LoginRoutes';
+import NoMatch from '@containers/NoMatch';
 
-import { URL } from "@url";
-import { ConstantsRoutes } from "@app/router/ConstantsRoutes";
-import { checkPermission } from "@app/rbac/checkPermission";
+import { URL } from '@url';
+import { ConstantsRoutes } from '@app/router/ConstantsRoutes';
+import { checkPermission } from '@app/rbac/checkPermission';
 
-import "@src/app/common/prototype";
+import '@src/app/common/prototype';
 
 function Routes({ token, myInfo, ...props }) {
   const { userPermissions, org } = myInfo;

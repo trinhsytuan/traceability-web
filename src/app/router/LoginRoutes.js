@@ -1,8 +1,9 @@
-import React, { Suspense, lazy } from "react";
-import { Redirect, Route, Switch, withRouter } from "react-router-dom";
+import React, { lazy } from 'react';
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 
-import { URL } from "@url";
-import "@src/app/common/prototype";
+import { URL } from '@url';
+import '@src/app/common/prototype';
+
 const Register = lazy(() => import("@containers/Authenticator/Register"));
 
 const ResetPassword = lazy(() => import("@containers/Authenticator/ResetPassword/index"));

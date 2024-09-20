@@ -1,9 +1,9 @@
-import React from "react";
-import { Button, Form, Input, Row, Col, Checkbox, Alert } from "antd";
-import { URL } from "@url";
-import { Link } from "react-router-dom";
-import { isUsernameValid } from "@app/common/functionCommons";
-import { RULES } from "@constants";
+import React from 'react';
+import { Button, Col, Form, Input, Row } from 'antd';
+import { URL } from '@url';
+import { Link } from 'react-router-dom';
+import { isUsernameValid } from '@app/common/functionCommons';
+import { RULES } from '@constants';
 
 const FormItem = Form.Item;
 

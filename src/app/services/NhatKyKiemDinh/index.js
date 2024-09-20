@@ -1,8 +1,14 @@
-import { API } from "@api";
-import { createBase, deleteByIdBase, getAllPaginationBase, getAllPaginationBaseByIDNotConvert, updateBaseFormatID } from "../Base";
-import axios from "axios";
-import { checkTypeStringOrFile } from "@app/common/functionCommons";
-import { deleteImage } from "../ThemMoiSanPham";
+import { API } from '@api';
+import {
+  createBase,
+  deleteByIdBase,
+  getAllPaginationBase,
+  getAllPaginationBaseByIDNotConvert,
+  updateBaseFormatID,
+} from '../Base';
+import axios from 'axios';
+import { checkTypeStringOrFile } from '@app/common/functionCommons';
+import { deleteImage } from '../ThemMoiSanPham';
 
 export function getStepAudit(id) {
   return getAllPaginationBase(API.GET_AUDIT_BY_STEP.format(id), 1, 0);

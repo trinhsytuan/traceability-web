@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { Dropdown, Image, Menu, Modal } from "antd";
-import { MoreOutlined } from "@ant-design/icons";
-import "./CustomImage.scss";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Dropdown, Image, Menu, Modal } from 'antd';
+import { MoreOutlined } from '@ant-design/icons';
+import './CustomImage.scss';
+
 CustomImage.propTypes = {
   name: PropTypes.string,
   src: PropTypes.string,

@@ -1,19 +1,20 @@
-import { EditOutlined } from "@ant-design/icons";
-import { deleteOrg, getListOrg } from "@app/services/QuanLyToChuc";
-import BaseContent from "@components/BaseContent";
-import DeleteIcon from "@components/Icons/DeleteIcon";
-import Loading from "@components/Loading";
-import SearchBar from "@components/SearchBar";
-import { CONSTANTS, PAGINATION_CONFIG, SELECT_ROLE, SELECT_ROLE_CREATE_ORG, TOAST_MESSAGE, TYPE_ORG } from "@constants";
-import { Button, Table, Tooltip } from "antd";
-import queryString, { stringify } from "query-string";
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import "./DanhSachToChuc.scss";
-import ModalAddToChuc from "./ModalAddToChuc";
-import DialogDeleteConfim from "@components/DialogDeleteConfim/DialogDeleteConfim";
-import { toast } from "@app/common/functionCommons";
+import { EditOutlined } from '@ant-design/icons';
+import { deleteOrg, getListOrg } from '@app/services/QuanLyToChuc';
+import BaseContent from '@components/BaseContent';
+import DeleteIcon from '@components/Icons/DeleteIcon';
+import Loading from '@components/Loading';
+import SearchBar from '@components/SearchBar';
+import { CONSTANTS, PAGINATION_CONFIG, SELECT_ROLE_CREATE_ORG, TOAST_MESSAGE, TYPE_ORG } from '@constants';
+import { Button, Table, Tooltip } from 'antd';
+import queryString, { stringify } from 'query-string';
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import './DanhSachToChuc.scss';
+import ModalAddToChuc from './ModalAddToChuc';
+import DialogDeleteConfim from '@components/DialogDeleteConfim/DialogDeleteConfim';
+import { toast } from '@app/common/functionCommons';
+
 DanhSachToChuc.propTypes = {};
 
 function DanhSachToChuc({ isLoading, myInfo, myPermission }) {

@@ -1,27 +1,16 @@
-import DangGuiDuyet from "@assets/icons/DangGuiDuyet-icon.svg";
-import DangGan from "@assets/icons/DangGan-icon.svg";
-import TuChoiKiemDinh from "@assets/icons/tuchoikiemdinh-icon.svg";
-import {
-  BROWSING_COLOR,
-  CONSTANTS,
-  RESULT_SENDING,
-  STATUS_ENDORSER,
-  STATUS_PARCEL_ENDORSER,
-  STATUS_PRODUCER_KD,
-  TOAST_MESSAGE,
-} from "@constants";
-import { Button, Checkbox, Col, Form, Input, Row, Select, Tooltip } from "antd";
-import Modal from "antd/lib/modal/Modal";
-import React, { useEffect, useState } from "react";
-import "./GuiDuyetKiemDinh.scss";
-import {
-  GetListUser,
-  sendToBrowserInEndorser,
-  sendtoBrowser,
-} from "@app/services/GuiDuyet";
-import { toast } from "@app/common/functionCommons";
-import Loading from "@components/Loading";
-import { connect } from "react-redux";
+import DangGuiDuyet from '@assets/icons/DangGuiDuyet-icon.svg';
+import DangGan from '@assets/icons/DangGan-icon.svg';
+import TuChoiKiemDinh from '@assets/icons/tuchoikiemdinh-icon.svg';
+import { BROWSING_COLOR, CONSTANTS, STATUS_PARCEL_ENDORSER, TOAST_MESSAGE } from '@constants';
+import { Button, Checkbox, Col, Form, Input, Row, Select, Tooltip } from 'antd';
+import Modal from 'antd/lib/modal/Modal';
+import React, { useEffect, useState } from 'react';
+import './GuiDuyetKiemDinh.scss';
+import { GetListUser, sendToBrowserInEndorser } from '@app/services/GuiDuyet';
+import { toast } from '@app/common/functionCommons';
+import Loading from '@components/Loading';
+import { connect } from 'react-redux';
+
 GuiDuyetKiemDinh.propTypes = {};
 
 function GuiDuyetKiemDinh({

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { Dropdown, Image, Menu, Modal } from "antd";
-import { MoreOutlined } from "@ant-design/icons";
-import "./CustomVideo.scss";
-import { convertWatchYoutubetoEmbebed } from "@app/common/dataConverter";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Dropdown, Menu, Modal } from 'antd';
+import { MoreOutlined } from '@ant-design/icons';
+import './CustomVideo.scss';
+import { convertWatchYoutubetoEmbebed } from '@app/common/dataConverter';
+
 CustomVideo.propTypes = {
   name: PropTypes.string,
   src: PropTypes.string,

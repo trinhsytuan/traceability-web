@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { Table } from "antd";
-import { connect } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import { Table } from 'antd';
+import { connect } from 'react-redux';
 
-import Loading from "@components/Loading";
-import Filter from "@components/Filter";
-import AddNewButton from "@AddNewButton";
-import CreateOrModifyUnit from "./DonViDetail";
-import ActionCell from "@components/ActionCell";
+import Loading from '@components/Loading';
+import Filter from '@components/Filter';
+import AddNewButton from '@AddNewButton';
+import CreateOrModifyUnit from './DonViDetail';
+import ActionCell from '@components/ActionCell';
 
-import { createUnit, deleteUnit, getAllUnit, updateUnit } from "@app/services/OrgUnit";
-import { CONSTANTS, ORG_UNIT_TYPE } from "@constants";
-import { calPageNumberAfterDelete, columnIndex, paginationConfig, toast } from "@app/common/functionCommons";
-import updateDataStore from "@app/common/updateDataStore";
+import { createUnit, deleteUnit, getAllUnit, updateUnit } from '@app/services/OrgUnit';
+import { CONSTANTS, ORG_UNIT_TYPE } from '@constants';
+import { calPageNumberAfterDelete, columnIndex, paginationConfig, toast } from '@app/common/functionCommons';
+import updateDataStore from '@app/common/updateDataStore';
 
-import * as orgUnit from "@app/store/ducks/orgUnit.duck";
+import * as orgUnit from '@app/store/ducks/orgUnit.duck';
 
 function DonVi({ permission, isLoading, orgUnitList, orgUnitTree, ...props }) {
   const [orgUnitData, setOrgUnitData] = useState({

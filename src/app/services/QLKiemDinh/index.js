@@ -1,10 +1,8 @@
-import axios from "axios";
+import axios from 'axios';
 
-import { API } from "@api";
-import { renderMessageError, toast } from "@app/common/functionCommons";
-import { deleteByIdBase, getAllPaginationBase } from "@app/services/Base";
-import { convertCamelCaseToSnakeCase, convertSnakeCaseToCamelCase } from "@app/common/dataConverter";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
+import { API } from '@api';
+import { renderMessageError, toast } from '@app/common/functionCommons';
+import { CONSTANTS } from '@constants';
 
 export function getMyOrgInspectByParcel(page, limit, query) {
   query = query ? query : "";

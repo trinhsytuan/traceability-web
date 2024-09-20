@@ -1,13 +1,12 @@
-import React, { useRef, useState } from "react";
-import PropTypes from "prop-types";
-import Modal from "antd/lib/modal/Modal";
-import { Button, Form, Input } from "antd";
-import "./VerifyDigitalSignature.scss";
-import { UploadOutlined } from "@ant-design/icons";
-import UploadIcon from "@components/Icons/UploadIcon";
-import { toast } from "@app/common/functionCommons";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
-import Loading from "@components/Loading";
+import React, { useRef, useState } from 'react';
+import Modal from 'antd/lib/modal/Modal';
+import { Button, Form, Input } from 'antd';
+import './VerifyDigitalSignature.scss';
+import UploadIcon from '@components/Icons/UploadIcon';
+import { toast } from '@app/common/functionCommons';
+import { CONSTANTS, TOAST_MESSAGE } from '@constants';
+import Loading from '@components/Loading';
+
 VerifyDigitalSignature.propTypes = {};
 
 function VerifyDigitalSignature({ visible, handleVisible, onSubmit }) {

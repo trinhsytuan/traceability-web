@@ -1,5 +1,5 @@
-import { API } from "@api";
-import { getAllPaginationBaseByIDParamsString } from "../Base";
+import { API } from '@api';
+import { getAllPaginationBaseByIDParamsString } from '../Base';
 
 export function getLifeCycleParcelProducer(id) {
   return getAllPaginationBaseByIDParamsString(API.GET_LIFECYCLE_BY_PARCEL_ID, id, 1, 0, "&scope=producer");

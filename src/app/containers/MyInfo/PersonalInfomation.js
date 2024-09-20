@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { cloneObj } from "@app/common/dataConverter";
-import "./PersonalInfomation.scss";
-import { Button, Col, Form, Row, Upload } from "antd";
-import CustomSkeleton from "@components/CustomSkeleton";
-import { CONSTANTS, GENDER_OPTIONS, RULES, TYPE_ORG } from "@constants";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { cloneObj } from '@app/common/dataConverter';
+import './PersonalInfomation.scss';
+import { Button, Col, Form, Row } from 'antd';
+import CustomSkeleton from '@components/CustomSkeleton';
+import { CONSTANTS, GENDER_OPTIONS, RULES } from '@constants';
 
-import DropZoneCustomImage from "./DropZoneCustomImage";
-import * as user from "@app/store/ducks/user.duck";
-import Loading from "@app/components/Loading";
+import DropZoneCustomImage from './DropZoneCustomImage';
+import * as user from '@app/store/ducks/user.duck';
+import Loading from '@app/components/Loading';
+
 PersonalInfomation.propTypes = {
   myInfo: PropTypes.object,
 };

@@ -1,11 +1,10 @@
-import { put, takeLatest } from "redux-saga/effects";
-import Cookies from "js-cookie";
+import { put, takeLatest } from 'redux-saga/effects';
+import Cookies from 'js-cookie';
 
-import { CONSTANTS } from "@constants";
-import { URL } from "@url";
-import { login } from "@app/services/User";
-import { setCookieToken } from "@app/common/functionCommons";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { CONSTANTS } from '@constants';
+import { URL } from '@url';
+import { login } from '@app/services/User';
+import { setCookieToken } from '@app/common/functionCommons';
 
 export const actionTypes = {
   ToggleLoading: "App/ToggleLoading",

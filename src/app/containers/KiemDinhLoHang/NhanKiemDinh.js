@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import Modal from "antd/lib/modal/Modal";
-import { Button, Form, Input } from "antd";
-import "./NhanKiemDinh.scss";
-import TextArea from "antd/lib/input/TextArea";
-import { changeStatusReception } from "@app/services/NhatKyKiemDinh";
-import { CONSTANTS, RESULT_SENDING, TOAST_MESSAGE } from "@constants";
-import { toast, validateSpaceNull } from "@app/common/functionCommons";
+import React, { useEffect } from 'react';
+import Modal from 'antd/lib/modal/Modal';
+import { Button, Form, Input } from 'antd';
+import './NhanKiemDinh.scss';
+import TextArea from 'antd/lib/input/TextArea';
+import { changeStatusReception } from '@app/services/NhatKyKiemDinh';
+import { CONSTANTS, RESULT_SENDING, TOAST_MESSAGE } from '@constants';
+import { toast, validateSpaceNull } from '@app/common/functionCommons';
+
 NhanKiemDinh.propTypes = {};
 
 function NhanKiemDinh({ dataStep, dataParcel, visible, onChange, status, reload }) {

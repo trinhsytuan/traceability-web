@@ -1,10 +1,9 @@
-import { API } from "@api";
-import { createBase, deleteByIdBase, postBaseNotNotifcation, postRawData, updateBase, updateBaseFormatID } from "../Base";
-import axios from "axios";
-import { checkTypeStringOrFile, renderMessageError, toast } from "@app/common/functionCommons";
-import { deleteImage } from "../ThemMoiSanPham";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
-import { convertCamelCaseToSnakeCase, convertSnakeCaseToCamelCase } from "@app/common/dataConverter";
+import { API } from '@api';
+import { createBase, deleteByIdBase, postRawData, updateBase } from '../Base';
+import axios from 'axios';
+import { checkTypeStringOrFile, renderMessageError } from '@app/common/functionCommons';
+import { deleteImage } from '../ThemMoiSanPham';
+import { convertCamelCaseToSnakeCase, convertSnakeCaseToCamelCase } from '@app/common/dataConverter';
 
 export function addProduct(values) {
   return createBase(API.PARCEL_BY_ID.format(""), values);

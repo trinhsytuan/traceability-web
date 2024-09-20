@@ -1,14 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
-import BaseContent from "@components/BaseContent";
-import { CloseOutlined, EditOutlined, LeftOutlined } from "@ant-design/icons";
-import "./ThemMoiSanPham.scss";
-import { useHistory, useParams } from "react-router-dom";
-import { URL } from "@url";
-import { Button, Col, DatePicker, Form, Input, Row, Select } from "antd";
-import { getAllUserByOrg, getListOrgUnitByOrgID, getListProcedure } from "@app/services/Manager";
-import TextArea from "antd/lib/input/TextArea";
-import UploadImage from "@components/UploadImage/UploadImage";
+import React, { useEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
+import BaseContent from '@components/BaseContent';
+import { CloseOutlined, EditOutlined, LeftOutlined } from '@ant-design/icons';
+import './ThemMoiSanPham.scss';
+import { useHistory, useParams } from 'react-router-dom';
+import { URL } from '@url';
+import { Button, Col, Form, Input, Row, Select } from 'antd';
+import { getAllUserByOrg, getListOrgUnitByOrgID, getListProcedure } from '@app/services/Manager';
+import TextArea from 'antd/lib/input/TextArea';
+import UploadImage from '@components/UploadImage/UploadImage';
 
 import {
   createProduct,
@@ -16,17 +16,17 @@ import {
   getInfoProduct,
   getMediaBase,
   updateProduct,
-} from "@app/services/ThemMoiSanPham";
-import { formatFormDataExtra, toast, validateSpaceNull } from "@app/common/functionCommons";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
-import { connect } from "react-redux";
-import { API } from "@api";
-import DialogDeleteConfim from "@components/DialogDeleteConfim/DialogDeleteConfim";
-import DanhSachLoHang from "@containers/LoHang/DanhSachLoHang";
-import DeleteIcon from "@components/Icons/DeleteIcon";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import Loading from "@components/Loading";
-import moment from "moment";
+} from '@app/services/ThemMoiSanPham';
+import { toast, validateSpaceNull } from '@app/common/functionCommons';
+import { CONSTANTS, TOAST_MESSAGE } from '@constants';
+import { connect } from 'react-redux';
+import { API } from '@api';
+import DialogDeleteConfim from '@components/DialogDeleteConfim/DialogDeleteConfim';
+import DanhSachLoHang from '@containers/LoHang/DanhSachLoHang';
+import DeleteIcon from '@components/Icons/DeleteIcon';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import Loading from '@components/Loading';
+import moment from 'moment';
 
 function ThemMoiSanPham({ isLoading, myInfo, myPermission }) {
   const { id } = useParams();

@@ -1,7 +1,8 @@
-import React from "react";
-import { CONSTANTS } from "@constants";
-import "./CustomAlert.scss";
-import InUserIcon from "../Icons/InUserIcon";
+import React from 'react';
+import { CONSTANTS } from '@constants';
+import './CustomAlert.scss';
+import InUserIcon from '../Icons/InUserIcon';
+
 export const CustomAlert = (props) => {
   const renderAlert = () => {
     let classString = "custom-alert";

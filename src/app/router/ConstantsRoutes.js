@@ -1,20 +1,20 @@
-import React, { lazy } from "react";
-import { HomeIcon, UserIcon } from "@app/components/Icons";
+import React, { lazy } from 'react';
+import { HomeIcon } from '@app/components/Icons';
 
-import { URL } from "@url";
-import TruyXuatSanPham from "@containers/TruyXuatSanPham/TruyXuatSanPham";
-import SearchIcon from "@components/Icons/SearchIcon";
-import ProcedureIcon from "@components/Icons/ProcedureIcon";
-import ThemMoiQuyTrinh from "@containers/QuyTrinh/ThemMoiQuyTrinh";
-import PhanQuyenVaiTro from "@containers/PhanQuyenVaiTro";
-import RolesIcon from "@components/Icons/RolesIcon";
-import { TYPE_ORG } from "@constants";
-import DanhSachKiemDinh from "@containers/QuanLy/DanhSachKiemDinh/DanhSachKiemDinh";
-import KiemDinhSanPham from "@containers/KiemDinhSanPham/KiemDinhSanPham";
-import QuanLyTaiKhoan from "@containers/QuanLy/TaiKhoan/QuanLyTaiKhoan";
-import QuanLyTaiKhoanToChuc from "@containers/QuanLy/TaiKhoanToChuc/QuanLyTaiKhoanToChuc";
-import MenuKDIcon from "@components/Icons/MenuKDIcon";
-import CommentIcon from "@components/Icons/CommentIcon";
+import { URL } from '@url';
+import TruyXuatSanPham from '@containers/TruyXuatSanPham/TruyXuatSanPham';
+import SearchIcon from '@components/Icons/SearchIcon';
+import ProcedureIcon from '@components/Icons/ProcedureIcon';
+import ThemMoiQuyTrinh from '@containers/QuyTrinh/ThemMoiQuyTrinh';
+import PhanQuyenVaiTro from '@containers/PhanQuyenVaiTro';
+import RolesIcon from '@components/Icons/RolesIcon';
+import { TYPE_ORG } from '@constants';
+import DanhSachKiemDinh from '@containers/QuanLy/DanhSachKiemDinh/DanhSachKiemDinh';
+import KiemDinhSanPham from '@containers/KiemDinhSanPham/KiemDinhSanPham';
+import QuanLyTaiKhoan from '@containers/QuanLy/TaiKhoan/QuanLyTaiKhoan';
+import QuanLyTaiKhoanToChuc from '@containers/QuanLy/TaiKhoanToChuc/QuanLyTaiKhoanToChuc';
+import MenuKDIcon from '@components/Icons/MenuKDIcon';
+import CommentIcon from '@components/Icons/CommentIcon';
 
 const ChinhSuaLoHang = lazy(() => import("@containers/ThemMoiLoHang/ChinhSuaLoHang"));
 const MyInfo = lazy(() => import("@containers/MyInfo/MyInfo"));

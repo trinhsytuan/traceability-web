@@ -1,14 +1,15 @@
-import { formatTimeDate, toast } from "@app/common/functionCommons";
-import { deleteAudit, getStepAudit } from "@app/services/NhatKyKiemDinh";
-import ClockIcon from "@components/Icons/ClockIcon";
-import { Button, Steps } from "antd";
-import React, { useEffect, useState } from "react";
-import FormNhatKy from "./FormNhatKy";
-import "./NhatKyKiemDinh.scss";
-import DialogDeleteConfim from "@components/DialogDeleteConfim/DialogDeleteConfim";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
-import DialogConfim from "@components/DialogConfim/DialogConfim";
-import { sendFeedbackAudit } from "@app/services/QLKiemDinh";
+import { formatTimeDate, toast } from '@app/common/functionCommons';
+import { deleteAudit, getStepAudit } from '@app/services/NhatKyKiemDinh';
+import ClockIcon from '@components/Icons/ClockIcon';
+import { Button, Steps } from 'antd';
+import React, { useEffect, useState } from 'react';
+import FormNhatKy from './FormNhatKy';
+import './NhatKyKiemDinh.scss';
+import DialogDeleteConfim from '@components/DialogDeleteConfim/DialogDeleteConfim';
+import { CONSTANTS, TOAST_MESSAGE } from '@constants';
+import DialogConfim from '@components/DialogConfim/DialogConfim';
+import { sendFeedbackAudit } from '@app/services/QLKiemDinh';
+
 NhatKyKiemDinh.propTypes = {};
 
 function NhatKyKiemDinh({ id, refs, showForm, edit, removeShowForm }) {

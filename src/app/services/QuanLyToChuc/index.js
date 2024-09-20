@@ -1,5 +1,5 @@
-import { API } from "@api";
-import { createBase, deleteByIdBase, getAllPaginationBaseParamsString, updateBaseFormatID } from "../Base";
+import { API } from '@api';
+import { createBase, deleteByIdBase, getAllPaginationBaseParamsString, updateBaseFormatID } from '../Base';
 
 export function getListOrg(page, limit, query) {
   return getAllPaginationBaseParamsString(API.GET_LIST_ORG, page, limit, query);

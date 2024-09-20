@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Button, Form, Input, Modal } from "antd";
-import "./EditTitleKey.scss";
-import { updateTitle } from "@app/services/TaoKhoa";
-import Loading from "@components/Loading";
-import { connect } from "react-redux";
-import { toast, validateSpaceNull } from "@app/common/functionCommons";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
+import React from 'react';
+import { Button, Form, Input, Modal } from 'antd';
+import './EditTitleKey.scss';
+import { updateTitle } from '@app/services/TaoKhoa';
+import Loading from '@components/Loading';
+import { connect } from 'react-redux';
+import { toast, validateSpaceNull } from '@app/common/functionCommons';
+import { CONSTANTS, TOAST_MESSAGE } from '@constants';
+
 EditTitleKey.propTypes = {};
 
 function EditTitleKey({ visibleEdit, setVisibleEdit, isLoading }) {

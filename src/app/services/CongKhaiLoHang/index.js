@@ -1,5 +1,5 @@
-import { API } from "@api";
-import { createBase, getAllPaginationBaseByID, updateBaseFormatID } from "../Base";
+import { API } from '@api';
+import { createBase, getAllPaginationBaseByID, updateBaseFormatID } from '../Base';
 
 export function createPublicProduct(data) {
   return createBase(API.PUBLIC_PARCEL, data);

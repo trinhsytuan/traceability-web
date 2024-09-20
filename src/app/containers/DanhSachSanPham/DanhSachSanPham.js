@@ -1,29 +1,25 @@
-import {
-  DownOutlined,
-  PlusOutlined,
-  SearchOutlined,
-  UpOutlined,
-} from "@ant-design/icons";
-import { getParcelSelectByMyOrg, getProductByID } from "@app/services/TruyXuat";
-import CongKhai from "@assets/icons/congkhai-icon.svg";
-import DangTao from "@assets/icons/dangtao-icon.svg";
-import HoanTatKiemDinh from "@assets/icons/hoantatkiemdinh-icon.svg";
-import TuChoiKiemDinh from "@assets/icons/tuchoikiemdinh-icon.svg";
-import DangKiemDinh from "@assets/icons/DangKiemDinh-icon.svg";
-import SendingIcon from "@assets/icons/sending-icon.svg";
-import BaseContent from "@components/BaseContent";
-import VisibleIcon from "@components/Icons/VisibleIcon";
-import Loading from "@components/Loading";
-import { PAGINATION_CONFIG, STATUS_PARCEL_ENDORSER } from "@constants";
-import { URL } from "@url";
-import { Button, Col, Form, Input, Row, Select, Table, Tooltip } from "antd";
-import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import "./DanhSachSanPham.scss";
-import queryString, { stringify } from "query-string";
-import LoHang from "./LoHang";
-import { connect } from "react-redux";
-import SearchBar from "@components/SearchBar";
+import { SearchOutlined } from '@ant-design/icons';
+import { getParcelSelectByMyOrg, getProductByID } from '@app/services/TruyXuat';
+import CongKhai from '@assets/icons/congkhai-icon.svg';
+import DangTao from '@assets/icons/dangtao-icon.svg';
+import HoanTatKiemDinh from '@assets/icons/hoantatkiemdinh-icon.svg';
+import TuChoiKiemDinh from '@assets/icons/tuchoikiemdinh-icon.svg';
+import DangKiemDinh from '@assets/icons/DangKiemDinh-icon.svg';
+import SendingIcon from '@assets/icons/sending-icon.svg';
+import BaseContent from '@components/BaseContent';
+import VisibleIcon from '@components/Icons/VisibleIcon';
+import Loading from '@components/Loading';
+import { PAGINATION_CONFIG, STATUS_PARCEL_ENDORSER } from '@constants';
+import { URL } from '@url';
+import { Button, Col, Form, Input, Row, Select, Table, Tooltip } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import './DanhSachSanPham.scss';
+import queryString, { stringify } from 'query-string';
+import LoHang from './LoHang';
+import { connect } from 'react-redux';
+import SearchBar from '@components/SearchBar';
+
 DanhSachSanPham.propTypes = {};
 
 function DanhSachSanPham({ myPermission }) {

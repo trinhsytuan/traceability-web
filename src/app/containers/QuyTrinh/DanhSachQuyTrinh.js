@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { formatSTT, toast } from "@app/common/functionCommons";
-import { getListProcedure } from "@app/services/Manager";
-import BaseContent from "@components/BaseContent";
-import VisibleIcon from "@components/Icons/VisibleIcon";
-import { CONSTANTS, DATA_SEARCH_PROCEDURE, PAGINATION_CONFIG } from "@constants";
-import { URL } from "@url";
-import { Button, Table, Tooltip } from "antd";
-import queryString, { stringify } from "query-string";
-import { connect } from "react-redux";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import "./DanhSachQuyTrinh.scss";
-import Loading from "@components/Loading";
-import PropTypes from "prop-types";
-import SearchBar from "@components/SearchBar";
+import React, { useEffect, useState } from 'react';
+import { formatSTT, toast } from '@app/common/functionCommons';
+import { getListProcedure } from '@app/services/Manager';
+import BaseContent from '@components/BaseContent';
+import VisibleIcon from '@components/Icons/VisibleIcon';
+import { CONSTANTS, DATA_SEARCH_PROCEDURE, PAGINATION_CONFIG } from '@constants';
+import { URL } from '@url';
+import { Button, Table, Tooltip } from 'antd';
+import queryString, { stringify } from 'query-string';
+import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import './DanhSachQuyTrinh.scss';
+import Loading from '@components/Loading';
+import PropTypes from 'prop-types';
+import SearchBar from '@components/SearchBar';
 
 DanhSachQuyTrinh.propTypes = {
   toggleLoading: PropTypes.bool,

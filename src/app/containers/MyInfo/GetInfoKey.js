@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import CreateKey from "./CreateKey";
-import { deleteKey, getKey } from "@app/services/TaoKhoa";
-import SecurityIcon from "@assets/icons/security-icon.svg";
-import "./GetInfoKey.scss";
-import { formatTimeDateStrike, toast } from "@app/common/functionCommons";
-import { Button, Modal } from "antd";
-import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
-import { connect } from "react-redux";
-import Loading from "@app/components/Loading";
-import EditTitleKey from "./EditTitleKey";
-import DeleteIcon from "@components/Icons/DeleteIcon";
-import DeleteIcons from "@assets/icons/delete-icon.svg";
+import React, { useEffect, useState } from 'react';
+import CreateKey from './CreateKey';
+import { deleteKey, getKey } from '@app/services/TaoKhoa';
+import SecurityIcon from '@assets/icons/security-icon.svg';
+import './GetInfoKey.scss';
+import { formatTimeDateStrike, toast } from '@app/common/functionCommons';
+import { Button, Modal } from 'antd';
+import { EditOutlined } from '@ant-design/icons';
+import { CONSTANTS, TOAST_MESSAGE } from '@constants';
+import { connect } from 'react-redux';
+import Loading from '@app/components/Loading';
+import EditTitleKey from './EditTitleKey';
+import DeleteIcon from '@components/Icons/DeleteIcon';
+import DeleteIcons from '@assets/icons/delete-icon.svg';
+
 GetInfoKey.propTypes = {};
 
 function GetInfoKey({ isLoading }) {

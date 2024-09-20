@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { DownOutlined, PlusOutlined, SearchOutlined, UpOutlined } from "@ant-design/icons";
-import { Button, Col, Form, Input, Row, Select, Table, DatePicker } from "antd";
-import moment from "moment";
-import queryString from "query-string";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { DownOutlined, PlusOutlined, SearchOutlined, UpOutlined } from '@ant-design/icons';
+import { Button, Col, DatePicker, Form, Input, Row, Select } from 'antd';
+import moment from 'moment';
+import queryString from 'query-string';
+import { useLocation } from 'react-router-dom';
 
-import "./Search.scss";
+import './Search.scss';
 
 function SearchBar(props) {
   const [statusFilter, setStatusFilter] = useState(false);

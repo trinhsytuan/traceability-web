@@ -1,12 +1,13 @@
-import { toast, validateSpaceNull } from "@app/common/functionCommons";
-import { createOrg, editOrg } from "@app/services/QuanLyToChuc";
-import Loading from "@components/Loading";
-import { CONSTANTS, RULES, SELECT_ROLE, SELECT_ROLE_CREATE_ORG, TOAST_MESSAGE } from "@constants";
-import { Button, Form, Input, Modal, Select } from "antd";
-import PropTypes from "prop-types";
-import React,{ useEffect } from "react";
-import { connect } from "react-redux";
-import "./ModalAddToChuc.scss";
+import { toast, validateSpaceNull } from '@app/common/functionCommons';
+import { createOrg, editOrg } from '@app/services/QuanLyToChuc';
+import Loading from '@components/Loading';
+import { CONSTANTS, RULES, SELECT_ROLE_CREATE_ORG, TOAST_MESSAGE } from '@constants';
+import { Button, Form, Input, Modal, Select } from 'antd';
+import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import './ModalAddToChuc.scss';
+
 ModalAddToChuc.propTypes = {
   data: PropTypes.object,
 };
@@ -27,15 +28,17 @@ function ModalAddToChuc({ visibled, onChangeVisibled, data, isLoading, callAPI }
     }
   }, [data]);
   const formSubmit = async (dataForm) => {
+    let newValues = values;
+    newValues?.email = newValues?.email?.toLowerCase();
     if (data) {
-      const response = await editOrg(data._id, dataForm);
+      const response = await editOrg(data?._id, newValues);
       if (response) {
         toast(CONSTANTS.SUCCESS, TOAST_MESSAGE.ORG.EDIT);
         callAPI();
         onCloseDialog();
       }
     } else {
-      const response = await createOrg(dataForm);
+      const response = await createOrg(newValues);
       if (response) {
         toast(CONSTANTS.SUCCESS, TOAST_MESSAGE.ORG.CREATE);
         callAPI();

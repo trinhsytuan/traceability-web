@@ -1,11 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import "./LoHang.scss";
-import { Tag, Tooltip } from "antd";
-import { URL } from "@url";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { BROWSING_COLOR, STATUS_PARCEL_ENDORSER } from "@constants";
+import './LoHang.scss';
+import { Tag, Tooltip } from 'antd';
+import { URL } from '@url';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { BROWSING_COLOR, STATUS_PARCEL_ENDORSER } from '@constants';
+
 LoHang.propTypes = {
   value: PropTypes.object,
 };

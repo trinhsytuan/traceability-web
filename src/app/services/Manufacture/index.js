@@ -1,6 +1,6 @@
-import { API } from "@api";
-import axios from "axios";
-import { createBase, deleteByIdBase, updateBaseFormatID } from "../Base";
+import { API } from '@api';
+import axios from 'axios';
+import { createBase, deleteByIdBase, updateBaseFormatID } from '../Base';
 
 export function getManufactureAllPagination(idOrg, page, limit, query = "") {
   return axios

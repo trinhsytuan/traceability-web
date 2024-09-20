@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import { Link, withRouter } from "react-router-dom";
-import { Dropdown, Layout, Menu } from "antd";
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { Link, withRouter } from 'react-router-dom';
+import { Dropdown, Layout, Menu } from 'antd';
 
 // import Notifications from './Notifications';
-import { API } from "@api";
-import { URL } from "@url";
+import { API } from '@api';
+import { URL } from '@url';
 
-import * as app from "@app/store/ducks/app.duck";
-import * as user from "@app/store/ducks/user.duck";
+import * as app from '@app/store/ducks/app.duck';
+import * as user from '@app/store/ducks/user.duck';
 
-import "./Header.less";
+import './Header.less';
 
-import ARROW_LEFT from "@assets/images/icon/arrow-left.svg";
-import ARROW_RIGHT from "@assets/images/icon/arrow-right.svg";
-import Notifications from "./Notifications";
+import ARROW_LEFT from '@assets/images/icon/arrow-left.svg';
+import ARROW_RIGHT from '@assets/images/icon/arrow-right.svg';
+import Notifications from './Notifications';
 
 function HeaderMenu({ token, history, myInfo, isBroken, siderCollapsed, ...props }) {
   if (!token) return null;

@@ -1,4 +1,4 @@
-import { CONSTANTS } from "@constants";
+import { CONSTANTS } from '@constants';
 
 export default function updateDataStore(type, dataList, dataChanged) {
   let dataListUpdated = [];

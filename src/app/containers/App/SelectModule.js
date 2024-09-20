@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
-import QuanLyDuongDayIcon from "@components/Icons/QuanLyDuongDayIcon";
-import TonTaiViTriIcon from "@components/Icons/TonTaiViTriIcon";
-import TonTaiThietBiIcon from "@components/Icons/TonTaiThietBiIcon";
-import { CONSTANTS_MODULE } from "@constants";
+import QuanLyDuongDayIcon from '@components/Icons/QuanLyDuongDayIcon';
+import TonTaiViTriIcon from '@components/Icons/TonTaiViTriIcon';
+import TonTaiThietBiIcon from '@components/Icons/TonTaiThietBiIcon';
+import { CONSTANTS_MODULE } from '@constants';
 
-import * as module from "@app/store/ducks/module.duck";
+import * as module from '@app/store/ducks/module.duck';
 
 function SelectModule({ permissions, isLoading, ...props }) {
   const congTrinhPermission = permissions?.construction;

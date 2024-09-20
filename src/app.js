@@ -1,28 +1,28 @@
-import "@babel/polyfill";
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
-import axios from "axios";
-import { ConfigProvider } from "antd";
-import viVN from "antd/es/locale/vi_VN";
-import { ToastContainer } from "react-toastify";
+import '@babel/polyfill';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import axios from 'axios';
+import { ConfigProvider } from 'antd';
+import viVN from 'antd/es/locale/vi_VN';
+import { ToastContainer } from 'react-toastify';
 
-import store from "./app/store/store";
-import "@app/common/prototype";
-import "sanitize.css/sanitize.css";
-import "react-toastify/dist/ReactToastify.css";
+import store from './app/store/store';
+import '@app/common/prototype';
+import 'sanitize.css/sanitize.css';
+import 'react-toastify/dist/ReactToastify.css';
 
-import "./styles/theme.less";
-import "./styles/main.scss";
-import "./styles/header.less";
+import './styles/theme.less';
+import './styles/main.scss';
+import './styles/header.less';
 
 // Import root app
-import App from "@containers/App";
+import App from '@containers/App';
 
-import "!file-loader?name=[name].[ext]!@assets/favicon/favicon.ico";
-import "file-loader?name=.htaccess!./.htaccess";
-import { setupAxios } from "@src/utils/utils";
+import '!file-loader?name=[name].[ext]!@assets/favicon/favicon.ico';
+import 'file-loader?name=.htaccess!./.htaccess';
+import { setupAxios } from '@src/utils/utils';
 
 const { PUBLIC_URL } = process.env;
 const MOUNT_NODE = document.getElementById("root");

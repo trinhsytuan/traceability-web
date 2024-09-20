@@ -1,9 +1,8 @@
-import { API } from "@api";
-import { convertCamelCaseToSnakeCase, convertSnakeCaseToCamelCase } from "@app/common/dataConverter";
-import { renderMessageError, toast } from "@app/common/functionCommons";
-import { createBase, createBaseSnackCase } from "@app/services/Base";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
-import axios from "axios";
+import { API } from '@api';
+import { convertSnakeCaseToCamelCase } from '@app/common/dataConverter';
+import { renderMessageError } from '@app/common/functionCommons';
+import { createBaseSnackCase } from '@app/services/Base';
+import axios from 'axios';
 
 export function getTempleteProcedureByID(id) {
   return axios

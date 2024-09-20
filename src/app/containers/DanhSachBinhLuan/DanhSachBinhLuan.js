@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import "./DanhSachBinhLuan.scss";
-import { connect } from "react-redux";
-import BaseContent from "@components/BaseContent";
-import Loading from "@components/Loading";
-import { Button, Form, Table } from "antd";
-import SearchBar from "@components/SearchBar";
-import queryString from "query-string";
-import { PAGINATION_CONFIG, STATUS_COMMENT, STATUS_COMMENT_SELECT } from "@constants";
-import { stringify } from "query-string";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { getTableComment } from "@app/services/BinhLuanSanPham";
-import VisibleIcon from "@components/Icons/VisibleIcon";
-import { formatTimeDate } from "@app/common/functionCommons";
-import { URL } from "@url";
+import React, { useEffect, useState } from 'react';
+import './DanhSachBinhLuan.scss';
+import { connect } from 'react-redux';
+import BaseContent from '@components/BaseContent';
+import Loading from '@components/Loading';
+import { Button, Form, Table } from 'antd';
+import SearchBar from '@components/SearchBar';
+import queryString, { stringify } from 'query-string';
+import { PAGINATION_CONFIG, STATUS_COMMENT, STATUS_COMMENT_SELECT } from '@constants';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { getTableComment } from '@app/services/BinhLuanSanPham';
+import VisibleIcon from '@components/Icons/VisibleIcon';
+import { formatTimeDate } from '@app/common/functionCommons';
+import { URL } from '@url';
+
 DanhSachBinhLuan.propTypes = {};
 
 function DanhSachBinhLuan({ isLoading }) {

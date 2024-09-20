@@ -1,11 +1,6 @@
-import React from "react";
-import {
-  CheckCircleOutlined,
-  CloseCircleOutlined,
-  InfoCircleOutlined,
-  WarningOutlined,
-} from "@ant-design/icons";
-import moment from "moment";
+import React from 'react';
+import { CheckCircleOutlined, CloseCircleOutlined, InfoCircleOutlined, WarningOutlined } from '@ant-design/icons';
+import moment from 'moment';
 
 export const WEB_VERSION = "2021/22/11/13/42";
 

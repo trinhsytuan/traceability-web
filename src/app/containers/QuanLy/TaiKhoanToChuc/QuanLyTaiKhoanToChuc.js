@@ -1,50 +1,19 @@
-import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
-import BaseContent from "@components/BaseContent";
-import VisibleIcon from "@components/Icons/VisibleIcon";
-import Loading from "@components/Loading";
-import {
-  STATUS_ACCOUNT,
-  PAGINATION_CONFIG,
-  TYPE_ORG,
-  RULES,
-  CONSTANTS,
-} from "@constants";
-import { URL } from "@url";
-import {
-  Button,
-  Col,
-  Form,
-  Input,
-  Row,
-  Select,
-  Table,
-  Tooltip,
-  Popconfirm,
-  Modal,
-} from "antd";
-import React, { useEffect, useState } from "react";
-import "./QuanLyTaiKhoanToChuc.scss";
-import {
-  getInactiveOrgs,
-  getMyOrgeRoles,
-  issueAccountOrg,
-  deleteById,
-  updateById,
-} from "@app/services/NhanVien";
+import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
+import BaseContent from '@components/BaseContent';
+import Loading from '@components/Loading';
+import { CONSTANTS, PAGINATION_CONFIG, RULES, STATUS_ACCOUNT, TYPE_ORG } from '@constants';
+import { Button, Col, Form, Input, Modal, Popconfirm, Row, Select, Table, Tooltip } from 'antd';
+import React, { useEffect, useState } from 'react';
+import './QuanLyTaiKhoanToChuc.scss';
+import { deleteById, getInactiveOrgs, getMyOrgeRoles, issueAccountOrg, updateById } from '@app/services/NhanVien';
 
-import queryString from "query-string";
-import SearchBar from "@components/SearchBar";
-import { stringify } from "qs";
-import { useHistory, useLocation } from "react-router-dom";
-import { connect } from "react-redux";
-import {
-  formatSTT,
-  getChangeFormSearch,
-  isUsernameValid,
-  toast,
-  validateSpaceNull,
-} from "@app/common/functionCommons";
-import { getListOrg } from "@app/services/QuanLyToChuc";
+import queryString from 'query-string';
+import SearchBar from '@components/SearchBar';
+import { stringify } from 'qs';
+import { useHistory, useLocation } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { formatSTT, getChangeFormSearch, isUsernameValid, toast } from '@app/common/functionCommons';
+import { getListOrg } from '@app/services/QuanLyToChuc';
 
 QuanLyTaiKhoanToChuc.propTypes = {};
 
@@ -309,14 +278,17 @@ function QuanLyTaiKhoanToChuc(props) {
     form.setFieldsValue({ active: true });
   };
   const onFinish = async (values) => {
+    let newValues = values;
+    newValues?.username = newValues?.username?.toLowerCase();
+    newValues?.email = newValues?.email?.toLowerCase();
     if (values.id) {
-      const res = await updateById(values.id, values);
+      const res = await updateById(newValues?.id, newValues);
       if (res) {
         getDataFilter();
         toggleModal();
       }
     } else {
-      const apiRes = await issueAccountOrg(values);
+      const apiRes = await issueAccountOrg(newValues);
       if (apiRes) {
         getDataFilter();
         toggleModal();

@@ -1,18 +1,18 @@
-import React from "react";
-import * as app from "@app/store/ducks/app.duck";
-import * as user from "@app/store/ducks/user.duck";
-import AuthBase from "@containers/Authenticator/AuthBase";
-import { Button, Col, Form, Input, Row } from "antd";
-import queryString from "query-string";
+import React from 'react';
+import * as app from '@app/store/ducks/app.duck';
+import * as user from '@app/store/ducks/user.duck';
+import AuthBase from '@containers/Authenticator/AuthBase';
+import { Button, Col, Form, Input, Row } from 'antd';
+import queryString from 'query-string';
 
-import { connect } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
+import { connect } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
 
-import { toast } from "@app/common/functionCommons";
-import { requestResetPassword } from "@app/services/User";
-import { CONSTANTS, RULES } from "@constants";
-import { URL } from "@url";
-import "./ResetPassword.scss";
+import { toast } from '@app/common/functionCommons';
+import { requestResetPassword } from '@app/services/User';
+import { CONSTANTS, RULES } from '@constants';
+import { URL } from '@url';
+import './ResetPassword.scss';
 
 function ResetPassword({ isLoading, ...props }) {
   let history = useHistory();

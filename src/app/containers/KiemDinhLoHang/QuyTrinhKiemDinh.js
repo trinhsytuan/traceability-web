@@ -1,18 +1,18 @@
-import { formatSTT, formatTimeDate } from "@app/common/functionCommons";
-import { getLifeCycleInspection } from "@app/services/LifeCycle";
-import { SettingIcon } from "@components/Icons";
-import ChungNhanIcon from "@components/Icons/ChungNhanIcon";
-import { BROWSING_COLOR, PAGINATION_MODAL, RESULT_SENDING, VI_STATUS_STEP } from "@constants";
-import { Button, Modal, Table } from "antd";
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import NhanKiemDinh from "./NhanKiemDinh";
-import "./QuyTrinhKiemDinh.scss";
-import ArrowLeftDown from "@components/Icons/ArrowLeftDown";
-import { findByTestId } from "react-testing-library";
-import PropTypes from "prop-types";
-import BaseContent from "@components/BaseContent";
-import VisibleIcon from "@components/Icons/VisibleIcon";
+import { formatSTT, formatTimeDate } from '@app/common/functionCommons';
+import { getLifeCycleInspection } from '@app/services/LifeCycle';
+import { SettingIcon } from '@components/Icons';
+import ChungNhanIcon from '@components/Icons/ChungNhanIcon';
+import { BROWSING_COLOR, PAGINATION_MODAL, RESULT_SENDING, VI_STATUS_STEP } from '@constants';
+import { Button, Modal, Table } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import NhanKiemDinh from './NhanKiemDinh';
+import './QuyTrinhKiemDinh.scss';
+import ArrowLeftDown from '@components/Icons/ArrowLeftDown';
+import PropTypes from 'prop-types';
+import BaseContent from '@components/BaseContent';
+import VisibleIcon from '@components/Icons/VisibleIcon';
+
 QuyTrinhKiemDinh.propTypes = {
   statusProps: PropTypes.bool,
 };

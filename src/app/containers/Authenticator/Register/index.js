@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { Button, Form, Input, Row, Col, Checkbox, Alert } from "antd";
-import { connect } from "react-redux";
-import { Link, useRouteMatch, Switch, Route, useHistory } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Col, Row } from 'antd';
+import { connect } from 'react-redux';
+import { Link, Route, Switch } from 'react-router-dom';
 
-import AuthBase from "@containers/Authenticator/AuthBase";
+import AuthBase from '@containers/Authenticator/AuthBase';
 
-import { URL } from "@url";
+import { URL } from '@url';
 
-import * as app from "@app/store/ducks/app.duck";
-import "./Register.scss";
-import HouseIcon from "@components/Icons/HouseIcon";
-import { Regular } from "./regular";
-import { Enterprise } from "./enterprise";
-import { Inspection } from "./inspection";
-import { register } from "@app/services/User";
-import { toast } from "@app/common/functionCommons";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
+import * as app from '@app/store/ducks/app.duck';
+import './Register.scss';
+import HouseIcon from '@components/Icons/HouseIcon';
+import { Regular } from './regular';
+import { Enterprise } from './enterprise';
+import { Inspection } from './inspection';
+import { register } from '@app/services/User';
+import { toast } from '@app/common/functionCommons';
+import { CONSTANTS, TOAST_MESSAGE } from '@constants';
 
 function Register({ history, isLoading, resultLogin, ...props }) {
   const [activeKey, setActiveKey] = useState(URL.REGISTER);

@@ -1,28 +1,28 @@
-import { EditOutlined, LeftOutlined, PlusOutlined } from "@ant-design/icons";
-import { toast } from "@app/common/functionCommons";
+import { EditOutlined, LeftOutlined, PlusOutlined } from '@ant-design/icons';
+import { toast } from '@app/common/functionCommons';
 import {
   CreateNewProductAndProcedure,
   EditProduct,
   getStepTemplateProcedureStepByOrg,
   getTempleteProcedureByID,
-} from "@app/services/MauQuyTrinh";
-import ProcedureIcon from "@assets/icons/procedure-step-icon.svg";
-import BaseContent from "@components/BaseContent";
-import DeleteIcon from "@components/Icons/DeleteIcon";
-import Editable from "@components/Icons/Editable";
-import VisibleIcon from "@components/Icons/VisibleIcon";
-import Loading from "@components/Loading";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
-import { URL } from "@url";
-import { Button, Col, Form, Input, Row, Select, Tooltip } from "antd";
-import TextArea from "antd/lib/input/TextArea";
-import PropTypes from "prop-types";
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
-import AddProgressProcedure from "./AddProgressProcedure";
-import DeleteConfim from "./DeleteConfim";
-import "./ThemMoiQuyTrinh.scss";
+} from '@app/services/MauQuyTrinh';
+import ProcedureIcon from '@assets/icons/procedure-step-icon.svg';
+import BaseContent from '@components/BaseContent';
+import DeleteIcon from '@components/Icons/DeleteIcon';
+import Editable from '@components/Icons/Editable';
+import VisibleIcon from '@components/Icons/VisibleIcon';
+import Loading from '@components/Loading';
+import { CONSTANTS, TOAST_MESSAGE } from '@constants';
+import { URL } from '@url';
+import { Button, Col, Form, Input, Row, Select, Tooltip } from 'antd';
+import TextArea from 'antd/lib/input/TextArea';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import AddProgressProcedure from './AddProgressProcedure';
+import DeleteConfim from './DeleteConfim';
+import './ThemMoiQuyTrinh.scss';
 
 ThemMoiQuyTrinh.propTypes = {
   isLoading: PropTypes.bool,

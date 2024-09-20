@@ -1,16 +1,15 @@
-import { LeftOutlined } from "@ant-design/icons";
-import { formatDate, toast } from "@app/common/functionCommons";
-import { sendResultToProducer } from "@app/services/GuiKetQuaKiemDinh";
-import { getHistoryAudit } from "@app/services/NhatKyKiemDinh";
-import { getParcelById, getStepByParcel } from "@app/services/TruyXuat";
-import ProcedureIcon from "@assets/icons/procedure-step-icon.svg";
-import BaseContent from "@components/BaseContent";
-import ArrowRightThick from "@components/Icons/ArrowRightThick";
-import Editable from "@components/Icons/Editable";
-import VisibleIcon from "@components/Icons/VisibleIcon";
-import Loading from "@components/Loading";
-import UploadImage from "@components/UploadImage/UploadImage";
-import VerifyDigitalSignature from "@components/VerifyDigitalSignature/VerifyDigitalSignature";
+import { LeftOutlined } from '@ant-design/icons';
+import { formatDate, toast } from '@app/common/functionCommons';
+import { sendResultToProducer } from '@app/services/GuiKetQuaKiemDinh';
+import { getParcelById, getStepByParcel } from '@app/services/TruyXuat';
+import ProcedureIcon from '@assets/icons/procedure-step-icon.svg';
+import BaseContent from '@components/BaseContent';
+import ArrowRightThick from '@components/Icons/ArrowRightThick';
+import Editable from '@components/Icons/Editable';
+import VisibleIcon from '@components/Icons/VisibleIcon';
+import Loading from '@components/Loading';
+import UploadImage from '@components/UploadImage/UploadImage';
+import VerifyDigitalSignature from '@components/VerifyDigitalSignature/VerifyDigitalSignature';
 import {
   BROWSING_COLOR,
   CONSTANTS,
@@ -20,25 +19,19 @@ import {
   STATUS_PRODUCER_KD,
   TOAST_MESSAGE,
   VI_STATUS_PARCEL,
-} from "@constants";
-import QuyTrinhXetDuyetKiemDinh from "@containers/QuyTrinhXetDuyet/QuyTrinhXetDuyetKiemDinh";
-import { URL } from "@url";
-import { Button, Col, Form, Input, InputNumber, Row, Tooltip } from "antd";
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import {
-  Link,
-  useHistory,
-  useParams,
-} from "react-router-dom/cjs/react-router-dom.min";
-import GuiDuyetKiemDinh from "./GuiDuyetKiemDinh";
-import GuiKetQuaKiemDinh from "./GuiKetQuaKiemDinh";
-import "./KiemDinhLoHang.scss";
-import ModalKiemDinh from "./ModalKiemDinh";
-import QuyTrinhKiemDinh from "./QuyTrinhKiemDinh";
-import EndorserIcon from "@components/Icons/EndorserIcon";
-import EndorserIconSmall from "@components/Icons/EndorserIconSmall";
-import PhanCongKiemDinhStep from "./PhanCongKiemDinhStep";
+} from '@constants';
+import QuyTrinhXetDuyetKiemDinh from '@containers/QuyTrinhXetDuyet/QuyTrinhXetDuyetKiemDinh';
+import { Button, Col, Form, Input, InputNumber, Row, Tooltip } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import GuiDuyetKiemDinh from './GuiDuyetKiemDinh';
+import GuiKetQuaKiemDinh from './GuiKetQuaKiemDinh';
+import './KiemDinhLoHang.scss';
+import ModalKiemDinh from './ModalKiemDinh';
+import QuyTrinhKiemDinh from './QuyTrinhKiemDinh';
+import EndorserIconSmall from '@components/Icons/EndorserIconSmall';
+import PhanCongKiemDinhStep from './PhanCongKiemDinhStep';
 
 KiemDinhLoHang.propTypes = {};
 

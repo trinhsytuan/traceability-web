@@ -1,14 +1,13 @@
-import { API } from "@api";
+import { API } from '@api';
 import {
   createBase,
-  deleteBase,
   deleteByIdBase,
   getAllPaginationBaseByID,
   getAllPaginationBaseByIDNotConvert,
   getPaginationBase,
   updateBase,
-} from "../Base";
-import axios from "axios";
+} from '../Base';
+import axios from 'axios';
 
 export function getCommentByID(idParcel, query) {
   return getAllPaginationBaseByID(API.GET_COMMENT_BY_PARCEL_ID, idParcel, query.page, query.limit, {

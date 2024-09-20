@@ -1,9 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Button, Modal } from "antd";
-import { CONSTANT_MESSAGE } from "@constants";
-import VerifyIcon from "@assets/icons/verify-icon.svg";
-import "./DialogConfim.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Button, Modal } from 'antd';
+import { CONSTANT_MESSAGE } from '@constants';
+import VerifyIcon from '@assets/icons/verify-icon.svg';
+import './DialogConfim.scss';
+
 DialogConfim.propTypes = {
   visible: PropTypes.bool,
   onCancel: PropTypes.func,

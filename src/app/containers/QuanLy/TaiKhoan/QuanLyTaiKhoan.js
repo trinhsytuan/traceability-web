@@ -1,21 +1,18 @@
-import {
-  DeleteOutlined,
-  EditOutlined
-} from "@ant-design/icons";
-import { deleteById, getAll, getMyOrgeRoles, issueAccount, updateById } from "@app/services/NhanVien";
-import BaseContent from "@components/BaseContent";
-import Loading from "@components/Loading";
-import { PAGINATION_CONFIG, RULES, STATUS_ACCOUNT } from "@constants";
-import { Button, Col, Form, Input, Modal, Popconfirm, Row, Select, Table, Tooltip } from "antd";
-import React, { useEffect, useState } from "react";
-import "./QuanLyTaiKhoan.scss";
+import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
+import { deleteById, getAll, getMyOrgeRoles, issueAccount, updateById } from '@app/services/NhanVien';
+import BaseContent from '@components/BaseContent';
+import Loading from '@components/Loading';
+import { PAGINATION_CONFIG, RULES, STATUS_ACCOUNT } from '@constants';
+import { Button, Col, Form, Input, Modal, Popconfirm, Row, Select, Table, Tooltip } from 'antd';
+import React, { useEffect, useState } from 'react';
+import './QuanLyTaiKhoan.scss';
 
-import { formatSTT, getChangeFormSearch, isUsernameValid, validateSpaceNull } from "@app/common/functionCommons";
-import SearchBar from "@components/SearchBar";
-import { stringify } from "qs";
-import queryString from "query-string";
-import { connect } from "react-redux";
-import { useHistory, useLocation } from "react-router-dom";
+import { formatSTT, getChangeFormSearch, isUsernameValid, validateSpaceNull } from '@app/common/functionCommons';
+import SearchBar from '@components/SearchBar';
+import { stringify } from 'qs';
+import queryString from 'query-string';
+import { connect } from 'react-redux';
+import { useHistory, useLocation } from 'react-router-dom';
 
 QuanLyTaiKhoan.propTypes = {};
 
@@ -224,14 +221,17 @@ function QuanLyTaiKhoan(props) {
     setShowModal(true);
   };
   const onFinish = async (values) => {
+    let newValues = values;
+    newValues?.username = newValues?.username?.toLowerCase();
+    newValues?.email = newValues?.email?.toLowerCase();
     if (values.id) {
-      const res = await updateById(values.id, values);
+      const res = await updateById(newValues?.id, newValues);
       if (res) {
         getDataFilter();
         toggleModal();
       }
     } else {
-      const apiRes = await issueAccount(values);
+      const apiRes = await issueAccount(newValues);
       if (apiRes) {
         getDataFilter();
         toggleModal();

@@ -1,16 +1,16 @@
-import { toast, validateSpaceNull } from "@app/common/functionCommons";
-import { deleteKey, enrollPKI, updateTitle } from "@app/services/TaoKhoa";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
-import { Button, Checkbox, Form, Input, Modal } from "antd";
-import React, { useState } from "react";
-import "./CreateKey.scss";
-import Alert from "@assets/icons/alert.svg";
-import { ArrowDownOutlined } from "@ant-design/icons";
-import CopyIcon from "@app/components/Icons/CopyIcon";
-import copy from "clipboard-copy";
-import { saveAs } from "file-saver";
-import { connect } from "react-redux";
-import Loading from "@app/components/Loading";
+import { toast, validateSpaceNull } from '@app/common/functionCommons';
+import { deleteKey, enrollPKI, updateTitle } from '@app/services/TaoKhoa';
+import { CONSTANTS, TOAST_MESSAGE } from '@constants';
+import { Button, Checkbox, Form, Input, Modal } from 'antd';
+import React, { useState } from 'react';
+import './CreateKey.scss';
+import Alert from '@assets/icons/alert.svg';
+import { ArrowDownOutlined } from '@ant-design/icons';
+import CopyIcon from '@app/components/Icons/CopyIcon';
+import copy from 'clipboard-copy';
+import { saveAs } from 'file-saver';
+import { connect } from 'react-redux';
+import Loading from '@app/components/Loading';
 
 function CreateKey({ update, isLoading }) {
   const [FormEnterPassword] = Form.useForm();

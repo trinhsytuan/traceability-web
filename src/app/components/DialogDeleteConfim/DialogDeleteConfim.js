@@ -1,9 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Button, Modal } from "antd";
-import DeleteIcon from "@assets/icons/delete-icon.svg";
-import { CONSTANT_MESSAGE } from "@constants";
-import './DialogDeleteConfim.scss'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Button, Modal } from 'antd';
+import DeleteIcon from '@assets/icons/delete-icon.svg';
+import { CONSTANT_MESSAGE } from '@constants';
+import './DialogDeleteConfim.scss';
+
 DialogDeleteConfim.propTypes = {
   visible: PropTypes.bool,
   onCancel: PropTypes.func,

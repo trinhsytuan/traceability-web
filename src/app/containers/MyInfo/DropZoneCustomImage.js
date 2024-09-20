@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import Dropzone from "react-dropzone";
-import PictureCard from "@assets/icons/picture-card.svg";
-import { API } from "@api";
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import Dropzone from 'react-dropzone';
+import PictureCard from '@assets/icons/picture-card.svg';
+import { API } from '@api';
 
-import "./DropZoneCustomImage.scss";
+import './DropZoneCustomImage.scss';
 
 function DropZoneCustomImage({ allowChange, stateRerender, multiple, imgUrl, width, height, myInfo, ...props }) {
   const [imagePreview, setPreview] = useState(null);

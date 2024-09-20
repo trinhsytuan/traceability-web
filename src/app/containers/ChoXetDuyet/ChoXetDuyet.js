@@ -1,11 +1,12 @@
-import React from "react";
-import "./ChoXetDuyet.scss";
-import AuthBase from "@containers/Authenticator/AuthBase";
-import BaseContent from "@components/BaseContent";
-import { Button } from "antd";
-import { URL } from "@url";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import SecuityIcon from "@components/Icons/SecuityIcon";
+import React from 'react';
+import './ChoXetDuyet.scss';
+import AuthBase from '@containers/Authenticator/AuthBase';
+import BaseContent from '@components/BaseContent';
+import { Button } from 'antd';
+import { URL } from '@url';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import SecuityIcon from '@components/Icons/SecuityIcon';
+
 ChoXetDuyet.propTypes = {};
 
 function ChoXetDuyet(props) {

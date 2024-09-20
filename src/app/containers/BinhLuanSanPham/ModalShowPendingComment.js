@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./ModalShowPendingComment.scss";
-import { Button, Modal } from "antd";
-import VerifyIcon from "@assets/icons/verify-icon.svg";
+import React from 'react';
+import './ModalShowPendingComment.scss';
+import { Button, Modal } from 'antd';
+import VerifyIcon from '@assets/icons/verify-icon.svg';
+
 ModalShowPendingComment.propTypes = {};
 
 function ModalShowPendingComment({ isOpen, handleCancel }) {

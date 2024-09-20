@@ -1,20 +1,19 @@
-import BaseContent from "@components/BaseContent";
-import VisibleIcon from "@components/Icons/VisibleIcon";
-import Loading from "@components/Loading";
-import { connect } from "react-redux";
-import { BROWSING_COLOR, VI_STATUS_STEP } from "@constants";
-import { URL } from "@url";
-import { Button, Col, Form, Input, Row, Select, Table, Modal, Tooltip } from "antd";
-import React, { useEffect, useState } from "react";
-import { useHistory, useLocation, Link } from "react-router-dom";
-import queryString from "query-string";
-import { formatSTT, getChangeFormSearch } from "@app/common/functionCommons";
-import { getMyInspect, changeInspector } from "@app/services/QLKiemDinh";
-import SearchBar from "@components/SearchBar";
-import { PAGINATION_CONFIG, STATUS_STEP_OPTIONS } from "@constants";
-import { stringify } from "qs";
-import { getAll as getAllMyOrgUser } from "@app/services/NhanVien";
-import "./KiemDinhSanPham.scss";
+import BaseContent from '@components/BaseContent';
+import VisibleIcon from '@components/Icons/VisibleIcon';
+import Loading from '@components/Loading';
+import { connect } from 'react-redux';
+import { BROWSING_COLOR, PAGINATION_CONFIG, STATUS_STEP_OPTIONS, VI_STATUS_STEP } from '@constants';
+import { URL } from '@url';
+import { Button, Col, Form, Input, Modal, Row, Select, Table, Tooltip } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import queryString from 'query-string';
+import { formatSTT, getChangeFormSearch } from '@app/common/functionCommons';
+import { changeInspector, getMyInspect } from '@app/services/QLKiemDinh';
+import SearchBar from '@components/SearchBar';
+import { stringify } from 'qs';
+import { getAll as getAllMyOrgUser } from '@app/services/NhanVien';
+import './KiemDinhSanPham.scss';
 
 KiemDinhSanPham.propTypes = {};
 

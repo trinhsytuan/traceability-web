@@ -1,22 +1,19 @@
-import React, { useEffect, useRef, useState } from "react";
-import { connect } from "react-redux";
-import { Link, withRouter } from "react-router-dom";
-import { CheckOutlined } from "@ant-design/icons";
-import { Badge, Dropdown, Empty, Menu, Skeleton } from "antd";
-import { io } from "socket.io-client";
+import React, { useEffect, useRef, useState } from 'react';
+import { connect } from 'react-redux';
+import { Link, withRouter } from 'react-router-dom';
+import { CheckOutlined } from '@ant-design/icons';
+import { Badge, Dropdown, Empty, Menu, Skeleton } from 'antd';
+import { io } from 'socket.io-client';
 
-import { URL } from "@url";
-import { cloneObj, formatTimeDate } from "@app/common/functionCommons";
-import { convertSnakeCaseToCamelCase } from "@app/common/dataConverter";
-import { getAllNotification } from "@app/services/Notification";
+import { URL } from '@url';
+import { formatTimeDate } from '@app/common/functionCommons';
+import { convertSnakeCaseToCamelCase } from '@app/common/dataConverter';
+import { getAllNotification } from '@app/services/Notification';
 
-import Notification from "@components/Notification/Notification";
-import TRUST_LOGO from "@assets/images/logo/TTRUST-logo.png";
-import NOTIFICATION from "@assets/images/icon/notification.svg";
-import NOTIFICATION_ITEM from "@assets/images/icon/notification-item.svg";
-import STAR_UNREAD from "@assets/images/icon/star-unread.svg";
-import STAR_READ from "@assets/images/icon/star-read.svg";
-import NotificationItemIcon from "@components/Icons/NotificationItemIcon";
+import Notification from '@components/Notification/Notification';
+import TRUST_LOGO from '@assets/images/logo/TTRUST-logo.png';
+import NOTIFICATION from '@assets/images/icon/notification.svg';
+import NotificationItemIcon from '@components/Icons/NotificationItemIcon';
 
 const PAGE_SIZE = 10;
 

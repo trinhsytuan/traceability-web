@@ -1,11 +1,12 @@
-import React from "react";
-import { connect } from "react-redux";
-import "./TrangChu.scss";
-import BaseContent from "@components/BaseContent";
-import IMG_TRUY_XUAT_APP from "@assets/images/imgtruyxuatapp.png";
-import GOOGLE_PLAY from "@assets/icons/google-play.svg";
-import APP_STORE from "@assets/icons/app-store.svg";
-import { LINK_DOWNLOAD_APP } from "@constants";
+import React from 'react';
+import { connect } from 'react-redux';
+import './TrangChu.scss';
+import BaseContent from '@components/BaseContent';
+import IMG_TRUY_XUAT_APP from '@assets/images/imgtruyxuatapp.png';
+import GOOGLE_PLAY from '@assets/icons/google-play.svg';
+import APP_STORE from '@assets/icons/app-store.svg';
+import { LINK_DOWNLOAD_APP } from '@constants';
+
 function TrangChu({ isLoading, ...props }) {
   return (
     <>

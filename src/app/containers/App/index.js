@@ -1,23 +1,23 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { connect } from "react-redux";
-import { Switch, withRouter } from "react-router-dom";
-import { Layout } from "antd";
-import Cookies from "js-cookie";
+import React, { Suspense, useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { Switch, withRouter } from 'react-router-dom';
+import { Layout } from 'antd';
+import Cookies from 'js-cookie';
 
-import Menu from "@components/Menu";
-import Routes from "@app/router/Routes";
-import LoginRoutes from "@app/router/LoginRoutes";
-import Loading from "@components/Loading";
-import CustomBreadcrumb from "@components/CustomBreadcrumb/CustomBreadcrumb";
-import HeaderMenu from "@components/Header/HeaderMenu";
+import Menu from '@components/Menu';
+import Routes from '@app/router/Routes';
+import LoginRoutes from '@app/router/LoginRoutes';
+import Loading from '@components/Loading';
+import CustomBreadcrumb from '@components/CustomBreadcrumb/CustomBreadcrumb';
+import HeaderMenu from '@components/Header/HeaderMenu';
 
-import { URL } from "@url";
-import { CONSTANTS } from "@constants";
+import { URL } from '@url';
+import { CONSTANTS } from '@constants';
 
-import * as app from "@app/store/ducks/app.duck";
-import * as user from "@app/store/ducks/user.duck";
-import * as caiDat from "@app/store/ducks/caiDat.duck";
-import * as extraField from "@app/store/ducks/extraField.duck";
+import * as app from '@app/store/ducks/app.duck';
+import * as user from '@app/store/ducks/user.duck';
+import * as caiDat from '@app/store/ducks/caiDat.duck';
+import * as extraField from '@app/store/ducks/extraField.duck';
 
 const { Footer, Content } = Layout;
 

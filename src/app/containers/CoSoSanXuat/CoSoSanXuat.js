@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import "./CoSoSanXuat.scss";
-import { connect } from "react-redux";
-import BaseContent from "@components/BaseContent";
-import Loading from "@components/Loading";
-import SearchBar from "@components/SearchBar";
-import queryString, { stringify } from "query-string";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { addNewFacture, deleteFacture, editFacture, getManufactureAllPagination } from "@app/services/Manufacture";
-import { CONSTANTS, PAGINATION_CONFIG, RULES, TOAST_MESSAGE } from "@constants";
-import { Button, Form, Input, Modal, Table, Tooltip } from "antd";
-import { formatSTT, toast, validateSpaceNull } from "@app/common/functionCommons";
-import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
-import DialogDeleteConfim from "@components/DialogDeleteConfim/DialogDeleteConfim";
+import React, { useEffect, useState } from 'react';
+import './CoSoSanXuat.scss';
+import { connect } from 'react-redux';
+import BaseContent from '@components/BaseContent';
+import Loading from '@components/Loading';
+import SearchBar from '@components/SearchBar';
+import queryString, { stringify } from 'query-string';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { addNewFacture, deleteFacture, editFacture, getManufactureAllPagination } from '@app/services/Manufacture';
+import { CONSTANTS, PAGINATION_CONFIG, RULES, TOAST_MESSAGE } from '@constants';
+import { Button, Form, Input, Modal, Table, Tooltip } from 'antd';
+import { formatSTT, toast, validateSpaceNull } from '@app/common/functionCommons';
+import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
+import DialogDeleteConfim from '@components/DialogDeleteConfim/DialogDeleteConfim';
+
 CoSoSanXuat.propTypes = {};
 
 function CoSoSanXuat({ token, myPermission, loading, myInfo, ...props }) {

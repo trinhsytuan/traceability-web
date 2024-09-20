@@ -1,7 +1,7 @@
-import axios from "axios";
-import { API } from "@api";
-import { renderMessageError, toast  } from "@app/common/functionCommons";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
+import axios from 'axios';
+import { API } from '@api';
+import { renderMessageError, toast } from '@app/common/functionCommons';
+import { CONSTANTS } from '@constants';
 
 export function getAll(page, limit, query) {
   query = query ? query : "";

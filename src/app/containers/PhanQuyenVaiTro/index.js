@@ -1,15 +1,15 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { connect } from "react-redux";
-import { Popconfirm, message, Modal, Tooltip, Row, Col, Table, Input, Button, Form, Checkbox } from "antd";
-import { DeleteOutlined, EditOutlined, PlusOutlined, CloseOutlined, SaveOutlined } from "@ant-design/icons";
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { Button, Checkbox, Col, Form, Input, message, Modal, Popconfirm, Row, Table, Tooltip } from 'antd';
+import { CloseOutlined, DeleteOutlined, EditOutlined, PlusOutlined, SaveOutlined } from '@ant-design/icons';
 
-import { add, getAll, deleteById, updateById } from "@app/services/phanquyenvaitroService";
-import queryString, { stringify } from "query-string";
-import { ROLE_PAGES_ENDORSER, ROLE_PAGES_PRODUCER, TYPE_ORG, ROLE_PAGES_SYSTEM, PAGINATION_CONFIG } from "@constants";
-import { useLocation } from "react-router-dom";
-import { formatSTT, validateSpaceNull } from "@app/common/functionCommons";
-import "./PhanQuyenVaiTro.scss";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { add, deleteById, getAll, updateById } from '@app/services/phanquyenvaitroService';
+import queryString, { stringify } from 'query-string';
+import { PAGINATION_CONFIG, ROLE_PAGES_ENDORSER, ROLE_PAGES_PRODUCER, ROLE_PAGES_SYSTEM, TYPE_ORG } from '@constants';
+import { useLocation } from 'react-router-dom';
+import { formatSTT, validateSpaceNull } from '@app/common/functionCommons';
+import './PhanQuyenVaiTro.scss';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 function TableEdit({ myPermission, loading, rolePages, typeOrg, ...props }) {
   const history = useHistory();

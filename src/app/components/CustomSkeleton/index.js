@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   Checkbox,
   Col,
@@ -15,12 +15,12 @@ import {
   Switch,
   TimePicker,
   TreeSelect,
-} from "antd";
+} from 'antd';
 
-import { CONSTANTS, RULES } from "@constants";
-import { formatMoment, removeAccents } from "@app/common/functionCommons";
+import { CONSTANTS, RULES } from '@constants';
+import { formatMoment, removeAccents } from '@app/common/functionCommons';
 
-import "./CustomSkeleton.scss";
+import './CustomSkeleton.scss';
 
 class FullLine extends Component {
   render() {

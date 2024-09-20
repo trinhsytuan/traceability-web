@@ -1,23 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
-import "./PreviewPublic.scss";
-import { Image, Modal } from "antd";
-import { STATUS_PARCEL, VI_STATUS_PARCEL } from "@constants";
-import "swiper/components/navigation/navigation.min.css";
-import "swiper/components/pagination/pagination.min.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.min.css";
-import { getMediaBase } from "@app/services/ThemMoiSanPham";
-import { API } from "@api";
-import IconVerify from "@assets/icons/icon-verify.svg";
-import { formatDate } from "@app/common/functionCommons";
-import UploadImage from "@components/UploadImage/UploadImage";
-import BinhLuanSanPham from "@containers/BinhLuanSanPham/BinhLuanSanPham";
-import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
-import { getOrg } from "@app/services/TruyXuat";
-import NhatKyKiemDinh from "@containers/KiemDinhLoHang/NhatKyKiemDinh";
-import NhatKyKiemDinhTruyXuat from "./NhatKyKiemDinh";
-import NhatKySanXuatTruyXuat from "./NhatKySanXuat";
+import React, { useEffect, useRef, useState } from 'react';
+import './PreviewPublic.scss';
+import { Image, Modal } from 'antd';
+import { STATUS_PARCEL, VI_STATUS_PARCEL } from '@constants';
+import 'swiper/components/navigation/navigation.min.css';
+import 'swiper/components/pagination/pagination.min.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.min.css';
+import { getMediaBase } from '@app/services/ThemMoiSanPham';
+import { API } from '@api';
+import IconVerify from '@assets/icons/icon-verify.svg';
+import { formatDate } from '@app/common/functionCommons';
+import UploadImage from '@components/UploadImage/UploadImage';
+import BinhLuanSanPham from '@containers/BinhLuanSanPham/BinhLuanSanPham';
+import { Pagination } from 'swiper';
+import { getOrg } from '@app/services/TruyXuat';
+import NhatKyKiemDinhTruyXuat from './NhatKyKiemDinh';
+import NhatKySanXuatTruyXuat from './NhatKySanXuat';
+
 PreviewPublic.propTypes = {};
 
 function PreviewPublic({ isOpen, handleOpen, idParcel, infoParcel, infoStep, infoPublic }) {

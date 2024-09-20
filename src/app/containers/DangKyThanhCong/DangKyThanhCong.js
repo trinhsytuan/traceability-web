@@ -1,11 +1,12 @@
-import React from "react";
-import "./DangKyThanhCong.scss";
-import AuthBase from "@containers/Authenticator/AuthBase";
-import BaseContent from "@components/BaseContent";
-import IconVerifyLarge from "@components/Icons/IconVerifyLarge";
-import { Button } from "antd";
-import { URL } from "@url";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import React from 'react';
+import './DangKyThanhCong.scss';
+import AuthBase from '@containers/Authenticator/AuthBase';
+import BaseContent from '@components/BaseContent';
+import IconVerifyLarge from '@components/Icons/IconVerifyLarge';
+import { Button } from 'antd';
+import { URL } from '@url';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+
 DangKyThanhCong.propTypes = {};
 
 function DangKyThanhCong(props) {

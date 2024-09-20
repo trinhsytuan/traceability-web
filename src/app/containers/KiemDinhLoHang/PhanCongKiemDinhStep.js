@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import Modal from "antd/lib/modal/Modal";
-import { connect } from "react-redux";
-import { Button, Col, Form, Input, Row, Select } from "antd";
-import { getAll as getAllMyOrgUser } from "@app/services/NhanVien";
-import { changeInspector } from "@app/services/QLKiemDinh";
+import React, { useEffect, useState } from 'react';
+import Modal from 'antd/lib/modal/Modal';
+import { connect } from 'react-redux';
+import { Button, Col, Form, Input, Row, Select } from 'antd';
+import { getAll as getAllMyOrgUser } from '@app/services/NhanVien';
+import { changeInspector } from '@app/services/QLKiemDinh';
+
 PhanCongKiemDinhStep.propTypes = {};
 
 function PhanCongKiemDinhStep({ data, visible, onChangeVisible, isLoading }) {

@@ -1,14 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
-import "./UploadImage.scss";
-import { PaperClipOutlined, UploadOutlined } from "@ant-design/icons";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
-import { toast } from "@app/common/functionCommons";
-import { Button, Form, Input, Modal, Radio, Typography } from "antd";
-import CustomImage from "@components/CustomImage/CustomImage";
-import CustomVideo from "@components/CustomVideo/CustomVideo";
-import { API } from "@api";
-import { checkIfLink } from "@app/common/dataConverter";
+import React, { useEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
+import './UploadImage.scss';
+import { PaperClipOutlined, UploadOutlined } from '@ant-design/icons';
+import { CONSTANTS, TOAST_MESSAGE } from '@constants';
+import { toast } from '@app/common/functionCommons';
+import { Button, Form, Input, Modal, Radio, Typography } from 'antd';
+import CustomImage from '@components/CustomImage/CustomImage';
+import CustomVideo from '@components/CustomVideo/CustomVideo';
+import { API } from '@api';
+import { checkIfLink } from '@app/common/dataConverter';
+
 UploadImage.propTypes = {
   onChange: PropTypes.func,
 };

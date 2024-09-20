@@ -1,17 +1,7 @@
-import { API } from "@api";
-import {
-  createBase,
-  deleteByIdBase,
-  getAllPaginationBaseByID,
-  updateBaseFormatID,
-} from "../Base";
-import {
-  updateImageToTableMediaAudit,
-  updateImageToTableMediaProcedure,
-  uploadImageAuditProcedure,
-  uploadImageAuditStep,
-} from "../NhatKyKiemDinh";
-import { deleteImage } from "../ThemMoiSanPham";
+import { API } from '@api';
+import { createBase, deleteByIdBase, getAllPaginationBaseByID, updateBaseFormatID } from '../Base';
+import { updateImageToTableMediaProcedure, uploadImageAuditProcedure } from '../NhatKyKiemDinh';
+import { deleteImage } from '../ThemMoiSanPham';
 
 export async function addNewAuditProcedure(data, idStep) {
   const image = data.image;

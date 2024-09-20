@@ -1,16 +1,15 @@
-import { Tabs } from "antd";
-import React, { useState } from "react";
-import { connect } from "react-redux";
+import { Tabs } from 'antd';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
-import * as app from "@app/store/ducks/app.duck";
-import * as user from "@app/store/ducks/user.duck";
-import BaseContent from "@components/BaseContent";
-import Loading from "@components/Loading";
-import ChangePassword from "./ChangePassword";
-import GetInfoKey from "./GetInfoKey";
-import "./MyInfo.scss";
-import PersonalInfomation from "./PersonalInfomation";
-import { TYPE_ORG } from "@constants";
+import * as app from '@app/store/ducks/app.duck';
+import * as user from '@app/store/ducks/user.duck';
+import BaseContent from '@components/BaseContent';
+import ChangePassword from './ChangePassword';
+import GetInfoKey from './GetInfoKey';
+import './MyInfo.scss';
+import PersonalInfomation from './PersonalInfomation';
+import { TYPE_ORG } from '@constants';
 
 function MyInfo({ myInfo, isLoading, roleList, ...props }) {
   const [handleChangeTab, setHandleChangeTab] = useState(1);

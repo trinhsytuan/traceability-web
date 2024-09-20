@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import "./ChangePassword.scss";
-import { Button, Col, Form, Input, Row } from "antd";
-import { CONSTANTS, RULES, TOAST_MESSAGE } from "@constants";
-import { changePassword } from "@app/services/User";
-import { toast } from "@app/common/functionCommons";
-import { connect } from "react-redux";
-import Loading from "@app/components/Loading";
+import React from 'react';
+import './ChangePassword.scss';
+import { Button, Col, Form, Input, Row } from 'antd';
+import { CONSTANTS, RULES, TOAST_MESSAGE } from '@constants';
+import { changePassword } from '@app/services/User';
+import { toast } from '@app/common/functionCommons';
+import { connect } from 'react-redux';
+import Loading from '@app/components/Loading';
+
 ChangePassword.propTypes = {};
 
 function ChangePassword({ isLoading }) {

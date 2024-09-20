@@ -1,15 +1,15 @@
-import Cookies from "js-cookie";
-import jwtDecode from "jwt-decode";
-import React from "react";
-import moment from "moment";
-import { TreeSelect } from "antd";
-import { camelCase, isEqual, isObject, kebabCase, snakeCase, transform } from "lodash";
-import queryString from "query-string";
-import * as toastify from "react-toastify";
+import Cookies from 'js-cookie';
+import jwtDecode from 'jwt-decode';
+import React from 'react';
+import moment from 'moment';
+import { TreeSelect } from 'antd';
+import { isEqual, isObject, kebabCase, snakeCase, transform } from 'lodash';
+import queryString from 'query-string';
+import * as toastify from 'react-toastify';
 
-import { CONSTANTS, KIEU_DU_LIEU, PAGINATION_CONFIG, TOAST_MESSAGE } from "@constants";
-import { convertObjectToSnakeCase } from "./dataConverter";
-import { isValidNumber } from "libphonenumber-js";
+import { CONSTANTS, KIEU_DU_LIEU, PAGINATION_CONFIG, TOAST_MESSAGE } from '@constants';
+import { convertObjectToSnakeCase } from './dataConverter';
+import { isValidNumber } from 'libphonenumber-js';
 
 export function cloneObj(input = {}) {
   return JSON.parse(JSON.stringify(input));

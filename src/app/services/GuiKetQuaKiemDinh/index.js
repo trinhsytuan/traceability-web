@@ -1,5 +1,5 @@
-import { API } from "@api";
-import { createBase } from "../Base";
+import { API } from '@api';
+import { createBase } from '../Base';
 
 export function sendResultToProducer(data, private_key) {
   const newData = {

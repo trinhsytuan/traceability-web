@@ -1,18 +1,19 @@
-import { API } from "@api";
-import { formatTimeDate, toast, validateSpaceNull } from "@app/common/functionCommons";
-import { createNewComment, deleteComment, getCommentByID, getCommentByMe } from "@app/services/BinhLuanSanPham";
-import DeleteIcon from "@components/Icons/DeleteIcon";
-import { CONSTANTS, STATUS_COMMENT, TOAST_MESSAGE } from "@constants";
-import { URL } from "@url";
-import { Button, Form, Pagination, Rate, Tooltip } from "antd";
-import TextArea from "antd/lib/input/TextArea";
-import PropTypes from "prop-types";
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import { useHistory } from "react-router-dom";
-import "./BinhLuanSanPham.scss";
-import ModalShowPendingComment from "./ModalShowPendingComment";
-import DialogDeleteConfim from "@components/DialogDeleteConfim/DialogDeleteConfim";
+import { API } from '@api';
+import { formatTimeDate, toast, validateSpaceNull } from '@app/common/functionCommons';
+import { createNewComment, deleteComment, getCommentByID, getCommentByMe } from '@app/services/BinhLuanSanPham';
+import DeleteIcon from '@components/Icons/DeleteIcon';
+import { CONSTANTS, STATUS_COMMENT, TOAST_MESSAGE } from '@constants';
+import { URL } from '@url';
+import { Button, Form, Pagination, Rate, Tooltip } from 'antd';
+import TextArea from 'antd/lib/input/TextArea';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import './BinhLuanSanPham.scss';
+import ModalShowPendingComment from './ModalShowPendingComment';
+import DialogDeleteConfim from '@components/DialogDeleteConfim/DialogDeleteConfim';
+
 BinhLuanSanPham.propTypes = {
   disabled: PropTypes.bool,
 };

@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import "./FormNhatKy.scss";
-import { Button, DatePicker, Form, Input, Select } from "antd";
-import TextArea from "antd/lib/input/TextArea";
-import moment from "moment";
-import { addNewAudit, deleteAudit, editAuditHistory } from "@app/services/NhatKyKiemDinh";
-import { toast } from "@app/common/functionCommons";
-import { CONSTANTS, RESULT_SENDING, TOAST_MESSAGE } from "@constants";
-import UploadImage from "@components/UploadImage/UploadImage";
-import DialogDeleteConfim from "@components/DialogDeleteConfim/DialogDeleteConfim";
-import { sendFeedbackAudit } from "@app/services/QLKiemDinh";
+import React, { useEffect, useState } from 'react';
+import './FormNhatKy.scss';
+import { Button, DatePicker, Form, Input, Select } from 'antd';
+import TextArea from 'antd/lib/input/TextArea';
+import moment from 'moment';
+import { addNewAudit, editAuditHistory } from '@app/services/NhatKyKiemDinh';
+import { toast } from '@app/common/functionCommons';
+import { CONSTANTS, RESULT_SENDING, TOAST_MESSAGE } from '@constants';
+import UploadImage from '@components/UploadImage/UploadImage';
+
 FormNhatKy.propTypes = {};
 
 function FormNhatKy({ dataForm, cancel, id, refresh, edit, closeForm, dialogConfim }) {

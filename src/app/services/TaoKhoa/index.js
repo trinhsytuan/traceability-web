@@ -1,6 +1,6 @@
-import { API } from "@api";
+import { API } from '@api';
 
-import { createBase, deleteBase, getAllBase, updateBase } from "@app/services/Base";
+import { createBase, deleteBase, getAllBase, updateBase } from '@app/services/Base';
 
 export function enrollPKI(data) {
   return createBase(API.ENROLL, data);

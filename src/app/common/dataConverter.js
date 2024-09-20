@@ -1,5 +1,5 @@
-import { camelCase, snakeCase } from "lodash";
-import moment from "moment";
+import { camelCase, snakeCase } from 'lodash';
+import moment from 'moment';
 
 export function cloneObj(input = {}) {
   return JSON.parse(JSON.stringify(input));

@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import "./ChiTietBinhLuan.scss";
-import BaseContent from "@components/BaseContent";
-import { LeftOutlined } from "@ant-design/icons";
-import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
-import { Button, Pagination, Rate } from "antd";
-import { getCommentByIDAll, updateCommentById } from "@app/services/BinhLuanSanPham";
-import queryString from "query-string";
-import { API } from "@api";
-import { formatTimeDate, toast } from "@app/common/functionCommons";
-import { CONSTANTS, STATUS_COMMENT, TOAST_MESSAGE } from "@constants";
-import { connect } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import './ChiTietBinhLuan.scss';
+import BaseContent from '@components/BaseContent';
+import { LeftOutlined } from '@ant-design/icons';
+import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import { Button, Pagination, Rate } from 'antd';
+import { getCommentByIDAll, updateCommentById } from '@app/services/BinhLuanSanPham';
+import queryString from 'query-string';
+import { API } from '@api';
+import { formatTimeDate, toast } from '@app/common/functionCommons';
+import { CONSTANTS, STATUS_COMMENT, TOAST_MESSAGE } from '@constants';
+import { connect } from 'react-redux';
+
 ChiTietBinhLuan.propTypes = {};
 
 function ChiTietBinhLuan({ myPermission }) {

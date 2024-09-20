@@ -1,8 +1,8 @@
-import { API } from "@api";
-import { convertCamelCaseToSnakeCase } from "@app/common/dataConverter";
-import axios from "axios";
-import { convertParam, convertParamsPagination } from "@app/common/functionCommons";
-import { getAllPaginationBase, getAllPaginationBaseByID } from "@app/services/Base";
+import { API } from '@api';
+import { convertCamelCaseToSnakeCase } from '@app/common/dataConverter';
+import axios from 'axios';
+import { getAllPaginationBase, getAllPaginationBaseByID } from '@app/services/Base';
+
 export function getListProcedure(page, limit, query) {
   return axios
     .get(`${API.GET_PROCEDURE_BY_ORG.format(page, limit, query)}`)

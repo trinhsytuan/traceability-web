@@ -1,6 +1,6 @@
-import axios from "axios";
-import { convertParam, renderMessageError } from "@app/common/functionCommons";
-import { convertCamelCaseToSnakeCase, convertSnakeCaseToCamelCase } from "@app/common/dataConverter";
+import axios from 'axios';
+import { convertParam, renderMessageError } from '@app/common/functionCommons';
+import { convertCamelCaseToSnakeCase, convertSnakeCaseToCamelCase } from '@app/common/dataConverter';
 
 export function createBase(api, data, loading = true) {
   const config = { loading };

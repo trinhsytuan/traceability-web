@@ -5,31 +5,23 @@ import {
   LeftOutlined,
   SaveOutlined,
   SearchOutlined,
-} from "@ant-design/icons";
-import {
-  formatDate,
-  formatDatetrike,
-  toast,
-} from "@app/common/functionCommons";
-import { sendToEndorser } from "@app/services/GuiDuyet";
-import {
-  getAllTempleteStepByID,
-  getAllUserByOrg,
-  getListProcedure,
-} from "@app/services/Manager";
-import { deleteParcel, updateParcelAll } from "@app/services/ThemMoiQuyTrinh";
-import { getInfoProduct } from "@app/services/ThemMoiSanPham";
-import { getParcelById, getStepByParcel } from "@app/services/TruyXuat";
-import ProcedureIcon from "@assets/icons/procedure-step-icon.svg";
-import BaseContent from "@components/BaseContent";
-import DialogDeleteConfim from "@components/DialogDeleteConfim/DialogDeleteConfim";
-import ArrowRightThick from "@components/Icons/ArrowRightThick";
-import DeleteIcon from "@components/Icons/DeleteIcon";
-import Editable from "@components/Icons/Editable";
-import IconEditHistory from "@components/Icons/IconEditHistory";
-import Loading from "@components/Loading";
-import UploadImage from "@components/UploadImage/UploadImage";
-import VerifyDigitalSignature from "@components/VerifyDigitalSignature/VerifyDigitalSignature";
+} from '@ant-design/icons';
+import { formatDate, formatDatetrike, toast } from '@app/common/functionCommons';
+import { sendToEndorser } from '@app/services/GuiDuyet';
+import { getAllTempleteStepByID, getAllUserByOrg, getListProcedure } from '@app/services/Manager';
+import { deleteParcel, updateParcelAll } from '@app/services/ThemMoiQuyTrinh';
+import { getInfoProduct } from '@app/services/ThemMoiSanPham';
+import { getParcelById, getStepByParcel } from '@app/services/TruyXuat';
+import ProcedureIcon from '@assets/icons/procedure-step-icon.svg';
+import BaseContent from '@components/BaseContent';
+import DialogDeleteConfim from '@components/DialogDeleteConfim/DialogDeleteConfim';
+import ArrowRightThick from '@components/Icons/ArrowRightThick';
+import DeleteIcon from '@components/Icons/DeleteIcon';
+import Editable from '@components/Icons/Editable';
+import IconEditHistory from '@components/Icons/IconEditHistory';
+import Loading from '@components/Loading';
+import UploadImage from '@components/UploadImage/UploadImage';
+import VerifyDigitalSignature from '@components/VerifyDigitalSignature/VerifyDigitalSignature';
 import {
   BROWSING_COLOR,
   CONSTANTS,
@@ -40,35 +32,21 @@ import {
   STATUS_STEP,
   TOAST_MESSAGE,
   VI_STATUS_PARCEL,
-} from "@constants";
-import CongKhaiSanPham from "@containers/CongKhaiSanPham/CongKhaiSanPham";
-import { URL } from "@url";
-import {
-  Button,
-  Col,
-  DatePicker,
-  Form,
-  Input,
-  InputNumber,
-  Row,
-  Select,
-  Tooltip,
-} from "antd";
-import moment from "moment";
-import QRCode from "qrcode";
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import {
-  Link,
-  useHistory,
-  useParams,
-} from "react-router-dom/cjs/react-router-dom.min";
-import DialogChinhSua from "./DialogChinhSua";
-import GuiDuyet from "./GuiDuyet";
-import GuiKiemDinh from "./GuiKiemDinh";
-import QuyTrinhKiemDinhSX from "./QuyTrinhKiemDinhSX";
-import "./ThemMoiLoHang.scss";
-import DialogGhiNhatKySX from "./DialogGhiNhatKySX";
+} from '@constants';
+import CongKhaiSanPham from '@containers/CongKhaiSanPham/CongKhaiSanPham';
+import { URL } from '@url';
+import { Button, Col, DatePicker, Form, Input, InputNumber, Row, Select, Tooltip } from 'antd';
+import moment from 'moment';
+import QRCode from 'qrcode';
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { Link, useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import DialogChinhSua from './DialogChinhSua';
+import GuiDuyet from './GuiDuyet';
+import GuiKiemDinh from './GuiKiemDinh';
+import QuyTrinhKiemDinhSX from './QuyTrinhKiemDinhSX';
+import './ThemMoiLoHang.scss';
+import DialogGhiNhatKySX from './DialogGhiNhatKySX';
 
 ChinhSuaLoHang.propTypes = {};
 

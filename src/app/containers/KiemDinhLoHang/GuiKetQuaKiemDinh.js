@@ -1,24 +1,10 @@
-import { getOrg } from "@app/services/TruyXuat";
-import {
-  CONSTANTS,
-  RESULT_SENDING,
-  STATUS_ENDORSER,
-  STATUS_PARCEL_ENDORSER,
-  STATUS_PRODUCER_KD,
-  TOAST_MESSAGE,
-} from "@constants";
-import { Button, Checkbox, Col, Form, Input, Modal, Row, Select, Tooltip } from "antd";
-import React, { useEffect, useState, useCallback } from "react";
-import { connect } from "react-redux";
-import "./GuiKetQuaKiemDinh.scss";
-import TextArea from "antd/lib/input/TextArea";
-import CongKhai from "@assets/icons/congkhai-icon.svg";
-import DangTao from "@assets/icons/dangtao-icon.svg";
-import HoanTatKiemDinh from "@assets/icons/hoantatkiemdinh-icon.svg";
-import TuChoiKiemDinh from "@assets/icons/tuchoikiemdinh-icon.svg";
-import ChoKiemDinh from "@assets/icons/chokiemdinh-icon.svg";
-import { sendResultToProducer } from "@app/services/GuiKetQuaKiemDinh";
-import { toast, validateSpaceNull } from "@app/common/functionCommons";
+import { CONSTANTS, RESULT_SENDING, TOAST_MESSAGE } from '@constants';
+import { Button, Checkbox, Col, Form, Input, Modal, Row, Select, Tooltip } from 'antd';
+import React, { useCallback, useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import './GuiKetQuaKiemDinh.scss';
+import TextArea from 'antd/lib/input/TextArea';
+import { toast, validateSpaceNull } from '@app/common/functionCommons';
 
 function GuiKetQuaKiemDinh({ onVisible, setVisible, infoProduct, newData, myInfo, onSubmit }) {
   const [form] = Form.useForm();

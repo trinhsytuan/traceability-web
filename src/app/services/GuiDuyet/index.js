@@ -1,6 +1,5 @@
-import { API } from "@api";
-import { createBase, getAllBase, updateBase } from "../Base";
-import axios from "axios";
+import { API } from '@api';
+import { getAllBase, updateBase } from '../Base';
 
 export function GetListUser() {
   return getAllBase(API.GET_LIST_BROWSER);

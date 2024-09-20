@@ -1,5 +1,5 @@
-import { API } from "@api";
-import { checkTypeStringOrFile } from "@app/common/functionCommons";
+import { API } from '@api';
+import { checkTypeStringOrFile } from '@app/common/functionCommons';
 import {
   createBase,
   deleteByIdBase,
@@ -7,8 +7,8 @@ import {
   getAllPaginationBaseByIDNotConvertParamsString,
   getByIdBase,
   updateBase,
-} from "@app/services/Base";
-import axios from "axios";
+} from '@app/services/Base';
+import axios from 'axios';
 
 export function addProduct(values) {
   return createBase(API.ADD_NEW_PRODUCT, values);

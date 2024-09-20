@@ -1,17 +1,18 @@
-import { DownOutlined, PlusOutlined, UpOutlined } from "@ant-design/icons";
-import { formatDate } from "@app/common/functionCommons";
-import UploadImage from "@components/UploadImage/UploadImage";
-import { Button, Col, Form, Input, InputNumber, Modal, Row } from "antd";
-import TextArea from "antd/lib/input/TextArea";
-import PropTypes from "prop-types";
-import React, { useEffect, useRef, useState } from "react";
-import "./ModalKiemDinh.scss";
-import NhatKyKiemDinh from "./NhatKyKiemDinh";
-import { getMediaAuditBaseStep } from "@app/services/ThemMoiSanPham";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import { createImageAudit, deleteImageAudit } from "@app/services/NhatKyKiemDinh";
-import { connect } from "react-redux";
-import Loading from "@components/Loading";
+import { DownOutlined, PlusOutlined, UpOutlined } from '@ant-design/icons';
+import { formatDate } from '@app/common/functionCommons';
+import UploadImage from '@components/UploadImage/UploadImage';
+import { Button, Col, Form, Input, InputNumber, Modal, Row } from 'antd';
+import TextArea from 'antd/lib/input/TextArea';
+import PropTypes from 'prop-types';
+import React, { useEffect, useRef, useState } from 'react';
+import './ModalKiemDinh.scss';
+import NhatKyKiemDinh from './NhatKyKiemDinh';
+import { getMediaAuditBaseStep } from '@app/services/ThemMoiSanPham';
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import { createImageAudit, deleteImageAudit } from '@app/services/NhatKyKiemDinh';
+import { connect } from 'react-redux';
+import Loading from '@components/Loading';
+
 ModalKiemDinh.propTypes = {
   handleEdit: PropTypes.bool,
 };

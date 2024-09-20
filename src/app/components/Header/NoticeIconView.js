@@ -16,7 +16,7 @@ import moment from 'moment';
 import { toast } from '@app/common/functionCommons';
 import ActionCell from '@components/ActionCell';
 import { useHistory } from 'react-router-dom';
-import LOGO from "@assets/images/logo/logo.svg";
+import LOGO from '@assets/images/logo/logo.svg';
 
 function getObjectLink(doc, workType, congViec) {
   const loaiCongViec = Object.values(workType).find((key) => {

@@ -1,17 +1,15 @@
-import React from "react";
-import { Button, Form, Input, Row, Col, Checkbox, Alert } from "antd";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Button, Checkbox, Col, Form, Input, Row } from 'antd';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-import AuthBase from "@containers/Authenticator/AuthBase";
+import AuthBase from '@containers/Authenticator/AuthBase';
+import { URL } from '@url';
 
-import { RULES } from "@constants";
-import { URL } from "@url";
-
-import * as app from "@app/store/ducks/app.duck";
-import "./Login.scss";
-import { CustomAlert } from "../../../components/CustomAlert";
-import { isUsernameValid } from "@app/common/functionCommons";
+import * as app from '@app/store/ducks/app.duck';
+import './Login.scss';
+import { CustomAlert } from '../../../components/CustomAlert';
+import { isUsernameValid } from '@app/common/functionCommons';
 
 const FormItem = Form.Item;
 

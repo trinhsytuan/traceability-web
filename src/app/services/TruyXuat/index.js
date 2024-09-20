@@ -1,5 +1,5 @@
-import { API } from "@api";
-import { convertCamelCaseToSnakeCase } from "@app/common/dataConverter";
+import { API } from '@api';
+import { convertCamelCaseToSnakeCase } from '@app/common/dataConverter';
 import {
   getAllBase,
   getAllPaginationBaseByIDNotConvert,
@@ -7,10 +7,9 @@ import {
   getAllPaginationBaseByIDParamsString,
   getAllPaginationBaseParamsString,
   getByIdBase,
-} from "@app/services/Base/index";
-import axios from "axios";
-import { getTempleteProcedureByID } from "../MauQuyTrinh";
-import { getInfoProduct, getMediaBase, getMediaProcedureBaseStep } from "../ThemMoiSanPham";
+} from '@app/services/Base/index';
+import axios from 'axios';
+import { getMediaBase, getMediaProcedureBaseStep } from '../ThemMoiSanPham';
 
 export function getParcelById(id) {
   return axios

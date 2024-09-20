@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./HeaderMenuForGuest.scss";
-import { Button, Layout, Typography } from "antd";
-import LOGO from "@assets/images/logo/logo.svg";
-import { URL } from "@url";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import React from 'react';
+import './HeaderMenuForGuest.scss';
+import { Layout } from 'antd';
+import LOGO from '@assets/images/logo/logo.svg';
+import { URL } from '@url';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+
 HeaderMenuForGuest.propTypes = {};
 
 function HeaderMenuForGuest(props) {

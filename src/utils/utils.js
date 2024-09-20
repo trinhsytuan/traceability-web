@@ -1,8 +1,8 @@
-import Cookies from "js-cookie";
-import { API } from "@api";
-import { CONSTANTS, TOAST_MESSAGE } from "@constants";
-import { checkTokenExp, toast } from "@app/common/functionCommons";
-import * as app from "@app/store/ducks/app.duck";
+import Cookies from 'js-cookie';
+import { API } from '@api';
+import { CONSTANTS, TOAST_MESSAGE } from '@constants';
+import { checkTokenExp, toast } from '@app/common/functionCommons';
+import * as app from '@app/store/ducks/app.duck';
 
 export function setupAxios(axios, store) {
   const { dispatch } = store;
