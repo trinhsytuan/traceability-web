@@ -17,7 +17,7 @@ function ForgetPassword() {
   const [resultLogin, setResultLogin] = useState(false);
   async function forgetPassword(values) {
     let newValues = values;
-    newValues?.email = newValues?.email?.toLowerCase();
+    newValues.email = newValues?.email?.toLowerCase();
     const response = await requestForgetPassword(newValues);
     if (response?.success) {
       setResultLogin(true);

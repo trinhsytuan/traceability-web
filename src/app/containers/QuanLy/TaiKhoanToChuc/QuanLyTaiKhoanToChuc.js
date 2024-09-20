@@ -279,8 +279,8 @@ function QuanLyTaiKhoanToChuc(props) {
   };
   const onFinish = async (values) => {
     let newValues = values;
-    newValues?.username = newValues?.username?.toLowerCase();
-    newValues?.email = newValues?.email?.toLowerCase();
+    newValues.username = newValues?.username?.toLowerCase();
+    newValues.email = newValues?.email?.toLowerCase();
     if (values.id) {
       const res = await updateById(newValues?.id, newValues);
       if (res) {
