@@ -1,14 +1,15 @@
-import { API } from '@api';
-import { checkTypeStringOrFile } from '@app/common/functionCommons';
+import { API } from "@api";
+import { checkTypeStringOrFile } from "@app/common/functionCommons";
 import {
   createBase,
   deleteByIdBase,
   getAllPaginationBaseByIDNotConvert,
   getAllPaginationBaseByIDNotConvertParamsString,
+  getAllPaginationBaseParamsString,
   getByIdBase,
   updateBase,
-} from '@app/services/Base';
-import axios from 'axios';
+} from "@app/services/Base";
+import axios from "axios";
 
 export function addProduct(values) {
   return createBase(API.ADD_NEW_PRODUCT, values);
@@ -141,7 +142,10 @@ export function deleteProduct(id) {
   return deleteByIdBase(API.GET_PRODUCT_BY_ID_BASE, id);
 }
 
+export function getAllProductByOrg(page, limit, query) {
+  return getAllPaginationBaseParamsString(API.GET_ALL_PRODUCT_BY_ORG, page, limit, query);
+}
 
-
-
-
+export function getProductByOrg(page, limit, query) {
+  return getAllPaginationBaseParamsString(API.PRODUCT_GET_ADMIN_ORG, page, limit, query);
+}

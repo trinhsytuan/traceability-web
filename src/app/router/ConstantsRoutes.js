@@ -34,7 +34,8 @@ const DanhSachBinhLuan = lazy(() => import("@containers/DanhSachBinhLuan/DanhSac
 const ChiTietBinhLuan = lazy(() => import("@containers/ChiTietBinhLuan/ChiTietBinhLuan"));
 const DanhSachToChuc = lazy(() => import("@containers/QuanLy/DanhSachToChuc/DanhSachToChuc"));
 const CoSoSanXuat = lazy(() => import("@containers/CoSoSanXuat/CoSoSanXuat"));
-
+const ThongKeDoanhNghiep = lazy(() => import("@containers/ThongKeDoanhNghiep/ThongKeDoanhNghiep"));
+const ThongKeSanPham = lazy(() => import("@containers/ThongKeSanPham/ThongKeSanPham"));
 function renderIcon(icon) {
   return (
     <span role="img" className="main-menu__icon">
@@ -153,6 +154,15 @@ export const ADMIN_ROUTES = [
         type_org: [TYPE_ORG.SYSTEM],
         url: "danh-sach-to-chuc",
       },
+      {
+        path: URL.MENU.THONG_KE_DOANH_NGHIEP,
+        menuName: "Thống kê doanh nghiệp",
+        breadcrumbName: "Thống kê doanh nghiệp",
+        component: ThongKeDoanhNghiep,
+        permission: [],
+        type_org: [TYPE_ORG.SYSTEM],
+        url: "thong-ke-doanh-nghiep"
+      }
     ],
   },
   // {
@@ -299,6 +309,14 @@ export const ADMIN_ROUTES = [
     permission: [],
     url: "danh-sach-binh-luan",
   },
+  {
+    path: URL.THONG_KE_SAN_PHAM_ID.format(":id"),
+    breadcrumbName: "Thống kê sản phẩm của tổ chức",
+    component: ThongKeSanPham,
+    type_org: [TYPE_ORG.SYSTEM],
+    permission: [],
+    url: "thong-ke-lo-hang"
+  }
 ];
 
 export function ConstantsRoutes() {

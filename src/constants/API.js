@@ -44,6 +44,7 @@ export const API = {
   ENROLL: "/api/v2/pki",
   UPDATE_TITLE_KEY_MY_SELF: "/api/v2/pki/me",
   PRODUCT_GET_BY_MY_ORG: "/api/v2/product/by-my-org-contain-parcels",
+  PRODUCT_GET_ADMIN_ORG: "/api/v2/product/by-org",
   GET_LIST_ORG: "/api/v2/org",
   GET_SELECT_PARCEL_BY_MY_ORG: "/api/v2/procedure/my-org-procedure-names",
   GET_PARCEL_BY_PRODUCT: "/api/v2/parcel/by-product",
@@ -139,4 +140,5 @@ export const API = {
   CREATE_RECORD_HISTORY_PROCEDURE: "/api/v2/product-history",
   GET_RECORD_HISTORY_PROCEDURE_BY_STEP: "/api/v2/product-history/by-step",
   UPDATE_PRODUCT_HISTORY_BY_STEP: "/api/v2/product-history/{0}",
+  GET_ALL_PRODUCT_BY_ORG: "/api/v2/product/findAllProductByOrg"
 };

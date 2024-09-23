@@ -1,0 +1,35 @@
+.thong-ke-doanh-nghiep-container{
+  display: flex;
+  flex-direction: column;
+  .thong-ke-doanh-nghiep-header{
+    text-transform: uppercase;
+    color: #179a6b;
+    font-family: "NotoSans-Bold";
+  }
+  .table-show-all-product{
+    margin-top: 20px;
+  }
+  .ant-pagination-options {
+    border-radius: 0px;
+  }
+  .ant-pagination-item-active {
+    a {
+      background-color: #f0fcf8;
+    }
+  }
+  .table-show-all-product {
+    .ant-pagination-item-link {
+      border: 0 !important;
+      color: #179a6b !important;
+    }
+
+    .ant-select-selector {
+      background-color: #f0fcf8 !important;
+      color: #179a6b;
+      border: 0 !important;
+    }
+    .ant-pagination-item {
+      border: 0;
+    }
+  }
+}

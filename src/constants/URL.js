@@ -21,6 +21,7 @@ export const URL = {
     QUAN_LY_TAI_KHOAN_TO_CHUC: "/tai-khoan-to-chuc",
     DANH_SACH_BINH_LUAN: "/danh-sach-binh-luan",
     DANH_SACH_TO_CHUC: "/danh-sach-to-chuc",
+    THONG_KE_DOANH_NGHIEP: "/thong-ke-doanh-nghiep",
     CO_SO_SAN_XUAT: "/co-so-san-xuat",
   },
   THONG_TIN_CA_NHAN: "/thong-tin-ca-nhan",
@@ -45,4 +46,5 @@ export const URL = {
   //BASE HYPERLEDGER
   SITE_HYPERLEDGER:
     "http://truyxuat.hdu.edu.vn:8081/#/transactions/bd37ae44e2fbad282a12766522579d3fcecd8f0034a0d413f359a0ddaff9bae8/{0}",
+  THONG_KE_SAN_PHAM_ID: "/thong-ke-san-pham/{0}",
 };
