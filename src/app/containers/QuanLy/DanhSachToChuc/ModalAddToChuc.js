@@ -28,7 +28,7 @@ function ModalAddToChuc({ visibled, onChangeVisibled, data, isLoading, callAPI }
     }
   }, [data]);
   const formSubmit = async (dataForm) => {
-    let newValues = values;
+    let newValues = dataForm;
     newValues.email = newValues?.email?.toLowerCase();
     if (data) {
       const response = await editOrg(data?._id, newValues);
