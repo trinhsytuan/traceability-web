@@ -1,19 +1,19 @@
-import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
-import BaseContent from '@components/BaseContent';
-import Loading from '@components/Loading';
-import { CONSTANTS, PAGINATION_CONFIG, RULES, STATUS_ACCOUNT, TYPE_ORG } from '@constants';
-import { Button, Col, Form, Input, Modal, Popconfirm, Row, Select, Table, Tooltip } from 'antd';
-import React, { useEffect, useState } from 'react';
-import './QuanLyTaiKhoanToChuc.scss';
-import { deleteById, getInactiveOrgs, getMyOrgeRoles, issueAccountOrg, updateById } from '@app/services/NhanVien';
+import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
+import BaseContent from "@components/BaseContent";
+import Loading from "@components/Loading";
+import { CONSTANTS, PAGINATION_CONFIG, RULES, STATUS_ACCOUNT, TYPE_ORG } from "@constants";
+import { Button, Col, Form, Input, Modal, Popconfirm, Row, Select, Table, Tooltip } from "antd";
+import React, { useEffect, useState } from "react";
+import "./QuanLyTaiKhoanToChuc.scss";
+import { deleteById, getInactiveOrgs, getMyOrgeRoles, issueAccountOrg, updateById } from "@app/services/NhanVien";
 
-import queryString from 'query-string';
-import SearchBar from '@components/SearchBar';
-import { stringify } from 'qs';
-import { useHistory, useLocation } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { formatSTT, getChangeFormSearch, isUsernameValid, toast } from '@app/common/functionCommons';
-import { getListOrg } from '@app/services/QuanLyToChuc';
+import queryString from "query-string";
+import SearchBar from "@components/SearchBar";
+import { stringify } from "qs";
+import { useHistory, useLocation } from "react-router-dom";
+import { connect } from "react-redux";
+import { formatSTT, getChangeFormSearch, isUsernameValid, toast, validateSpaceNull } from "@app/common/functionCommons";
+import { getListOrg } from "@app/services/QuanLyToChuc";
 
 QuanLyTaiKhoanToChuc.propTypes = {};
 
@@ -61,6 +61,7 @@ function QuanLyTaiKhoanToChuc(props) {
       align: "center",
       width: 60,
     },
+    { title: "Họ và tên", dataIndex: "name", key: "name" },
     { title: "Tài khoản", dataIndex: "username", key: "username" },
     {
       title: "Tên tổ chức",
@@ -137,11 +138,7 @@ function QuanLyTaiKhoanToChuc(props) {
     return (
       <>
         {(myPermission?.[thisUrl]?.sua || myPermission?.is_admin) && (
-          <Tooltip
-            placement="left"
-            title="Chỉnh sửa thông tin tài khoản"
-            color="#FF811E"
-          >
+          <Tooltip placement="left" title="Chỉnh sửa thông tin tài khoản" color="#FF811E">
             <Button
               icon={<EditOutlined />}
               size="small"
@@ -228,9 +225,7 @@ function QuanLyTaiKhoanToChuc(props) {
     const page = parseInt(search.page ? search.page : page);
     const limit = parseInt(search.limit ? search.limit : limit);
     let queryStr = "";
-    queryStr += `${
-      search.username ? "&username[like]={0}".format(search.username) : ""
-    }`;
+    queryStr += `${search.username ? "&username[like]={0}".format(search.username) : ""}`;
     queryStr += `${search.name ? "&name[like]={0}".format(search.name) : ""}`;
     queryStr += `${search.type ? "&type={0}".format(search.type) : ""}`;
     queryStr += `${search.active ? "&active={0}".format(search.active) : ""}`;
@@ -274,7 +269,7 @@ function QuanLyTaiKhoanToChuc(props) {
   };
   const toggleModalVaiTro = () => {
     setShowModal(true);
-    setTypeOrgEdit({org: true});
+    setTypeOrgEdit({ org: true });
     form.setFieldsValue({ active: true });
   };
   const onFinish = async (values) => {
@@ -305,13 +300,8 @@ function QuanLyTaiKhoanToChuc(props) {
         <SearchBar
           onFilterChange={handleRefresh}
           dataSearch={dataSearch}
-          buttonHeader={
-            (myPermission?.[thisUrl]?.them || myPermission?.is_admin) && true
-          }
-          labelButtonHeader={
-            (myPermission?.[thisUrl]?.them || myPermission?.is_admin) &&
-            "Thêm tài khoản"
-          }
+          buttonHeader={(myPermission?.[thisUrl]?.them || myPermission?.is_admin) && true}
+          labelButtonHeader={(myPermission?.[thisUrl]?.them || myPermission?.is_admin) && "Thêm tài khoản"}
           handleBtnHeader={toggleModalVaiTro}
         />
 
@@ -338,9 +328,7 @@ function QuanLyTaiKhoanToChuc(props) {
         <Modal
           title={
             <span className="modal-role__tile">
-              {form.getFieldValue("id")
-                ? "Chỉnh sửa tài khoản tổ chức"
-                : "Thêm mới tài khoản tổ chức"}
+              {form.getFieldValue("id") ? "Chỉnh sửa tài khoản tổ chức" : "Thêm mới tài khoản tổ chức"}
             </span>
           }
           className="modal-width-50"
@@ -367,6 +355,30 @@ function QuanLyTaiKhoanToChuc(props) {
                 <Form.Item
                   label={
                     <span>
+                      Họ và tên <span className="form-item-remark">*</span>{" "}
+                    </span>
+                  }
+                  name="name"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Họ và tên người dùng không được bỏ trống",
+                    },
+                    {validator: validateSpaceNull}
+                  ]}
+                  className="form-item-container"
+                  labelCol={{ xl: 4, md: 7, sm: 24 }}
+                  wrapperCol={{
+                    xl: { span: 18, offset: 3 },
+                    md: { span: 15, offset: 6 },
+                    sm: { span: 24, offset: 0 },
+                  }}
+                ><Input size="small" placeholder="Nhập họ và tên người dùng" className="form-item__input" /></Form.Item>
+              </Col>
+              <Col span={24}>
+                <Form.Item
+                  label={
+                    <span>
                       Tên tài khoản <span className="form-item-remark">*</span>{" "}
                     </span>
                   }
@@ -386,11 +398,7 @@ function QuanLyTaiKhoanToChuc(props) {
                     sm: { span: 24, offset: 0 },
                   }}
                 >
-                  <Input
-                    size="small"
-                    placeholder="Nhập tên tài khoản"
-                    className="form-item__input"
-                  />
+                  <Input size="small" placeholder="Nhập tên tài khoản" className="form-item__input" />
                 </Form.Item>
               </Col>
               <Col span={24}>
@@ -416,11 +424,7 @@ function QuanLyTaiKhoanToChuc(props) {
                     sm: { span: 24, offset: 0 },
                   }}
                 >
-                  <Input
-                    size="small"
-                    placeholder="Nhập email"
-                    className="form-item__input"
-                  />
+                  <Input size="small" placeholder="Nhập email" className="form-item__input" />
                 </Form.Item>
               </Col>
               <Col span={24}>
@@ -446,11 +450,7 @@ function QuanLyTaiKhoanToChuc(props) {
                     sm: { span: 24, offset: 0 },
                   }}
                 >
-                  <Input
-                    size="small"
-                    placeholder="Nhập số điện thoại"
-                    className="form-item__input"
-                  />
+                  <Input size="small" placeholder="Nhập số điện thoại" className="form-item__input" />
                 </Form.Item>
               </Col>
               <Col span={24}>
@@ -465,11 +465,7 @@ function QuanLyTaiKhoanToChuc(props) {
                     sm: { span: 24, offset: 0 },
                   }}
                 >
-                  <Input
-                    size="small"
-                    placeholder="Nhập địa chỉ"
-                    className="form-item__input"
-                  />
+                  <Input size="small" placeholder="Nhập địa chỉ" className="form-item__input" />
                 </Form.Item>
               </Col>
               {typeOrgEdit?.org && (
@@ -499,18 +495,12 @@ function QuanLyTaiKhoanToChuc(props) {
                       showSearch
                       placeholder="Vui lòng chọn tổ chức"
                       filterOption={(inputValue, option) =>
-                        option.label
-                          .toLowerCase()
-                          .indexOf(inputValue.toLowerCase()) !== -1
+                        option.label.toLowerCase().indexOf(inputValue.toLowerCase()) !== -1
                       }
                     >
                       {org &&
                         org.map((option) => (
-                          <Select.Option
-                            key={option._id}
-                            value={option._id}
-                            label={option.name}
-                          >
+                          <Select.Option key={option._id} value={option._id} label={option.name}>
                             {option.name}
                           </Select.Option>
                         ))}
@@ -532,11 +522,7 @@ function QuanLyTaiKhoanToChuc(props) {
                 >
                   <Select
                     placeholder="Chọn trạng thái tài khoản"
-                    defaultValue={
-                      form.getFieldValue("active")
-                        ? form.getFieldValue("active")
-                        : true
-                    }
+                    defaultValue={form.getFieldValue("active") ? form.getFieldValue("active") : true}
                   >
                     <Select.Option value={true}>Đã kích hoạt</Select.Option>
                     <Select.Option value={false}>Chưa kích hoạt</Select.Option>
@@ -544,12 +530,7 @@ function QuanLyTaiKhoanToChuc(props) {
                 </Form.Item>
               </Col>
               <Col span={24} className="form-footer">
-                <Button
-                  size="small"
-                  onClick={toggleModal}
-                  disabled={props.loading}
-                  className="btn-footer btn-cancel"
-                >
+                <Button size="small" onClick={toggleModal} disabled={props.loading} className="btn-footer btn-cancel">
                   Huỷ thao tác
                 </Button>
 
