@@ -1,23 +1,23 @@
-import { API } from '@api';
-import IconVerify from '@assets/icons/icon-verify.svg';
-import { Image, Tooltip } from 'antd';
-import React, { useRef, useState } from 'react';
-import 'swiper/components/navigation/navigation.min.css';
-import 'swiper/components/pagination/pagination.min.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.min.css';
-import './ThongTinSanPham.scss';
+import { API } from "@api";
+import IconVerify from "@assets/icons/icon-verify.svg";
+import { Image, Tooltip } from "antd";
+import React, { useRef, useState } from "react";
+import "swiper/components/navigation/navigation.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.min.css";
+import "./ThongTinSanPham.scss";
 
-import { formatDate } from '@app/common/functionCommons';
-import RefreshIcon from '@components/Icons/RefreshIcon';
-import UploadImage from '@components/UploadImage/UploadImage';
-import { STATUS_PARCEL, VI_STATUS_PARCEL } from '@constants';
-import BinhLuanSanPham from '@containers/BinhLuanSanPham/BinhLuanSanPham';
-import ModalShowVerifyBlockchain from '@containers/ModalShowVerifyBlockchain/ModalShowVerifyBlockchain';
-import { URL } from '@url';
-import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
-import NhatKySanXuatTruyXuat from '@containers/CongKhaiSanPham/NhatKySanXuat';
-import NhatKyKiemDinhTruyXuat from '@containers/CongKhaiSanPham/NhatKyKiemDinh';
+import { formatDate } from "@app/common/functionCommons";
+import RefreshIcon from "@components/Icons/RefreshIcon";
+import UploadImage from "@components/UploadImage/UploadImage";
+import { STATUS_PARCEL, VI_STATUS_PARCEL } from "@constants";
+import BinhLuanSanPham from "@containers/BinhLuanSanPham/BinhLuanSanPham";
+import ModalShowVerifyBlockchain from "@containers/ModalShowVerifyBlockchain/ModalShowVerifyBlockchain";
+import { URL } from "@url";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
+import NhatKySanXuatTruyXuat from "@containers/CongKhaiSanPham/NhatKySanXuat";
+import NhatKyKiemDinhTruyXuat from "@containers/CongKhaiSanPham/NhatKyKiemDinh";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -27,7 +27,7 @@ function ThongTinSanPham({ data, isPublic }) {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(1);
   const [activeTabs, setActiveTab] = useState(0);
   const [showModal, setShowModal] = useState(false);
-  const [linkToBlock, setLinkToBlock] = useState('');
+  const [linkToBlock, setLinkToBlock] = useState("");
   const [showNKKD, setShowNKKD] = useState(false);
   const [idShowNKKD, setIDShowNKKD] = useState(null);
   const [showNKSX, setShowNKSX] = useState(false);
@@ -48,7 +48,7 @@ function ThongTinSanPham({ data, isPublic }) {
   };
   const cancelModal = () => {
     setShowModal(false);
-    setLinkToBlock('');
+    setLinkToBlock("");
   };
 
   const handleSlideChange = () => {
@@ -74,12 +74,9 @@ function ThongTinSanPham({ data, isPublic }) {
   };
   const viStatus = (status) => {
     let viText = status;
-    if (viText == STATUS_PARCEL.UNEXPORTED)
-      viText = VI_STATUS_PARCEL.UNEXPORTED;
-    else if (viText == STATUS_PARCEL.CANCELLED)
-      viText = VI_STATUS_PARCEL.CANCELLED;
-    else if (viText == STATUS_PARCEL.CREATING)
-      viText = VI_STATUS_PARCEL.CREATING;
+    if (viText == STATUS_PARCEL.UNEXPORTED) viText = VI_STATUS_PARCEL.UNEXPORTED;
+    else if (viText == STATUS_PARCEL.CANCELLED) viText = VI_STATUS_PARCEL.CANCELLED;
+    else if (viText == STATUS_PARCEL.CREATING) viText = VI_STATUS_PARCEL.CREATING;
     else viText = VI_STATUS_PARCEL.EXPORTED;
     return viText;
   };
@@ -96,15 +93,15 @@ function ThongTinSanPham({ data, isPublic }) {
               onSwiper={(swiper) => (firstSwiperRef.current = swiper)}
             >
               {data?.imgProduct?.map((res, index) => {
-                if (res.type == 'image') {
+                if (res.type == "image") {
                   return (
                     <SwiperSlide key={index}>
                       <Image
                         className="img_slide_top"
                         src={API.PREVIEW_ID.format(res.url)}
-                        width={'100%'}
-                        height={'100%'}
-                        style={{ objectFit: 'cover', borderRadius: '10px' }}
+                        width={"100%"}
+                        height={"100%"}
+                        style={{ objectFit: "cover", borderRadius: "10px" }}
                       />
                     </SwiperSlide>
                   );
@@ -114,11 +111,11 @@ function ThongTinSanPham({ data, isPublic }) {
                 <SwiperSlide>
                   <Image
                     className="img_slide_top"
-                    src={require('@assets/icons/NotImage.png')}
+                    src={require("@assets/icons/NotImage.png")}
                     preview={false}
-                    width={'100%'}
-                    height={'100%'}
-                    style={{ objectFit: 'cover', borderRadius: '10px' }}
+                    width={"100%"}
+                    height={"100%"}
+                    style={{ objectFit: "cover", borderRadius: "10px" }}
                   />
                 </SwiperSlide>
               )}
@@ -136,14 +133,12 @@ function ThongTinSanPham({ data, isPublic }) {
               allowTouchMove={false}
             >
               {data?.imgProduct?.map((res, index) => {
-                if (res.type == 'image') {
+                if (res.type == "image") {
                   return (
                     <SwiperSlide key={index}>
                       <img
                         src={API.PREVIEW_ID.format(res.url)}
-                        className={`preview_image ${
-                          currentSlideIndex - 1 == index && 'image_active'
-                        }`}
+                        className={`preview_image ${currentSlideIndex - 1 == index && "image_active"}`}
                         onClick={() => handleBottomSlideClick(index)}
                       />
                     </SwiperSlide>
@@ -194,28 +189,16 @@ function ThongTinSanPham({ data, isPublic }) {
       <div className="div_hr"></div>
       <div className="body-info">
         <div className="tabs-item">
-          <div
-            className={activeTabs == 0 ? 'tabs-active' : 'tab-inactive'}
-            onClick={() => onChange(0)}
-          >
+          <div className={activeTabs == 0 ? "tabs-active" : "tab-inactive"} onClick={() => onChange(0)}>
             Thông tin sản phẩm
           </div>
-          <div
-            className={activeTabs == 1 ? 'tabs-active' : 'tab-inactive'}
-            onClick={() => onChange(1)}
-          >
+          <div className={activeTabs == 1 ? "tabs-active" : "tab-inactive"} onClick={() => onChange(1)}>
             Thông tin lô sản phẩm
           </div>
-          <div
-            className={activeTabs == 2 ? 'tabs-active' : 'tab-inactive'}
-            onClick={() => onChange(2)}
-          >
+          <div className={activeTabs == 2 ? "tabs-active" : "tab-inactive"} onClick={() => onChange(2)}>
             Quy trình sản xuất
           </div>
-          <div
-            className={activeTabs == 3 ? 'tabs-active' : 'tab-inactive'}
-            onClick={() => onChange(3)}
-          >
+          <div className={activeTabs == 3 ? "tabs-active" : "tab-inactive"} onClick={() => onChange(3)}>
             Bình luận
           </div>
         </div>
@@ -261,7 +244,9 @@ function ThongTinSanPham({ data, isPublic }) {
               {data?.product?.url && (
                 <div className="info-product">
                   <span className="title">URL:</span>
-                  <a href={data?.product?.url} className="describe">{data?.product?.url}</a>
+                  <a href={data?.product?.url} className="describe">
+                    {data?.product?.url}
+                  </a>
                 </div>
               )}
             </div>
@@ -286,7 +271,6 @@ function ThongTinSanPham({ data, isPublic }) {
                   <span>{data.num}</span>
                 </div>
               )}
-              
             </div>
           )}
           {activeTabs == 2 && (
@@ -295,101 +279,77 @@ function ThongTinSanPham({ data, isPublic }) {
                 return (
                   <div className="show_step_product" key={index}>
                     <div className="show_step_product__title">
-                      <img src={IconVerify}/>
+                      <img src={IconVerify} />
                       <span>
                         Bước {res.stepIndex} : {res.name}
                       </span>
                       {data?.product?.require_inspect ? (
-                        res?.status == 'endorsed' ? (
-                          <div className="show_step_product__kiemdinh">
-                            Đã được kiểm định bởi {res?.endorser.name}
-                          </div>
+                        res?.status == "endorsed" ? (
+                          <div className="show_step_product__kiemdinh">Đã được kiểm định bởi {res?.endorser.name}</div>
                         ) : (
-                          <div className="show_step_product__kiemdinhcancel">
-                            Quy trình chưa được kiểm định
-                          </div>
+                          <div className="show_step_product__kiemdinhcancel">Quy trình chưa được kiểm định</div>
                         )
                       ) : (
-                        ''
+                        ""
                       )}
                     </div>
                     <div className="show_step_product__info">
                       <div className="show_step_product__info__content titleMoTaTruyXuat">
-                        <span className="title ">Mô tả:</span>{' '}
-                        <span>{res.describe}</span>
+                        <span className="title ">Mô tả:</span> <span>{res.describe}</span>
                       </div>
                       {res?.fromDate && (
                         <div className="show_step_product__info__content">
-                          <span className="title">Thời gian bắt đầu:</span>{' '}
-                          <span>{formatDate(res.fromDate)}</span>
+                          <span className="title">Thời gian bắt đầu:</span> <span>{formatDate(res.fromDate)}</span>
                         </div>
                       )}
                       {res?.toDate && (
                         <div className="show_step_product__info__content">
-                          <span className="title">Thời gian kết thúc:</span>{' '}
-                          <span>{formatDate(res.toDate)}</span>
+                          <span className="title">Thời gian kết thúc:</span> <span>{formatDate(res.toDate)}</span>
                         </div>
                       )}
                       {data?.procedure?.productHistory && res?.productHistory && (
                         <div className="show_step_product__info__content">
-                          <span
-                            className="title title_clickaction nkkd_action"
-                            onClick={() => handleShowNKSX(res)}
-                          >
+                          <span className="title title_clickaction nkkd_action" onClick={() => handleShowNKSX(res)}>
                             Xem nhật ký sản xuất
                           </span>
                         </div>
                       )}
                       {data?.procedure?.auditHistory && res?.auditHistory && (
                         <div className="show_step_product__info__content">
-                          <span
-                            className="title title_clickaction nkkd_action"
-                            onClick={() => handleShowNKKD(res)}
-                          >
+                          <span className="title title_clickaction nkkd_action" onClick={() => handleShowNKKD(res)}>
                             Xem nhật ký kiểm định
                           </span>
                         </div>
                       )}
                       {res?.img?.length > 0 && (
                         <div className="show_step_product__info__content">
-                          <span className="title">
-                            Hình ảnh, video lô hàng:
-                          </span>
+                          <span className="title">Hình ảnh, video lô hàng:</span>
                         </div>
                       )}
                       <div className="show_step_product__img">
-                        {res.img && (
-                          <UploadImage data={res.img} disabled={true}/>
-                        )}
+                        {res.img && <UploadImage data={res.img} disabled={true} />}
                       </div>
                       <div className="show_step_product__blockchain">
                         {res?.txtId && (
-                          <div
-                            className="verify_checked"
-                            onClick={() => handleClickBlock(res.txtId)}
-                          >
-                            <Tooltip placement="top" title={'Xác thực lại'}>
+                          <div className="verify_checked" onClick={() => handleClickBlock(res.txtId)}>
+                            <Tooltip placement="top" title={"Xác thực lại"}>
                               <a>
-                                Thông tin đã được xác thực trên hệ thống
-                                Blockchain
+                                Thông tin đã được kiểm định bởi cơ quan kiểm định và xác thực trên hệ thống Blockchain
+                                Trường Đại học Hồng Đức
                               </a>
-                              <RefreshIcon/>
+                              <RefreshIcon />
                             </Tooltip>
                           </div>
                         )}
                       </div>
                     </div>
-                    {index != data.steps.length - 1 && (
-                      <div className="show_hr"/>
-                    )}
+                    {index != data.steps.length - 1 && <div className="show_hr" />}
                   </div>
                 );
               })}
             </div>
           )}
-          {activeTabs == 3 && (
-            <BinhLuanSanPham idParcel={data._id} idProduct={data.product._id}/>
-          )}
+          {activeTabs == 3 && <BinhLuanSanPham idParcel={data._id} idProduct={data.product._id} />}
         </div>
       </div>
       <ModalShowVerifyBlockchain
@@ -397,16 +357,8 @@ function ThongTinSanPham({ data, isPublic }) {
         handleCancel={cancelModal}
         linkToUrl={linkToBlock}
       ></ModalShowVerifyBlockchain>
-      <NhatKySanXuatTruyXuat
-        idParcel={idShowNKSX}
-        handleVisible={handleShowNKSX}
-        onVisible={showNKSX}
-      />
-      <NhatKyKiemDinhTruyXuat
-        idParcel={idShowNKKD}
-        handleVisible={handleShowNKKD}
-        onVisible={showNKKD}
-      />
+      <NhatKySanXuatTruyXuat idParcel={idShowNKSX} handleVisible={handleShowNKSX} onVisible={showNKSX} />
+      <NhatKyKiemDinhTruyXuat idParcel={idShowNKKD} handleVisible={handleShowNKKD} onVisible={showNKKD} />
     </div>
   );
 }
