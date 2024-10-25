@@ -16,6 +16,7 @@ import ARROW_LEFT from '@assets/images/icon/arrow-left.svg';
 import ARROW_RIGHT from '@assets/images/icon/arrow-right.svg';
 import Notifications from './Notifications';
 
+import LogoHongDuc from '@assets/images/logo/LogoHongDuc.png'
 function HeaderMenu({ token, history, myInfo, isBroken, siderCollapsed, ...props }) {
   if (!token) return null;
   const [isAvatarLoader, setAvatarLoader] = useState(false);
@@ -60,11 +61,15 @@ function HeaderMenu({ token, history, myInfo, isBroken, siderCollapsed, ...props
           <div className="Header__Toggle toggle-menu">
             <img src={siderCollapsed ? ARROW_RIGHT : ARROW_LEFT} alt="" onClick={toggleCollapsed} />
           </div>
-
+         
           <span className="toggle-drawer-menu Header__Toggle">
             <img src={ARROW_RIGHT} alt="" onClick={toggleCollapsed} />
           </span>
         </div>
+        <div className='Header__MessageHDU'>
+            <span>Đây là hệ thống Truy xuất nguồn gốc của trường Đại học Hồng Đức</span>
+            <img src={LogoHongDuc}/>
+          </div>
         <div className="header-action" style={{ width: "unset" }}>
           <Dropdown overlay={menu} trigger={["click"]} placement="bottomRight">
             <div className="my-info-container">

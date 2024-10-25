@@ -15,6 +15,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .Header__MessageHDU{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-family: "NotoSans-Bold";
+    img{
+      width: 50px;
+      height: 50px;
+    }
+    @media screen and(max-width: 1250px){
+      display: none;
+      
+    }
+  }
   &__Toggle{
     display: flex;
     justify-content: center;
