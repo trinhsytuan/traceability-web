@@ -11,6 +11,8 @@ import React from "react";
 import queryString, { stringify } from "query-string";
 import SearchBar from "@components/SearchBar";
 import ModalThongKeLoHang from "./ModalThongKeLoHang";
+import { getAllParcelById } from "@app/services/TruyXuat";
+import { URL } from "@url";
 ThongKeSanPham.propTypes = {};
 
 function ThongKeSanPham({ isLoading }) {
@@ -34,6 +36,13 @@ function ThongKeSanPham({ isLoading }) {
       value: "name",
     },
   ];
+  const handleClickViewProcedure = async(data) => {
+    const apiResponse = await getAllParcelById(data?._id);
+    if (apiResponse) {
+      const dataShow = apiResponse[0];
+      history.replace(`${URL.TRUY_XUAT_SAN_PHAM}?code=${dataShow?.name}`)
+    }
+  }
   useEffect(() => {
     getDataFilter();
   }, [location.search]);
@@ -68,15 +77,6 @@ function ThongKeSanPham({ isLoading }) {
       className: "titleTable",
     },
     {
-      title: "Quy trình",
-      dataIndex: "procedure",
-      key: "procedure",
-      className: "procedure",
-      width: 250,
-      align: "center",
-      render: (_, value, index) => <span key={index}>{value?.procedure?.name}</span>,
-    },
-    {
       title: "Tác vụ",
       key: "action",
       align: "center",
@@ -88,7 +88,7 @@ function ThongKeSanPham({ isLoading }) {
             <Tooltip placement="left" title={"Xem thông tin lô hàng"} color="#179a6b">
               <Button
                 type="primary"
-                onClick={() => onOpenModal(value)}
+                onClick={() => handleClickViewProcedure(value)}
                 icon={<VisibleIcon />}
                 style={{ borderRadius: 0 }}
                 className="btn_edit"
