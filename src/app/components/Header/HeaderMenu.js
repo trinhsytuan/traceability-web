@@ -67,7 +67,7 @@ function HeaderMenu({ token, history, myInfo, isBroken, siderCollapsed, ...props
           </span>
         </div>
         <div className='Header__MessageHDU'>
-            <span>Đây là hệ thống Truy xuất nguồn gốc của trường Đại học Hồng Đức</span>
+            <span>Hệ thống Truy xuất nguồn gốc của trường Đại học Hồng Đức</span>
             <img src={LogoHongDuc}/>
           </div>
         <div className="header-action" style={{ width: "unset" }}>
