@@ -83,6 +83,7 @@
       display: flex;
       flex-direction: row;
       gap: 18px;
+      flex-wrap: wrap;
 
       .btn-visit-program {
         display: flex;
@@ -262,6 +263,7 @@
     background-color: #ffffff;
     display: flex;
     gap: 20px;
+    padding-bottom: 100px;
     flex-direction: column;
     background-image: url('../../../assets/images/backgroudEcoSystem.png');
 
@@ -307,7 +309,7 @@
       height: 100%;
 
       iframe {
-        width: 40%;
+        width: 50%;
         aspect-ratio: 16/9;
         @media screen and(max-width: 1000px){
         width: 90%;          
