@@ -23,7 +23,7 @@ function Routes({ token, myInfo, ...props }) {
 
   useEffect(() => {
     if (!token && !checkRouteNotToken(props.history.location.pathname)) {
-      props.history.push(URL.LOGIN);
+      props.history.push(URL.TRANG_CHU_QUANG_CAO);
     }
   }, [token, props.history]);
 

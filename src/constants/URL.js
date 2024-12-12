@@ -43,6 +43,7 @@ export const URL = {
   CHO_XET_DUYET: "/cho-xet-duyet",
   TRUY_XUAT_SAN_PHAM_FOR_GUEST: "/truy-xuat-san-pham",
   TRUY_XUAT_SAN_PHAM: "/truy-xuat-san-pham",
+  TRANG_CHU_QUANG_CAO: "/",
   //BASE HYPERLEDGER
   SITE_HYPERLEDGER:
     "http://truyxuat.hdu.edu.vn/blockchain/#/transactions/bd37ae44e2fbad282a12766522579d3fcecd8f0034a0d413f359a0ddaff9bae8/{0}",

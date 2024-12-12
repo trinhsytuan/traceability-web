@@ -13,6 +13,7 @@ const Login = lazy(() => import("@components/../containers/Authenticator/Login/L
 const DangKyThanhCong = lazy(() => import("@containers/DangKyThanhCong/DangKyThanhCong"));
 const ChoXetDuyet = lazy(() => import("@containers/ChoXetDuyet/ChoXetDuyet"));
 const TruyXuatSanPhamForGuest = lazy(() => import("@containers/TruyXuatSanPhamForGuest/TruyXuatSanPhamForGuest"));
+const TrangChuQuangCao = lazy(() => import("@containers/TrangChuQuangCao/index"));
 const UrlNotToken = [
   { path: URL.LOGIN, component: Login },
   { path: URL.REGISTER, component: Register },
@@ -21,6 +22,7 @@ const UrlNotToken = [
   { path: URL.DANG_KY_THANH_CONG, component: DangKyThanhCong },
   { path: URL.CHO_XET_DUYET, component: ChoXetDuyet },
   { path: URL.TRUY_XUAT_SAN_PHAM, component: TruyXuatSanPhamForGuest },
+  {path: URL.TRANG_CHU_QUANG_CAO, component: TrangChuQuangCao}
 ];
 const LoginRoutes = (props) => {
   return (
