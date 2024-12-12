@@ -171,7 +171,7 @@
       padding: 0;
     }
 
-    @media screen and(max-width: 800px) {
+    @media screen and(max-width: 900px) {
       display: flex;
       flex-direction: column;
       gap: 30px;
@@ -180,7 +180,7 @@
     .advantage-logo-center-responsive {
       display: none;
 
-      @media screen and(max-width: 800px) {
+      @media screen and(max-width: 900px) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -250,10 +250,71 @@
     width: 100%;
     height: 100%;
 
-    @media screen and(max-width: 800px) {
+    @media screen and(max-width: 900px) {
       display: none;
 
     }
   }
+
+  .homepage-eco-system-container {
+    margin-top: 50px;
+    box-shadow: 0 0 0 50px #ffffff;
+    background-color: #ffffff;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background-image: url('../../../assets/images/backgroudEcoSystem.png');
+
+    .homepage-eco-system-title {
+      text-align: center;
+      color: #253745;
+
+      text-align: center;
+      font-family: "NotoSans-Bold";
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px;
+    }
+
+    .homepage-eco-system-description {
+      color: #9B9B9B;
+      padding: 0 20%;
+      font-family: "NotoSans-Regular";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22.5px;
+      text-align: center;
+
+      @media screen and(max-width: 1000px) {
+        padding: 0 10%;
+
+      }
+
+      @media screen and(max-width: 800px) {
+        padding: 0 5%;
+
+      }
+    }
+
+    .youtube-eco-system-video {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      iframe {
+        width: 40%;
+        aspect-ratio: 16/9;
+        @media screen and(max-width: 1000px){
+        width: 90%;          
+        }
+      }
+    }
+  }
+
 
 }

@@ -57,34 +57,54 @@ function TrangChuQuangCao(props) {
           Phần mềm truy xuất nguồn gốc của trường Đại học Hồng Đức
         </div>
         <div className="advantage-body">
-        <div className="advantage-logo-center-responsive">
-            <img src={LOGO_THTRACING}/>
+          <div className="advantage-logo-center-responsive">
+            <img src={LOGO_THTRACING} />
           </div>
           <div className="advantage-left">
             {ADVANTAGE_CONTENT.map((item, index) => {
-              if (item?.position === "left") return <div className="advantage-item" key={index}>
-                <div className="advantage-item-icon"><img src={item?.icon}/></div>
-                <div className="advantage-item-right">
-                  <div className="advantage-item-right-top">{item?.title}</div>
-                  <div className="advantage-item-right-bottom">{item?.content}</div>
+              if (item?.position === "left")
+                return (
+                  <div className="advantage-item" key={index}>
+                    <div className="advantage-item-icon">
+                      <img src={item?.icon} />
+                    </div>
+                    <div className="advantage-item-right">
+                      <div className="advantage-item-right-top">{item?.title}</div>
+                      <div className="advantage-item-right-bottom">{item?.content}</div>
+                    </div>
                   </div>
-              </div>;
+                );
             })}
           </div>
           <div className="advantage-logo-center">
-            <img src={LOGO_THTRACING}/>
+            <img src={LOGO_THTRACING} />
           </div>
           <div className="advantage-left">
             {ADVANTAGE_CONTENT.map((item, index) => {
-              if (item?.position === "right") return <div className="advantage-item" key={index}>
-                <div className="advantage-item-icon"><img src={item?.icon}/></div>
-                <div className="advantage-item-right">
-                  <div className="advantage-item-right-top">{item?.title}</div>
-                  <div className="advantage-item-right-bottom">{item?.content}</div>
+              if (item?.position === "right")
+                return (
+                  <div className="advantage-item" key={index}>
+                    <div className="advantage-item-icon">
+                      <img src={item?.icon} />
+                    </div>
+                    <div className="advantage-item-right">
+                      <div className="advantage-item-right-top">{item?.title}</div>
+                      <div className="advantage-item-right-bottom">{item?.content}</div>
+                    </div>
                   </div>
-              </div>;
+                );
             })}
           </div>
+        </div>
+      </div>
+      <div className="homepage-eco-system-container">
+        <div className="homepage-eco-system-title">Hệ sinh thái HĐ - Tracing</div>
+        <div className="homepage-eco-system-description">
+          HĐ - Tracing ứng dụng công nghệ QR Code giúp doanh nghiệp quản lý sản phẩm, kênh phân phối & tương tác hiệu
+          quả với người dùng nhằm tăng trải nghiệm khách hàng, tăng hiệu quả kinh doanh cho Doanh nghiệp.
+        </div>
+        <div className="youtube-eco-system-video">
+        <iframe  src="https://www.youtube.com/embed/8JrcL-0cPik" title="Truy xuất nguồn gốc thực phẩm qua QR code| VTV24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
       <ModalTuVan onOpen={openFormTuVan} setIsOpen={isOpenFormTuVan} />
