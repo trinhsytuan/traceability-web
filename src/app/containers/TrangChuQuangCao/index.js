@@ -211,7 +211,7 @@ function TrangChuQuangCao(props) {
             </div>
             <div className="solutions-right-item">
               <div className="solutions-right-left-item">
-                <img src={SAVE_ICON} />
+                <img src={MARKETING_ICON} />
               </div>
               <div className="solutions-right-right-item">
                 <div className="solutions-right-right-top-item">
