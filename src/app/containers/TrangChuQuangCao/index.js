@@ -15,9 +15,14 @@ import USER_ICON from "@assets/images/icon/userIcon.svg";
 import BOX_IMG from "@assets/images/icon/boxIcon.svg";
 import IMG_THANHLONG from "@assets/images/icon/imgThanhLong.png";
 import SAVE_ICON from "@assets/images/icon/saveIcon.svg";
+import GOOGLE_PLAY from '@assets/icons/google-play-small.svg';
+import APP_STORE from '@assets/icons/app-store-small.svg';
 import MARKETING_ICON from "@assets/images/icon/marketingIcon.svg";
 import FOCUS_ICON from "@assets/images/icon/focusImage.svg";
 import SOLUTION_IMAGE from "@assets/images/icon/solutionLeftImage.png";
+import SOLUTION_ICON from "@assets/images/SvgIcons/solutionIcon.svg";
+import HOTLINE_ICON from "@assets/images/SvgIcons/hotlineIcon.svg";
+import STAMP_ICON from "@assets/images/SvgIcons/stampIcon.svg";
 TrangChuQuangCao.propTypes = {};
 
 function TrangChuQuangCao(props) {
@@ -235,13 +240,111 @@ function TrangChuQuangCao(props) {
                   <span>Tích hợp dễ dàng - Tiết kiệm chi phí</span>
                 </div>
                 <div className="solutions-right-right-bottom-item-span">
-                Các giải pháp dễ dàng tùy biến, sử dụng độc lập hoặc tích hợp trên cùng 1 con tem theo nhu cầu của doanh nghiệp, nhờ vậy giúp tiết kiệm chi phí và vận hành hiệu quả hơn.
+                  Các giải pháp dễ dàng tùy biến, sử dụng độc lập hoặc tích hợp trên cùng 1 con tem theo nhu cầu của
+                  doanh nghiệp, nhờ vậy giúp tiết kiệm chi phí và vận hành hiệu quả hơn.
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div className="circle-ad-container">
+        <div className="circle-ad-item">
+          <span className="circle-ad-item-title">Các giải pháp tiêu biểu</span>
+          <span className="circle-ad-item-desciption">
+            Tất cả các giải pháp đều được liên kết chặt chẽ với nhau, dễ dàng sử dụng trên máy tính và thiết bị Mobile
+          </span>
+          <img src={SOLUTION_ICON} className="solutions-mobile-show" />
+          <div className="circle-ad-body">
+            <div className="circle-ad-left">
+              <div className="circle-ad-item1">
+                <div className="circle-ad-item1-title">Minh bạch thông tin bằng công nghệ Blockchain</div>
+                <div className="circle-ad-item1-desciption">
+                  Sản phẩm sử dụng công nghệ Blockchain giúp minh bạch sản phẩm, dữ liệu không thể sửa hoặc thay đổi
+                </div>
+              </div>
+              <div className="circle-ad-item1">
+                <div className="circle-ad-item1-title">QR Code Chống giả</div>
+                <div className="circle-ad-item1-desciption">
+                  Cảnh báo và xác thực hàng thật / giả thông qua QR Code, SMS chỉ với 1 mã duy nhất trên mỗi đơn vị sản
+                  phẩm.
+                </div>
+              </div>
+              <div className="circle-ad-item1">
+                <div className="circle-ad-item1-title">Kết nối doanh nghiệp với nhà kiểm định</div>
+                <div className="circle-ad-item1-desciption">
+                  Hỗ trợ kết nối doanh nghiệp với các nhà kiểm định kiểm định sản phẩm
+                </div>
+              </div>
+            </div>
+            <div className="circle-ad-mid">
+              <img src={SOLUTION_ICON} className="solutions-mobile-hidden" />
+              <div className="hidden-solutions">
+                <div className="circle-ad-item1 left-solutions">
+                  <p className="circle-ad-item1-title ">QR Code Truy xuất nguồn gốc</p>
+                  <div className="circle-ad-item1-desciption" style={{ textAlign: "left" }}>
+                    Giải pháp dành cho nhà doanh nghiệp, các hợp tác xã thực hiện truy xuất nguồn gốc sản phẩm theo tiêu
+                    chuẩn quốc gia.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="circle-ad-right">
+              <div className="circle-ad-item1 left-solutions">
+                <div className="circle-ad-item1-title">QR Code Bảo hành điện tử</div>
+                <div className="circle-ad-item1-desciption" style={{ textAlign: "left" }}>
+                  Số hóa quy trình bảo hành thông qua QR Code duy nhất trên mỗi đơn vị sản phẩm.
+                </div>
+              </div>
+              <div className="circle-ad-item1 left-solutions">
+                <div className="circle-ad-item1-title">Hỗ trợ quản lý lô hàng</div>
+                <div className="circle-ad-item1-desciption" style={{ textAlign: "left" }}>
+                  Giúp các doanh nghiệp quản lý lô hàng xuất ra thị trường theo số lượng của lô hàng.
+                </div>
+              </div>
+              <div className="circle-ad-item1 left-solutions">
+                <div className="circle-ad-item1-title">Hỗ trợ quản lý sản phẩm</div>
+                <div className="circle-ad-item1-desciption" style={{ textAlign: "left" }}>
+                  Phần mềm hỗ trợ doanh nghiệp quản lý sản phẩm đang có mặt trên thị trường.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="service-container">
+        <div className="service-tag">Dịch vụ</div>
+        <div className="service-tag-body">Hỗ trợ doanh nghiệp đưa sản phẩm ra thị trường
+        NHANH NHẤT - TIẾT KIỆM NHẤT</div>
+        <div className="service-support">
+          <div className="service-support-item">
+            <div className="service-support-left"><img src={HOTLINE_ICON}/></div>
+            <div className="service-support-right">
+              <div className="service-support-title">Hỗ trợ</div>
+              <div className="service-support-description">Dịch vụ hỗ trợ doanh nghiệp đưa thông tin lên phần mềm của chúng tôi giúp doanh nghiệp sử dụng dịch vụ với thời gian nhanh và chi phí cạnh tranh.</div>
+            </div>
+          </div>
+          <div className="service-support-item">
+            <div className="service-support-left"><img src={STAMP_ICON}/></div>
+            <div className="service-support-right">
+              <div className="service-support-title">Dịch vụ in tem nhãn</div>
+              <div className="service-support-description">Dịch vụ in tem nhãn dành cho doanh nghiệp sản xuất, phân phối, nhập khẩu, kinh doanh nhỏ lẻ. HĐ - Tracing cam kết giá rẻ nhất, thời gian nhanh nhất và tích hợp in trực tiếp vào bao bì.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="download-app-container">
+        <span className="download-app-title">Tải ứng dụng quét mã vạch</span>
+        <div className="icon-store">
+          <a href="https://play.google.com/store/apps/details?id=vn.thinklabs.traceabilityapp&pli=1" className="icon-google"><img src={GOOGLE_PLAY} width={200}/></a>
+          <a href="https://apps.apple.com/vn/app/th-tracing/id6529534082?platform=iphone"><img src={APP_STORE} width={200}/></a>
+        </div>
+      </div>
+      <div className="footer-hd">
+        <hr className="footer-hr"/>
+        <span>© Copyright © 2024 HĐ - Tracing phần mềm Truy xuất nguồn gốc của trường Đại học Hồng Đức</span>
+      </div>
+
       <ModalTuVan onOpen={openFormTuVan} setIsOpen={isOpenFormTuVan} />
     </div>
   );

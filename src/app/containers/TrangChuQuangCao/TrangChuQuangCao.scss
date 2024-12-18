@@ -555,6 +555,7 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+    padding-bottom: 40px;
   }
 
   .solutions-right-right-top-item {
@@ -608,5 +609,342 @@
     line-height: 27px;
   }
 
+  .circle-ad-container {
+    padding-top: 30px;
+    background-repeat: repeat;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(225, 244, 228, 0.00) 0%, #F0FAF2 73.46%);
+    //background-image: url('../../../assets/images/icon/bgCircle.png');
+  }
+
+  .circle-ad-item {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    align-items: center;
+
+
+    @media screen and(max-width: 800px) {
+      padding: 0 5%;
+
+    }
+
+    .circle-ad-item-title {
+      color: #33B44A;
+
+      text-align: center;
+      font-family: "NotoSans-Bold";
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px;
+    }
+
+    .circle-ad-item-desciption {
+      color: #9B9B9B;
+      margin-top: 8px;
+      text-align: center;
+      font-family: "NotoSans-Regular";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27px;
+    }
+
+    .circle-ad-body {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+
+      @media screen and(max-width: 1000px) {
+        flex-direction: column;
+
+      }
+    }
+
+    .circle-ad-item1 {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 24px;
+      margin-top: 20px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+
+      @media screen and(max-width: 1000px) {
+        align-items: flex-start;
+      }
+
+      border-radius: 8px;
+      background: #FFF;
+      box-shadow: -4px 0px 0px 0px #EBF8ED inset,
+      4px 0px 0px 0px #EBF8ED inset;
+
+      .circle-ad-item1-title {
+        color: #252E4F;
+
+        text-align: right;
+        font-family: "NotoSans-Bold";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 19.2px;
+      }
+
+      .circle-ad-item1-desciption {
+        color: #9B9B9B;
+        font-family: "NotoSans-Regular";
+        font-size: 18px;
+        text-align: right;
+
+        @media screen and(max-width: 1000px) {
+          text-align: left;
+        }
+
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+
+        /* 150% */
+      }
+    }
+
+    .circle-ad-mid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: 30px;
+      margin-top: 100px;
+
+      @media screen and(max-width: 1000px) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .circle-ad-left {
+    @media screen and(min-width: 1000px) {
+      width: 35%;
+    }
+
+  }
+
+  .circle-ad-right {
+    @media screen and(min-width: 1000px) {
+      width: 32%;
+    }
+  }
+
+  .circle-ad-mid {
+    @media screen and(min-width: 1000px) {
+      width: 40%;
+    }
+  }
+
+  .solutions-mobile-show {
+    display: none;
+
+    @media screen and(max-width: 1000px) {
+      display: unset;
+      margin-top: 50px;
+
+    }
+  }
+
+  .solutions-mobile-hidden {
+    display: none;
+
+    @media screen and(min-width: 1001px) {
+      display: unset;
+
+    }
+  }
+
+  .hidden-solutions {
+    @media screen and(max-width: 1000px) {
+      margin-top: -100px;
+
+
+    }
+  }
+
+  .left-solutions {
+    align-items: flex-start !important;
+  }
+
+  .service-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15%;
+    background: linear-gradient(180deg, rgba(225, 255, 255, 0.00) 0%, #F0FAF2 73.46%);
+
+    @media screen and(max-width: 1200px) {
+      padding: 0 10%;
+
+    }
+
+    @media screen and(max-width: 800px) {
+      padding: 0 5%;
+
+    }
+
+    padding-top: 70px;
+    padding-bottom: 60px;
+    align-items: center;
+  }
+
+  .service-tag {
+    padding: 15px;
+    color: #33B44A;
+    margin-top: 50px;
+
+    width: fit-content;
+    text-align: center;
+    font-family: "NotoSans-Bold";
+    background: #EDFBEF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+
+    line-height: 24px;
+  }
+
+  .service-tag-body {
+    color: #253745;
+
+    text-align: center;
+    font-family: "NotoSans-Bold";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+  }
+
+  .service-support {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 30px;
+
+    @media screen and(max-width: 1000px) {
+      flex-direction: column;
+
+    }
+  }
+
+  .service-support-item {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 8px 14px 0px rgba(51, 180, 74, 0.10);
+  }
+
+  .service-support-title {
+    color: #252E4F;
+
+    font-family: "NotoSans-Bold";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  .service-support-description {
+    color: #9B9B9B;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    /* 150% */
+  }
+
+  .service-support-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .download-app-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-image: url('../../../assets/images/icon/footerBg.png');
+    padding: 0 15%;
+    
+    background-repeat: repeat;
+    @media screen and(max-width: 1200px) {
+      padding: 0 10%;
+      flex-direction: column;
+     
+      
+
+    }
+
+    @media screen and(max-width: 800px) {
+      padding: 0 5%;
+
+    }
+  }
+
+  .download-app-title {
+    color: #FFF;
+
+    font-family: "NotoSans-Bold";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    @media screen and(max-width: 1200px) {
+      margin-top: 50px;
+      
+
+    }
+  }
+  .icon-store{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 15px;
+    img{
+      height: fit-content;
+    }
+    
+  }
+  .icon-google{
+    margin-right: -60px;
+  }
+  .footer-hd{
+    padding: 15px 20%;
+    background-color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    align-items: center;
+    color: #A6A6A6;
+
+    @media screen and(max-width: 1000px){
+      padding: 15px 10%;
+      
+    }
+    @media screen and(max-width: 800px){
+      padding: 15px 5%;
+      
+    }
+  }
+  .footer-hr{
+    width: 100%;
+  }
 
 }
