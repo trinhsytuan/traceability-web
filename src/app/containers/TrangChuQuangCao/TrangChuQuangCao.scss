@@ -19,10 +19,14 @@
 
     .btn_login_header {
       display: flex;
-      padding: 10px 31.821px 10px 40.42px;
       justify-content: flex-end;
       align-items: center;
       padding: 10px 31.821px 10px 40.42px;
+
+      @media screen and(max-width: 700px) {
+        padding: 10px 20px 10px 20.42px;
+      }
+
       border-radius: 20px;
       border: 1px solid #02D460;
       color: #02D460;
@@ -365,6 +369,13 @@
 
     }
 
+    .txng-mobile-container-right {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     .txng-mobile-container-left {
       display: flex;
       flex-direction: column;
@@ -686,6 +697,9 @@
         color: #252E4F;
 
         text-align: right;
+        @media screen and(max-width: 1000px) {
+          text-align: left;
+        }
         font-family: "NotoSans-Bold";
         font-size: 16px;
         font-style: normal;
@@ -751,6 +765,10 @@
       display: unset;
       margin-top: 50px;
 
+      width: 100%;
+      height: 100%;
+
+
     }
   }
 
@@ -788,6 +806,7 @@
 
     @media screen and(max-width: 800px) {
       padding: 0 5%;
+      padding-bottom: 50px;
 
     }
 
@@ -882,13 +901,14 @@
 
     background-image: url('../../../assets/images/icon/footerBg.png');
     padding: 0 15%;
-    
+
     background-repeat: repeat;
+
     @media screen and(max-width: 1200px) {
       padding: 0 10%;
       flex-direction: column;
-     
-      
+
+
 
     }
 
@@ -903,47 +923,62 @@
 
     font-family: "NotoSans-Bold";
     font-size: 30px;
+    flex-wrap: wrap;
     font-style: normal;
     font-weight: 600;
     line-height: 30px;
+
     @media screen and(max-width: 1200px) {
       margin-top: 50px;
-      
+
 
     }
   }
-  .icon-store{
+
+  .icon-store {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    
     gap: 15px;
-    img{
+
+    img {
       height: fit-content;
     }
+
     
+
   }
-  .icon-google{
+
+  .icon-google {
     margin-right: -60px;
   }
-  .footer-hd{
+
+  .footer-hd {
     padding: 15px 20%;
     background-color: #1A1A1A;
     display: flex;
     flex-direction: column;
     gap: 13px;
     align-items: center;
+    justify-content: center;
     color: #A6A6A6;
-
-    @media screen and(max-width: 1000px){
-      padding: 15px 10%;
-      
+    span{
+      text-align: center;
     }
-    @media screen and(max-width: 800px){
+
+    @media screen and(max-width: 1000px) {
+      padding: 15px 10%;
+
+    }
+
+    @media screen and(max-width: 800px) {
       padding: 15px 5%;
-      
+
     }
   }
-  .footer-hr{
+
+  .footer-hr {
     width: 100%;
   }
 
