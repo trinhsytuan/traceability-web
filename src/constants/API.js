@@ -140,5 +140,6 @@ export const API = {
   CREATE_RECORD_HISTORY_PROCEDURE: "/api/v2/product-history",
   GET_RECORD_HISTORY_PROCEDURE_BY_STEP: "/api/v2/product-history/by-step",
   UPDATE_PRODUCT_HISTORY_BY_STEP: "/api/v2/product-history/{0}",
-  GET_ALL_PRODUCT_BY_ORG: "/api/v2/product/findAllProductByOrg"
+  GET_ALL_PRODUCT_BY_ORG: "/api/v2/product/findAllProductByOrg",
+  REGISTER_TU_VAN: "/api/v2/register"
 };

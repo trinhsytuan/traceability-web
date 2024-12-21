@@ -41,6 +41,7 @@ export function setupAxios(axios, store) {
           API.USER_RESET_PASSWORD,
           API.USER_CHANGE_PASSWORD,
           API.USER_FORGET_PASSWORD,
+          API.REGISTER_TU_VAN,
           API.REGISTER,
           API.QUERY_PRODUCT_BY_PARCEL_NAME,
           API.GET_MEDIA_BY_STEP,
