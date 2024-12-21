@@ -48,4 +48,5 @@ export const URL = {
   SITE_HYPERLEDGER:
     "http://truyxuat.hdu.edu.vn/blockchain/#/transactions/bd37ae44e2fbad282a12766522579d3fcecd8f0034a0d413f359a0ddaff9bae8/{0}",
   THONG_KE_SAN_PHAM_ID: "/thong-ke-san-pham/{0}",
+  TRA_CUU_TU_VAN: "/tra-cuu-tu-van"
 };

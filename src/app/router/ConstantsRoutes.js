@@ -1,29 +1,24 @@
-import React, { lazy } from 'react';
-import { HomeIcon } from '@app/components/Icons';
+import React, { lazy } from "react";
+import { HomeIcon } from "@app/components/Icons";
 
-import { URL } from '@url';
-import TruyXuatSanPham from '@containers/TruyXuatSanPham/TruyXuatSanPham';
-import SearchIcon from '@components/Icons/SearchIcon';
-import ProcedureIcon from '@components/Icons/ProcedureIcon';
-import ThemMoiQuyTrinh from '@containers/QuyTrinh/ThemMoiQuyTrinh';
-import PhanQuyenVaiTro from '@containers/PhanQuyenVaiTro';
-import RolesIcon from '@components/Icons/RolesIcon';
-import { TYPE_ORG } from '@constants';
-import DanhSachKiemDinh from '@containers/QuanLy/DanhSachKiemDinh/DanhSachKiemDinh';
-import KiemDinhSanPham from '@containers/KiemDinhSanPham/KiemDinhSanPham';
-import QuanLyTaiKhoan from '@containers/QuanLy/TaiKhoan/QuanLyTaiKhoan';
-import QuanLyTaiKhoanToChuc from '@containers/QuanLy/TaiKhoanToChuc/QuanLyTaiKhoanToChuc';
-import MenuKDIcon from '@components/Icons/MenuKDIcon';
-import CommentIcon from '@components/Icons/CommentIcon';
+import { URL } from "@url";
+import TruyXuatSanPham from "@containers/TruyXuatSanPham/TruyXuatSanPham";
+import SearchIcon from "@components/Icons/SearchIcon";
+import ProcedureIcon from "@components/Icons/ProcedureIcon";
+import ThemMoiQuyTrinh from "@containers/QuyTrinh/ThemMoiQuyTrinh";
+import PhanQuyenVaiTro from "@containers/PhanQuyenVaiTro";
+import RolesIcon from "@components/Icons/RolesIcon";
+import { TYPE_ORG } from "@constants";
+import DanhSachKiemDinh from "@containers/QuanLy/DanhSachKiemDinh/DanhSachKiemDinh";
+import KiemDinhSanPham from "@containers/KiemDinhSanPham/KiemDinhSanPham";
+import QuanLyTaiKhoan from "@containers/QuanLy/TaiKhoan/QuanLyTaiKhoan";
+import QuanLyTaiKhoanToChuc from "@containers/QuanLy/TaiKhoanToChuc/QuanLyTaiKhoanToChuc";
+import MenuKDIcon from "@components/Icons/MenuKDIcon";
+import CommentIcon from "@components/Icons/CommentIcon";
 
 const ChinhSuaLoHang = lazy(() => import("@containers/ThemMoiLoHang/ChinhSuaLoHang"));
 const MyInfo = lazy(() => import("@containers/MyInfo/MyInfo"));
 const TrangChu = lazy(() => import("@containers/TrangChu/TrangChu"));
-const Setting = lazy(() => import("@containers/Setting/Setting"));
-const User = lazy(() => import("@containers/User/User"));
-const DonVi = lazy(() => import("@containers/DonVi/DonVi"));
-const KhoiPhucTaiKhoan = lazy(() => import("@containers/User/KhoiPhucTaiKhoan"));
-const Role = lazy(() => import("@containers/Role/Role"));
 const DanhSachQuyTrinh = lazy(() => import("@containers/QuyTrinh/DanhSachQuyTrinh"));
 const DanhSachSanPham = lazy(() => import("@containers/DanhSachSanPham/DanhSachSanPham"));
 const ThemMoiSanPham = lazy(() => import("@containers/ThemMoiSanPham/ThemMoiSanPham"));
@@ -36,6 +31,7 @@ const DanhSachToChuc = lazy(() => import("@containers/QuanLy/DanhSachToChuc/Danh
 const CoSoSanXuat = lazy(() => import("@containers/CoSoSanXuat/CoSoSanXuat"));
 const ThongKeDoanhNghiep = lazy(() => import("@containers/ThongKeDoanhNghiep/ThongKeDoanhNghiep"));
 const ThongKeSanPham = lazy(() => import("@containers/ThongKeSanPham/ThongKeSanPham"));
+const ThongKeTuVan = lazy(() => import("@containers/ThongKeTuVan/index"));
 function renderIcon(icon) {
   return (
     <span role="img" className="main-menu__icon">
@@ -161,8 +157,17 @@ export const ADMIN_ROUTES = [
         component: ThongKeDoanhNghiep,
         permission: [],
         type_org: [TYPE_ORG.SYSTEM],
-        url: "thong-ke-doanh-nghiep"
-      }
+        url: "thong-ke-doanh-nghiep",
+      },
+      {
+        path: URL.TRA_CUU_TU_VAN,
+        menuName: "Thông tin tư vấn phần mềm",
+        breadcrumbName: "Thông tin tư vấn phần mềm",
+        component: ThongKeTuVan,
+        type_org: [TYPE_ORG.SYSTEM],
+        permission: [],
+        url: "thong-ke-tu-van",
+      },
     ],
   },
   // {
@@ -315,8 +320,9 @@ export const ADMIN_ROUTES = [
     component: ThongKeSanPham,
     type_org: [TYPE_ORG.SYSTEM],
     permission: [],
-    url: "thong-ke-lo-hang"
-  }
+    url: "thong-ke-lo-hang",
+  },
+  
 ];
 
 export function ConstantsRoutes() {

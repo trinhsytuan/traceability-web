@@ -1,0 +1,25 @@
+.thong-ke-tu-van-container{
+  display: flex;
+  flex-direction: column;
+  .title{
+    font-family: "NotoSans-Bold";
+    text-transform: uppercase;
+    color: #179a6b;
+  }
+  .table{
+    margin-top: 20px;
+    .ant-pagination-item-link {
+      border: 0 !important;
+      color: #179a6b !important;
+    }
+  
+    .ant-select-selector {
+      background-color: #f0fcf8 !important;
+      color: #179a6b;
+      border: 0 !important;
+    }
+    .ant-pagination-item {
+      border: 0;
+    }
+  }
+}
