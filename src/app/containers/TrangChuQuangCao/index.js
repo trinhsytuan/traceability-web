@@ -1,10 +1,10 @@
 import "./TrangChuQuangCao.scss";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { RightOutlined } from "@ant-design/icons";
 import IMG_TRUY_XUAT_APP from "@assets/images/imgtruyxuatapp.png";
 import LOGO from "@assets/images/logo/auth-logo.svg";
 import { URL } from "@url";
-import { Button } from "antd";
+import { Button, Image } from "antd";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import LOGO_THTRACING from "@assets/images/LogoTHTracing.png";
 import ModalTuVan from "./ModalTuVan";
@@ -15,21 +15,31 @@ import USER_ICON from "@assets/images/icon/userIcon.svg";
 import BOX_IMG from "@assets/images/icon/boxIcon.svg";
 import IMG_THANHLONG from "@assets/images/icon/imgThanhLong.png";
 import SAVE_ICON from "@assets/images/icon/saveIcon.svg";
-import GOOGLE_PLAY from '@assets/icons/google-play-small.svg';
-import APP_STORE from '@assets/icons/app-store-small.svg';
+import GOOGLE_PLAY from "@assets/icons/google-play-small.svg";
+import APP_STORE from "@assets/icons/app-store-small.svg";
 import MARKETING_ICON from "@assets/images/icon/marketingIcon.svg";
 import FOCUS_ICON from "@assets/images/icon/focusImage.svg";
 import SOLUTION_IMAGE from "@assets/images/icon/solutionLeftImage.png";
 import SOLUTION_ICON from "@assets/images/SvgIcons/solutionIcon.svg";
 import HOTLINE_ICON from "@assets/images/SvgIcons/hotlineIcon.svg";
 import STAMP_ICON from "@assets/images/SvgIcons/stampIcon.svg";
+import "swiper/components/navigation/navigation.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.min.css";
+import ANH_TXNG_1 from "@assets/images/anhTruyXuatSP1.png";
+import ANH_TXNG_2 from "@assets/images/anhTruyXuatSP2.png";
+import ANH_TXNG_3 from "@assets/images/anhTruyXuatSP3.png";
 TrangChuQuangCao.propTypes = {};
 
 function TrangChuQuangCao(props) {
+  const firstSwiperRef = useRef(null);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(1);
   const [openFormTuVan, setIsOpenFormTuVan] = useState(false);
   const isOpenFormTuVan = () => {
     setIsOpenFormTuVan(!openFormTuVan);
   };
+
   const history = useHistory();
   return (
     <div className="trang-chu-quang-cao-container">
@@ -62,7 +72,49 @@ function TrangChuQuangCao(props) {
           </div>
         </div>
         <div className="right_slide">
-          <img src={IMG_TRUY_XUAT_APP} className="img-truy-xuat-app" />
+          <Swiper
+            className="slider-left"
+            loop={true}
+            autoplay={{ delay: 2000 }}
+            onSwiper={(swiper) => (firstSwiperRef.current = swiper)}
+          >
+            <SwiperSlide key={1}>
+              <img
+                className="img_slide_top"
+                src={IMG_TRUY_XUAT_APP}
+                width={"100%"}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+                height={"auto"}
+              />
+            </SwiperSlide>
+            <SwiperSlide key={2}>
+              <img
+                className="img_slide_top"
+                src={ANH_TXNG_1}
+                width={"100%"}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+                height={"auto"}
+              />
+            </SwiperSlide>
+            <SwiperSlide key={3}>
+              <img
+                className="img_slide_top"
+                src={ANH_TXNG_2}
+                width={"100%"}
+                height={"auto"}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+              />
+            </SwiperSlide>
+            <SwiperSlide key={4}>
+              <img
+                className="img_slide_top"
+                src={ANH_TXNG_3}
+                width={"100%"}
+                height={"auto"}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
       <div className="advantage-introduction-container">
@@ -314,21 +366,32 @@ function TrangChuQuangCao(props) {
       </div>
       <div className="service-container">
         <div className="service-tag">Dịch vụ</div>
-        <div className="service-tag-body">Hỗ trợ doanh nghiệp đưa sản phẩm ra thị trường
-        NHANH NHẤT - TIẾT KIỆM NHẤT</div>
+        <div className="service-tag-body">
+          Hỗ trợ doanh nghiệp đưa sản phẩm ra thị trường NHANH NHẤT - TIẾT KIỆM NHẤT
+        </div>
         <div className="service-support">
           <div className="service-support-item">
-            <div className="service-support-left"><img src={HOTLINE_ICON}/></div>
+            <div className="service-support-left">
+              <img src={HOTLINE_ICON} />
+            </div>
             <div className="service-support-right">
               <div className="service-support-title">Hỗ trợ</div>
-              <div className="service-support-description">Dịch vụ hỗ trợ doanh nghiệp đưa thông tin lên phần mềm của chúng tôi giúp doanh nghiệp sử dụng dịch vụ với thời gian nhanh và chi phí cạnh tranh.</div>
+              <div className="service-support-description">
+                Dịch vụ hỗ trợ doanh nghiệp đưa thông tin lên phần mềm của chúng tôi giúp doanh nghiệp sử dụng dịch vụ
+                với thời gian nhanh và chi phí cạnh tranh.
+              </div>
             </div>
           </div>
           <div className="service-support-item">
-            <div className="service-support-left"><img src={STAMP_ICON}/></div>
+            <div className="service-support-left">
+              <img src={STAMP_ICON} />
+            </div>
             <div className="service-support-right">
               <div className="service-support-title">Dịch vụ in tem nhãn</div>
-              <div className="service-support-description">Dịch vụ in tem nhãn dành cho doanh nghiệp sản xuất, phân phối, nhập khẩu, kinh doanh nhỏ lẻ. HĐ - Tracing cam kết giá rẻ nhất, thời gian nhanh nhất và tích hợp in trực tiếp vào bao bì.</div>
+              <div className="service-support-description">
+                Dịch vụ in tem nhãn dành cho doanh nghiệp sản xuất, phân phối, nhập khẩu, kinh doanh nhỏ lẻ. HĐ -
+                Tracing cam kết giá rẻ nhất, thời gian nhanh nhất và tích hợp in trực tiếp vào bao bì.
+              </div>
             </div>
           </div>
         </div>
@@ -336,12 +399,19 @@ function TrangChuQuangCao(props) {
       <div className="download-app-container">
         <span className="download-app-title">Tải ứng dụng quét mã vạch</span>
         <div className="icon-store">
-          <a href="https://play.google.com/store/apps/details?id=vn.thinklabs.traceabilityapp&pli=1" className="icon-google"><img src={GOOGLE_PLAY} width={200}/></a>
-          <a href="https://apps.apple.com/vn/app/th-tracing/id6529534082?platform=iphone"><img src={APP_STORE} width={200}/></a>
+          <a
+            href="https://play.google.com/store/apps/details?id=vn.thinklabs.traceabilityapp&pli=1"
+            className="icon-google"
+          >
+            <img src={GOOGLE_PLAY} width={200} />
+          </a>
+          <a href="https://apps.apple.com/vn/app/th-tracing/id6529534082?platform=iphone">
+            <img src={APP_STORE} width={200} />
+          </a>
         </div>
       </div>
       <div className="footer-hd">
-        <hr className="footer-hr"/>
+        <hr className="footer-hr" />
         <span>© Copyright © 2024 HĐ - Tracing phần mềm Truy xuất nguồn gốc của trường Đại học Hồng Đức</span>
       </div>
 
