@@ -30,11 +30,12 @@ import "swiper/swiper.min.css";
 import ANH_TXNG_1 from "@assets/images/anhTruyXuatSP1.png";
 import ANH_TXNG_2 from "@assets/images/anhTruyXuatSP2.png";
 import ANH_TXNG_3 from "@assets/images/anhTruyXuatSP3.png";
+import ANH_TXNG_4 from "@assets/images/laudanang.jpg";
+import ANH_TXNG_5 from "@assets/images/thanhhuong.jpg";
 TrangChuQuangCao.propTypes = {};
 
 function TrangChuQuangCao(props) {
   const firstSwiperRef = useRef(null);
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(1);
   const [openFormTuVan, setIsOpenFormTuVan] = useState(false);
   const isOpenFormTuVan = () => {
     setIsOpenFormTuVan(!openFormTuVan);
@@ -57,8 +58,8 @@ function TrangChuQuangCao(props) {
             <span className="title-left-slide">Giải pháp phần mềm truy xuất nguồn gốc HĐ - Tracing</span>
             <span>
               <span className="title-left-slide-2">
-                HĐ - Tracing là phần mềm truy xuất nguồn gốc của Trường Đại học Hồng Đức, cung cấp giải pháp truy xuất
-                nguồn gốc cho doanh nghiệp giúp chống hàng giả, hàng nhái và minh bạch trong quá trình sản xuất.
+              HĐ - Tracing là phần mềm truy xuất nguồn gốc do Trường Đại học Hồng Đức phát triển, nhằm hỗ trợ doanh nghiệp trong việc quản lý và đảm bảo tính minh bạch của sản phẩm từ khâu sản xuất đến tay người tiêu dùng.
+              <br/>HĐ - Tracing sử dụng công nghệ Blockchain, minh bạch thông tin và giảm thiểu rủi ro, tăng cường sự tin tưởng từ khách hàng.
               </span>
             </span>
           </div>
@@ -81,7 +82,7 @@ function TrangChuQuangCao(props) {
             <SwiperSlide key={1}>
               <img
                 className="img_slide_top"
-                src={IMG_TRUY_XUAT_APP}
+                src={ANH_TXNG_4}
                 width={"100%"}
                 style={{ objectFit: "cover", borderRadius: "10px" }}
                 height={"auto"}
@@ -112,6 +113,16 @@ function TrangChuQuangCao(props) {
                 width={"100%"}
                 height={"auto"}
                 style={{ objectFit: "cover", borderRadius: "10px" }}
+              />
+              
+            </SwiperSlide>
+            <SwiperSlide key={5}>
+              <img
+                className="img_slide_top"
+                src={ANH_TXNG_5}
+                width={"100%"}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+                height={"auto"}
               />
             </SwiperSlide>
           </Swiper>

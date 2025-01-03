@@ -41,7 +41,7 @@
     height: 100%;
     padding: 3% 8%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     gap: 10%;
     background-repeat: repeat;
     justify-content: space-between;
@@ -53,7 +53,7 @@
 
     }
 
-    background-image: url('../../../assets/images/bg-home.svg');
+    background-color: #008001;
 
     @media screen and(max-width: 800px) {
       background-repeat: repeat;
@@ -64,8 +64,8 @@
     .left_slide {
       justify-content: center;
       display: flex;
-      width: 70%;
       flex-direction: column;
+      
       gap: 7px;
       @media screen and(max-width: 800px) {
         width: 100%;
@@ -92,6 +92,7 @@
 
     .title-left-slide-2 {
       color: #FFF;
+      text-align: justify;
       font-size: 15px;
       font-style: normal;
       font-weight: 400;
