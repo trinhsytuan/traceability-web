@@ -32,6 +32,8 @@ import ANH_TXNG_2 from "@assets/images/anhTruyXuatSP2.png";
 import ANH_TXNG_3 from "@assets/images/anhTruyXuatSP3.png";
 import ANH_TXNG_4 from "@assets/images/laudanang.jpg";
 import ANH_TXNG_5 from "@assets/images/thanhhuong.jpg";
+import ANH_TXNG_6 from "@assets/images/anhTruyXuatSP4.png";
+import ANH_TXNG_7 from "@assets/images/anhTruyXuatSP5.png";
 TrangChuQuangCao.propTypes = {};
 
 function TrangChuQuangCao(props) {
@@ -55,13 +57,48 @@ function TrangChuQuangCao(props) {
       <div className="titleSlide">
         <div className="left_slide">
           <div className="left_slide">
-            <span className="title-left-slide">Giải pháp phần mềm truy xuất nguồn gốc HĐ - Tracing</span>
-            <span>
-              <span className="title-left-slide-2">
-              HĐ - Tracing là phần mềm truy xuất nguồn gốc do Trường Đại học Hồng Đức phát triển, nhằm hỗ trợ doanh nghiệp trong việc quản lý và đảm bảo tính minh bạch của sản phẩm từ khâu sản xuất đến tay người tiêu dùng.
-              <br/>HĐ - Tracing sử dụng công nghệ Blockchain, minh bạch thông tin và giảm thiểu rủi ro, tăng cường sự tin tưởng từ khách hàng.
-              </span>
-            </span>
+            <div className="advantage-introduction-container">
+              <div className="advantage-title">HĐ - Tracing</div>
+              <div className="introduction-advantage-description">
+                Phần mềm truy xuất nguồn gốc của trường Đại học Hồng Đức
+              </div>
+              <div className="advantage-body">
+                
+                <div className="advantage-left">
+                  {ADVANTAGE_CONTENT.map((item, index) => {
+                    if (item?.position === "left")
+                      return (
+                        <div className="advantage-item" key={index}>
+                          <div className="advantage-item-icon">
+                            <img src={item?.icon} />
+                          </div>
+                          <div className="advantage-item-right">
+                            <div className="advantage-item-right-top">{item?.title}</div>
+                            <div className="advantage-item-right-bottom">{item?.content}</div>
+                          </div>
+                        </div>
+                      );
+                  })}
+                </div>
+              
+                <div className="advantage-left">
+                  {ADVANTAGE_CONTENT.map((item, index) => {
+                    if (item?.position === "right")
+                      return (
+                        <div className="advantage-item" key={index}>
+                          <div className="advantage-item-icon">
+                            <img src={item?.icon} />
+                          </div>
+                          <div className="advantage-item-right">
+                            <div className="advantage-item-right-top">{item?.title}</div>
+                            <div className="advantage-item-right-bottom">{item?.content}</div>
+                          </div>
+                        </div>
+                      );
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
           <div className="btn-actions">
             <Button className="btn-visit-program" onClick={() => history.push(URL.LOGIN)}>
@@ -114,7 +151,6 @@ function TrangChuQuangCao(props) {
                 height={"auto"}
                 style={{ objectFit: "cover", borderRadius: "10px" }}
               />
-              
             </SwiperSlide>
             <SwiperSlide key={5}>
               <img
@@ -125,55 +161,28 @@ function TrangChuQuangCao(props) {
                 height={"auto"}
               />
             </SwiperSlide>
+            <SwiperSlide key={6}>
+              <img
+                className="img_slide_top"
+                src={ANH_TXNG_6}
+                width={"100%"}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+                height={"auto"}
+              />
+            </SwiperSlide>
+            <SwiperSlide key={7}>
+              <img
+                className="img_slide_top"
+                src={ANH_TXNG_7}
+                width={"100%"}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+                height={"auto"}
+              />
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>
-      <div className="advantage-introduction-container">
-        <div className="advantage-title">HĐ - Tracing</div>
-        <div className="introduction-advantage-description">
-          Phần mềm truy xuất nguồn gốc của trường Đại học Hồng Đức
-        </div>
-        <div className="advantage-body">
-          <div className="advantage-logo-center-responsive">
-            <img src={LOGO_THTRACING} />
-          </div>
-          <div className="advantage-left">
-            {ADVANTAGE_CONTENT.map((item, index) => {
-              if (item?.position === "left")
-                return (
-                  <div className="advantage-item" key={index}>
-                    <div className="advantage-item-icon">
-                      <img src={item?.icon} />
-                    </div>
-                    <div className="advantage-item-right">
-                      <div className="advantage-item-right-top">{item?.title}</div>
-                      <div className="advantage-item-right-bottom">{item?.content}</div>
-                    </div>
-                  </div>
-                );
-            })}
-          </div>
-          <div className="advantage-logo-center">
-            <img src={LOGO_THTRACING} />
-          </div>
-          <div className="advantage-left">
-            {ADVANTAGE_CONTENT.map((item, index) => {
-              if (item?.position === "right")
-                return (
-                  <div className="advantage-item" key={index}>
-                    <div className="advantage-item-icon">
-                      <img src={item?.icon} />
-                    </div>
-                    <div className="advantage-item-right">
-                      <div className="advantage-item-right-top">{item?.title}</div>
-                      <div className="advantage-item-right-bottom">{item?.content}</div>
-                    </div>
-                  </div>
-                );
-            })}
-          </div>
-        </div>
-      </div>
+
       <div className="homepage-eco-system-container">
         <div className="homepage-eco-system-title">Hệ sinh thái HĐ - Tracing</div>
         <div className="homepage-eco-system-description">

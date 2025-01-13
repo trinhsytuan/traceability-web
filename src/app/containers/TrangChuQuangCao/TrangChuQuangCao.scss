@@ -45,6 +45,7 @@
     gap: 10%;
     background-repeat: repeat;
     justify-content: space-between;
+
     @media screen and(max-width: 800px) {
       padding: 10px 30px;
       flex-direction: column;
@@ -53,7 +54,7 @@
 
     }
 
-    background-color: #008001;
+    background-color: #ffffff;
 
     @media screen and(max-width: 800px) {
       background-repeat: repeat;
@@ -65,12 +66,13 @@
       justify-content: center;
       display: flex;
       flex-direction: column;
-      
+
       gap: 7px;
+
       @media screen and(max-width: 800px) {
         width: 100%;
-  
-  
+
+
       }
     }
 
@@ -78,7 +80,7 @@
       color: #FFEF00;
       font-size: 30px;
       font-style: normal;
-      
+
       font-weight: 700;
       line-height: 48px;
       font-family: 'NotoSans-Bold';
@@ -123,6 +125,7 @@
 
       .btn-lhtv {
         display: flex;
+        
         width: 173.09px;
         height: 48px;
         padding: 14px 34px 15px 34px;
@@ -131,7 +134,7 @@
         flex-shrink: 0;
         border-radius: 4px;
         border: 1px solid #FFF;
-        background: rgba(255, 255, 255, 0.10);
+        background: #179a6b;
         color: white;
       }
     }
@@ -139,10 +142,12 @@
     .right_slide {
       width: 30%;
       margin-top: 50px;
+
       @media screen and(max-width: 800px) {
         width: 100%;
         margin-top: 40px;
       }
+
       .img-truy-xuat-app {
         margin-top: 40px;
         padding-bottom: 20px;
@@ -194,9 +199,9 @@
     padding: 0 10%;
     align-items: stretch;
     /* Đảm bảo chiều cao các phần tử bằng nhau */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
     @media screen and(max-width: 1200px) {
       padding: 0 5%;
@@ -206,24 +211,14 @@
       padding: 0;
     }
 
-    @media screen and(max-width: 900px) {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
+
 
     .advantage-logo-center-responsive {
-      display: none;
-
-      @media screen and(max-width: 900px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-
-
-      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      width: 100%;
     }
 
 
@@ -711,9 +706,11 @@
         color: #252E4F;
 
         text-align: right;
+
         @media screen and(max-width: 1000px) {
           text-align: left;
         }
+
         font-family: "NotoSans-Bold";
         font-size: 16px;
         font-style: normal;
@@ -953,14 +950,14 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    
+
     gap: 15px;
 
     img {
       height: fit-content;
     }
 
-    
+
 
   }
 
@@ -977,7 +974,8 @@
     align-items: center;
     justify-content: center;
     color: #A6A6A6;
-    span{
+
+    span {
       text-align: center;
     }
 
