@@ -34,6 +34,7 @@ import ANH_TXNG_4 from "@assets/images/laudanang.jpg";
 import ANH_TXNG_5 from "@assets/images/thanhhuong.jpg";
 import ANH_TXNG_6 from "@assets/images/anhTruyXuatSP4.png";
 import ANH_TXNG_7 from "@assets/images/anhTruyXuatSP5.png";
+import ANH_TXNG_8 from "@assets/images/anhTruyXuatSP6.png";
 TrangChuQuangCao.propTypes = {};
 
 function TrangChuQuangCao(props) {
@@ -174,6 +175,15 @@ function TrangChuQuangCao(props) {
               <img
                 className="img_slide_top"
                 src={ANH_TXNG_7}
+                width={"100%"}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+                height={"auto"}
+              />
+            </SwiperSlide>
+            <SwiperSlide key={8}>
+              <img
+                className="img_slide_top"
+                src={ANH_TXNG_8}
                 width={"100%"}
                 style={{ objectFit: "cover", borderRadius: "10px" }}
                 height={"auto"}
