@@ -53,6 +53,9 @@ function TrangChuQuangCao(props) {
           <Button className="btn_login_header" onClick={() => history.push(URL.LOGIN)}>
             Đăng nhập
           </Button>
+          <Button className="btn-lhtv" onClick={isOpenFormTuVan}>
+              Đăng ký tư vấn
+            </Button>
         </div>
       </div>
       <div className="titleSlide">
@@ -102,12 +105,7 @@ function TrangChuQuangCao(props) {
             </div>
           </div>
           <div className="btn-actions">
-            <Button className="btn-visit-program" onClick={() => history.push(URL.LOGIN)}>
-              Truy cập phần mềm <RightOutlined />
-            </Button>
-            <Button className="btn-lhtv" onClick={isOpenFormTuVan}>
-              Đăng ký tư vấn
-            </Button>
+            
           </div>
         </div>
         <div className="right_slide">
@@ -162,16 +160,8 @@ function TrangChuQuangCao(props) {
                 height={"auto"}
               />
             </SwiperSlide>
+            
             <SwiperSlide key={6}>
-              <img
-                className="img_slide_top"
-                src={ANH_TXNG_6}
-                width={"100%"}
-                style={{ objectFit: "cover", borderRadius: "10px" }}
-                height={"auto"}
-              />
-            </SwiperSlide>
-            <SwiperSlide key={7}>
               <img
                 className="img_slide_top"
                 src={ANH_TXNG_7}
@@ -180,10 +170,19 @@ function TrangChuQuangCao(props) {
                 height={"auto"}
               />
             </SwiperSlide>
-            <SwiperSlide key={8}>
+            <SwiperSlide key={7}>
               <img
                 className="img_slide_top"
                 src={ANH_TXNG_8}
+                width={"100%"}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+                height={"auto"}
+              />
+            </SwiperSlide>
+            <SwiperSlide key={8}>
+              <img
+                className="img_slide_top"
+                src={ANH_TXNG_6}
                 width={"100%"}
                 style={{ objectFit: "cover", borderRadius: "10px" }}
                 height={"auto"}
