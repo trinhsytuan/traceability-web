@@ -2,7 +2,7 @@ import "./TrangChuQuangCao.scss";
 import React, { useRef, useState } from "react";
 import { RightOutlined } from "@ant-design/icons";
 import IMG_TRUY_XUAT_APP from "@assets/images/imgtruyxuatapp.png";
-import LOGO from "@assets/images/logo/auth-logo.svg";
+import LOGO from "@assets/images/logo/logo.svg";
 import { URL } from "@url";
 import { Button, Image } from "antd";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
