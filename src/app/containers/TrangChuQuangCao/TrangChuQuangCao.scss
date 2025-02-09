@@ -43,10 +43,10 @@
 
   .titleSlide {
     height: 100%;
-    padding: 3% 8%;
+    padding: 3% 10%;
     display: flex;
     flex-direction: row-reverse;
-    gap: 10%;
+    gap: 5%;
     background-repeat: repeat;
     justify-content: space-between;
 
@@ -132,7 +132,7 @@
     }
 
     .right_slide {
-      width: 30%;
+      width: 40%;
       margin-top: 50px;
 
       @media screen and(max-width: 800px) {

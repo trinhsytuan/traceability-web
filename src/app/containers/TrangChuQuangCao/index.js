@@ -30,8 +30,6 @@ import "swiper/swiper.min.css";
 import ANH_TXNG_1 from "@assets/images/anhTruyXuatSP1.png";
 import ANH_TXNG_2 from "@assets/images/anhTruyXuatSP2.png";
 import ANH_TXNG_3 from "@assets/images/anhTruyXuatSP3.png";
-import ANH_TXNG_4 from "@assets/images/laudanang.jpg";
-import ANH_TXNG_5 from "@assets/images/thanhhuong.jpg";
 import ANH_TXNG_6 from "@assets/images/anhTruyXuatSP4.png";
 import ANH_TXNG_7 from "@assets/images/anhTruyXuatSP5.png";
 import ANH_TXNG_8 from "@assets/images/anhTruyXuatSP6.png";
@@ -115,16 +113,8 @@ function TrangChuQuangCao(props) {
             autoplay={{ delay: 2000 }}
             onSwiper={(swiper) => (firstSwiperRef.current = swiper)}
           >
+            
             <SwiperSlide key={1}>
-              <img
-                className="img_slide_top"
-                src={ANH_TXNG_4}
-                width={"100%"}
-                style={{ objectFit: "cover", borderRadius: "10px" }}
-                height={"auto"}
-              />
-            </SwiperSlide>
-            <SwiperSlide key={2}>
               <img
                 className="img_slide_top"
                 src={ANH_TXNG_1}
@@ -133,7 +123,7 @@ function TrangChuQuangCao(props) {
                 height={"auto"}
               />
             </SwiperSlide>
-            <SwiperSlide key={3}>
+            <SwiperSlide key={2}>
               <img
                 className="img_slide_top"
                 src={ANH_TXNG_2}
@@ -142,7 +132,7 @@ function TrangChuQuangCao(props) {
                 style={{ objectFit: "cover", borderRadius: "10px" }}
               />
             </SwiperSlide>
-            <SwiperSlide key={4}>
+            <SwiperSlide key={3}>
               <img
                 className="img_slide_top"
                 src={ANH_TXNG_3}
@@ -151,17 +141,9 @@ function TrangChuQuangCao(props) {
                 style={{ objectFit: "cover", borderRadius: "10px" }}
               />
             </SwiperSlide>
-            <SwiperSlide key={5}>
-              <img
-                className="img_slide_top"
-                src={ANH_TXNG_5}
-                width={"100%"}
-                style={{ objectFit: "cover", borderRadius: "10px" }}
-                height={"auto"}
-              />
-            </SwiperSlide>
+          
             
-            <SwiperSlide key={6}>
+            <SwiperSlide key={4}>
               <img
                 className="img_slide_top"
                 src={ANH_TXNG_7}
@@ -170,7 +152,7 @@ function TrangChuQuangCao(props) {
                 height={"auto"}
               />
             </SwiperSlide>
-            <SwiperSlide key={7}>
+            <SwiperSlide key={5}>
               <img
                 className="img_slide_top"
                 src={ANH_TXNG_8}
@@ -179,7 +161,7 @@ function TrangChuQuangCao(props) {
                 height={"auto"}
               />
             </SwiperSlide>
-            <SwiperSlide key={8}>
+            <SwiperSlide key={6}>
               <img
                 className="img_slide_top"
                 src={ANH_TXNG_6}
