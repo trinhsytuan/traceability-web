@@ -30,13 +30,13 @@ import "swiper/swiper.min.css";
 import ANH_TXNG_1 from "@assets/images/anhTruyXuatSP1.png";
 import ANH_TXNG_2 from "@assets/images/anhTruyXuatSP2.png";
 import ANH_TXNG_3 from "@assets/images/anhTruyXuatSP3.png";
-import ANH_TXNG_6 from "@assets/images/anhTruyXuatSP4.png";
-import ANH_TXNG_7 from "@assets/images/anhTruyXuatSP5.png";
-import ANH_TXNG_8 from "@assets/images/anhTruyXuatSP6.png";
+import ANH_TXNG_4 from "@assets/images/anhTruyXuatSP4.png";
+import ANH_TXNG_5 from "@assets/images/anhTruyXuatSP5.png";
+import ANH_TXNG_6 from "@assets/images/anhTruyXuatSP6.png";
 TrangChuQuangCao.propTypes = {};
 
 function TrangChuQuangCao(props) {
-  const firstSwiperRef = useRef(null);
+  const swiperRef = useRef(null);
   const [openFormTuVan, setIsOpenFormTuVan] = useState(false);
   const isOpenFormTuVan = () => {
     setIsOpenFormTuVan(!openFormTuVan);
@@ -52,8 +52,8 @@ function TrangChuQuangCao(props) {
             Đăng nhập
           </Button>
           <Button className="btn-lhtv" onClick={isOpenFormTuVan}>
-              Đăng ký tư vấn
-            </Button>
+            Đăng ký tư vấn
+          </Button>
         </div>
       </div>
       <div className="titleSlide">
@@ -65,7 +65,6 @@ function TrangChuQuangCao(props) {
                 Phần mềm truy xuất nguồn gốc của trường Đại học Hồng Đức
               </div>
               <div className="advantage-body">
-                
                 <div className="advantage-left">
                   {ADVANTAGE_CONTENT.map((item, index) => {
                     if (item?.position === "left")
@@ -82,7 +81,7 @@ function TrangChuQuangCao(props) {
                       );
                   })}
                 </div>
-              
+
                 <div className="advantage-left">
                   {ADVANTAGE_CONTENT.map((item, index) => {
                     if (item?.position === "right")
@@ -102,18 +101,15 @@ function TrangChuQuangCao(props) {
               </div>
             </div>
           </div>
-          <div className="btn-actions">
-            
-          </div>
+          <div className="btn-actions"></div>
         </div>
-        <div className="right_slide">
+        <div className="right_slide" onMouseEnter={() => swiperRef.current.autoplay.stop()}>
           <Swiper
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
             className="slider-left"
             loop={true}
-            autoplay={{ delay: 2000 }}
-            onSwiper={(swiper) => (firstSwiperRef.current = swiper)}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
           >
-            
             <SwiperSlide key={1}>
               <img
                 className="img_slide_top"
@@ -141,12 +137,11 @@ function TrangChuQuangCao(props) {
                 style={{ objectFit: "cover", borderRadius: "10px" }}
               />
             </SwiperSlide>
-          
-            
+
             <SwiperSlide key={4}>
               <img
                 className="img_slide_top"
-                src={ANH_TXNG_7}
+                src={ANH_TXNG_4}
                 width={"100%"}
                 style={{ objectFit: "cover", borderRadius: "10px" }}
                 height={"auto"}
@@ -155,7 +150,7 @@ function TrangChuQuangCao(props) {
             <SwiperSlide key={5}>
               <img
                 className="img_slide_top"
-                src={ANH_TXNG_8}
+                src={ANH_TXNG_5}
                 width={"100%"}
                 style={{ objectFit: "cover", borderRadius: "10px" }}
                 height={"auto"}
