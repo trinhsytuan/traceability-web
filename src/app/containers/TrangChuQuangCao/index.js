@@ -33,6 +33,9 @@ import ANH_TXNG_3 from "@assets/images/anhTruyXuatSP3.png";
 import ANH_TXNG_4 from "@assets/images/anhTruyXuatSP4.png";
 import ANH_TXNG_5 from "@assets/images/anhTruyXuatSP5.png";
 import ANH_TXNG_6 from "@assets/images/anhTruyXuatSP6.png";
+import ANH_TXNG_7 from "@assets/images/anhTruyXuatSP7.png";
+import ANH_TXNG_8 from "@assets/images/anhTruyXuatSP8.png";
+import ANH_TXNG_9 from "@assets/images/anhTruyXuatSP9.png";
 TrangChuQuangCao.propTypes = {};
 
 function TrangChuQuangCao(props) {
@@ -103,7 +106,11 @@ function TrangChuQuangCao(props) {
           </div>
           <div className="btn-actions"></div>
         </div>
-        <div className="right_slide" onMouseEnter={() => swiperRef.current.autoplay.stop()}>
+        <div
+          className="right_slide"
+          onMouseEnter={() => swiperRef.current.autoplay.stop()}
+          onMouseLeave={() => swiperRef.current.autoplay.start()}
+        >
           <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             className="slider-left"
@@ -160,6 +167,33 @@ function TrangChuQuangCao(props) {
               <img
                 className="img_slide_top"
                 src={ANH_TXNG_6}
+                width={"100%"}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+                height={"auto"}
+              />
+            </SwiperSlide>
+            <SwiperSlide key={7}>
+              <img
+                className="img_slide_top"
+                src={ANH_TXNG_7}
+                width={"100%"}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+                height={"auto"}
+              />
+            </SwiperSlide>
+            <SwiperSlide key={8}>
+              <img
+                className="img_slide_top"
+                src={ANH_TXNG_8}
+                width={"100%"}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+                height={"auto"}
+              />
+            </SwiperSlide>
+            <SwiperSlide key={9}>
+              <img
+                className="img_slide_top"
+                src={ANH_TXNG_9}
                 width={"100%"}
                 style={{ objectFit: "cover", borderRadius: "10px" }}
                 height={"auto"}
