@@ -16,8 +16,8 @@ function TrangChu({ isLoading, ...props }) {
             <img src={IMG_TRUY_XUAT_APP} className="img_app"  />
           </div>
           <div className="homepage_right">
-            <h2>TH Tracing nay đã có phiên bản Mobile:</h2>
-            <h2>Tải ứng dụng TH Tracing tại địa chỉ:</h2>
+            <h2>HĐ Tracing nay đã có phiên bản Mobile:</h2>
+            <h2>Tải ứng dụng HĐ Tracing tại địa chỉ:</h2>
             <div className="row-linkdownloadapp">
               <a href={LINK_DOWNLOAD_APP.CH_PLAY}>
                 <img src={GOOGLE_PLAY} width={150} height={150}></img>
